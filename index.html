@@ -752,6 +752,14 @@
 @media(prefers-reduced-motion:reduce){.creatureImpactVfx,.creatureDamageNumberV157{animation-duration:.25s}}
 </style><style id="handNoBadgesV159">
 .card.handNoBadgesV159 .cost,.card.handNoBadgesV159 .life,.card.handNoBadgesV159 .state,.card.handNoBadgesV159 .counter,.card.handNoBadgesV159 .countdownBadge{display:none!important}
+
+@media (pointer:coarse){
+ .effectChoiceCardV218,.autoTargetChoice,.effectChoiceCancelV218{touch-action:manipulation;min-height:44px}
+ .effectChoiceBoxV218{max-height:calc(100dvh - 24px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+ #autoResolutionOverlay .autoEffectBox,#autoResolutionOverlay .autoModalBox{max-height:calc(100dvh - 16px);overflow-y:auto;-webkit-overflow-scrolling:touch}
+ .autoAttackBtn{min-width:28px;min-height:28px;touch-action:manipulation}
+}
+@media (max-width:650px){.effectChoiceBoxV218{width:min(96vw,540px)}.effectChoiceCardsV218{overflow-y:auto;max-height:54dvh;-webkit-overflow-scrolling:touch}}
 </style><style id="spellImpactV162">
 .spellImpactVfxV162{position:fixed;z-index:17010;pointer-events:none;transform:translate(-50%,-50%);width:clamp(135px,23vw,280px);height:clamp(135px,23vw,280px);object-fit:contain;animation:spellImpactFadeV162 1.45s ease-out forwards}
 .spellDamageNumberV162{position:fixed;z-index:17011;pointer-events:none;transform:translate(-50%,-50%);font-size:clamp(23px,5vw,43px);font-weight:900;color:white;text-shadow:0 2px 4px #091a39,0 0 12px #57aaff;animation:creatureDamageFloatV157 1.3s ease-out forwards}
@@ -1307,7 +1315,7 @@
 .effectChoiceCardV218 img{width:76px;height:106px;object-fit:contain;border-radius:6px}.effectChoiceCardV218 span{font-size:12px;line-height:1.25;overflow-wrap:anywhere}
 .effectChoiceCancelV218{margin-top:16px!important;background:#263749!important;color:#f8e5be!important;border:1px solid #c3a46f!important;border-radius:9px!important;padding:10px 26px!important}
 @media(max-width:500px){.effectChoiceBoxV218{padding:15px}.effectChoiceCardsV218{grid-template-columns:repeat(3,minmax(0,1fr))}.effectChoiceCardV218 img{width:61px;height:85px}}
-</style></head><body><div id="lobbyArrivalV186" class="lobbyArrivalV186" aria-live="polite"><div class="lobbyArrivalContentV186"><strong>✦ Duelist Joined! ✦</strong><small id="lobbyArrivalNameV186">Your challenger has entered the chamber.</small></div></div><div id="mobileHandMenu"><button onclick="mobileHandAction('play')">Play</button><button onclick="mobileHandAction('reveal')">Reveal</button><button onclick="mobileHandAction('shuffle')">Shuffle into Deck</button><button onclick="mobileHandAction('discard')">Discard</button></div><div id="startingAllyMobileOverlay" role="dialog" aria-modal="true" aria-label="Starting Ally card" onclick="closeStartingAllyMobile(event)"><div class="allyPopup"><img id="startingAllyMobileImage" alt="Starting Ally full card"><button type="button" onclick="closeStartingAllyMobile(event)">Close</button></div></div><div id="sideboardModal" style="display:none;position:fixed;inset:0;z-index:30000;background:rgba(5,10,24,.94);overflow:auto;padding:24px;color:#f2e6cb"><div style="max-width:960px;margin:auto;background:#14243a;border:2px solid #a98a54;border-radius:14px;padding:22px"><h2 id="sideboardTitle">Sideboard</h2><p id="sideboardHelp">Swap up to five cards. Choose a card from each column to exchange.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px"><section><h3>Main Deck <span id="sideMainCount"></span></h3><div id="sideMainCards" style="max-height:55vh;overflow:auto"></div></section><section><h3>Sideboard <span id="sideReserveCount"></span></h3><div id="sideReserveCards" style="max-height:55vh;overflow:auto"></div></section></div><p id="sideboardStatus"></p><button id="sideboardConfirm" onclick="confirmSideboard()" style="padding:12px 24px;background:#ac8d54;color:#101827;font-weight:bold">Confirm Sideboard</button></div></div><audio id="gameplayBackgroundMusic" src="backgrounds/back_music.mp3" preload="none" loop playsinline></audio><div id="home" class="home"><div class="landingCardStream" aria-hidden="true"><img class="landingFlyingCard" src="cards/creatures/creature_snowman.png" alt="" loading="lazy" draggable="false" style="--flight:16s;--delay:-1s;--start-x:110vw;--start-y:-30vh;--end-x:-28vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/charms/charm_stupefy.png" alt="" loading="lazy" draggable="false" style="--flight:19.2s;--delay:-8s;--start-x:58vw;--start-y:-22vh;--end-x:-52vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/quidditch/quidd_firebolt.png" alt="" loading="lazy" draggable="false" style="--flight:15.2s;--delay:-13s;--start-x:110vw;--start-y:27vh;--end-x:-18vw;--end-y:130vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/transfiguration/transf_glacius.png" alt="" loading="lazy" draggable="false" style="--flight:21.6s;--delay:-19s;--start-x:80vw;--start-y:-22vh;--end-x:-40vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/potions/potinos_crystalball.png" alt="" loading="lazy" draggable="false" style="--flight:18.4s;--delay:-4s;--start-x:110vw;--start-y:43vh;--end-x:-14vw;--end-y:140vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/dark/dark_crucio.png" alt="" loading="lazy" draggable="false" style="--flight:20s;--delay:-16s;--start-x:40vw;--start-y:-22vh;--end-x:-65vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/creatures/creature_bowtruckle.png" alt="" loading="lazy" draggable="false" style="--flight:16.8s;--delay:-11s;--start-x:110vw;--start-y:5vh;--end-x:-28vw;--end-y:120vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/charms/charm_stupefy.png" alt="" loading="lazy" draggable="false" style="--flight:17s;--delay:-5s;--start-x:94vw;--start-y:-25vh;--end-x:-34vw;--end-y:118vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/creatures/creature_snowman.png" alt="" loading="lazy" draggable="false" style="--flight:19s;--delay:-14s;--start-x:53vw;--start-y:-30vh;--end-x:-55vw;--end-y:118vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/dark/dark_crucio.png" alt="" loading="lazy" draggable="false" style="--flight:18s;--delay:-9s;--start-x:112vw;--start-y:32vh;--end-x:-20vw;--end-y:135vh" onerror="this.style.display='none'"></div><img class="landingSnitch" src="backgrounds/snitch.gif" alt="" aria-hidden="true" onerror="this.style.display='none'"><div class="homeBox"><h1 class="homeTitle"><img src="backgrounds/hpmini_title.png" alt="Pocket TCG Simulator" onerror="this.style.display='none';this.parentNode.appendChild(document.createTextNode('Pocket TCG Simulator'))"></h1><div class="homeActions"><button class="homeBtn" onclick="showPlay()">▶ Play</button><button class="homeBtn" onclick="showBuilder()">▦ Deck Builder</button><button class="homeBtn" onclick="showDatabase()">▤ Database</button><button class="homeBtn" onclick="showRules()">📖 Rules</button></div></div><div class="landingVersion">Pocket Magic Awakened · v1.246</div></div><div id="rules" class="rulesScreen screenHidden" aria-label="Game rules">
+</style></head><body><div id="lobbyArrivalV186" class="lobbyArrivalV186" aria-live="polite"><div class="lobbyArrivalContentV186"><strong>✦ Duelist Joined! ✦</strong><small id="lobbyArrivalNameV186">Your challenger has entered the chamber.</small></div></div><div id="mobileHandMenu"><button onclick="mobileHandAction('play')">Play</button><button onclick="mobileHandAction('reveal')">Reveal</button><button onclick="mobileHandAction('shuffle')">Shuffle into Deck</button><button onclick="mobileHandAction('discard')">Discard</button></div><div id="startingAllyMobileOverlay" role="dialog" aria-modal="true" aria-label="Starting Ally card" onclick="closeStartingAllyMobile(event)"><div class="allyPopup"><img id="startingAllyMobileImage" alt="Starting Ally full card"><button type="button" onclick="closeStartingAllyMobile(event)">Close</button></div></div><div id="sideboardModal" style="display:none;position:fixed;inset:0;z-index:30000;background:rgba(5,10,24,.94);overflow:auto;padding:24px;color:#f2e6cb"><div style="max-width:960px;margin:auto;background:#14243a;border:2px solid #a98a54;border-radius:14px;padding:22px"><h2 id="sideboardTitle">Sideboard</h2><p id="sideboardHelp">Swap up to five cards. Choose a card from each column to exchange.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px"><section><h3>Main Deck <span id="sideMainCount"></span></h3><div id="sideMainCards" style="max-height:55vh;overflow:auto"></div></section><section><h3>Sideboard <span id="sideReserveCount"></span></h3><div id="sideReserveCards" style="max-height:55vh;overflow:auto"></div></section></div><p id="sideboardStatus"></p><button id="sideboardConfirm" onclick="confirmSideboard()" style="padding:12px 24px;background:#ac8d54;color:#101827;font-weight:bold">Confirm Sideboard</button></div></div><audio id="gameplayBackgroundMusic" src="backgrounds/back_music.mp3" preload="none" loop playsinline></audio><div id="home" class="home"><div class="landingCardStream" aria-hidden="true"><img class="landingFlyingCard" src="cards/creatures/creature_snowman.png" alt="" loading="lazy" draggable="false" style="--flight:16s;--delay:-1s;--start-x:110vw;--start-y:-30vh;--end-x:-28vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/charms/charm_stupefy.png" alt="" loading="lazy" draggable="false" style="--flight:19.2s;--delay:-8s;--start-x:58vw;--start-y:-22vh;--end-x:-52vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/quidditch/quidd_firebolt.png" alt="" loading="lazy" draggable="false" style="--flight:15.2s;--delay:-13s;--start-x:110vw;--start-y:27vh;--end-x:-18vw;--end-y:130vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/transfiguration/transf_glacius.png" alt="" loading="lazy" draggable="false" style="--flight:21.6s;--delay:-19s;--start-x:80vw;--start-y:-22vh;--end-x:-40vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/potions/potinos_crystalball.png" alt="" loading="lazy" draggable="false" style="--flight:18.4s;--delay:-4s;--start-x:110vw;--start-y:43vh;--end-x:-14vw;--end-y:140vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/dark/dark_crucio.png" alt="" loading="lazy" draggable="false" style="--flight:20s;--delay:-16s;--start-x:40vw;--start-y:-22vh;--end-x:-65vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/creatures/creature_bowtruckle.png" alt="" loading="lazy" draggable="false" style="--flight:16.8s;--delay:-11s;--start-x:110vw;--start-y:5vh;--end-x:-28vw;--end-y:120vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/charms/charm_stupefy.png" alt="" loading="lazy" draggable="false" style="--flight:17s;--delay:-5s;--start-x:94vw;--start-y:-25vh;--end-x:-34vw;--end-y:118vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/creatures/creature_snowman.png" alt="" loading="lazy" draggable="false" style="--flight:19s;--delay:-14s;--start-x:53vw;--start-y:-30vh;--end-x:-55vw;--end-y:118vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/dark/dark_crucio.png" alt="" loading="lazy" draggable="false" style="--flight:18s;--delay:-9s;--start-x:112vw;--start-y:32vh;--end-x:-20vw;--end-y:135vh" onerror="this.style.display='none'"></div><img class="landingSnitch" src="backgrounds/snitch.gif" alt="" aria-hidden="true" onerror="this.style.display='none'"><div class="homeBox"><h1 class="homeTitle"><img src="backgrounds/hpmini_title.png" alt="Pocket TCG Simulator" onerror="this.style.display='none';this.parentNode.appendChild(document.createTextNode('Pocket TCG Simulator'))"></h1><div class="homeActions"><button class="homeBtn" onclick="showPlay()">▶ Play</button><button class="homeBtn" onclick="showBuilder()">▦ Deck Builder</button><button class="homeBtn" onclick="showDatabase()">▤ Database</button><button class="homeBtn" onclick="showRules()">📖 Rules</button></div></div><div class="landingVersion">Pocket Magic Awakened · v1.247</div></div><div id="rules" class="rulesScreen screenHidden" aria-label="Game rules">
 <div class="rulesBar"><h2>📖 Official Game Guide</h2><span style="flex:1"></span><button onclick="showHome()">← Back to Menu</button></div>
 <div class="rulesLayout"><nav class="rulesNav" aria-label="Rulebook sections">
 <a href="#rules-overview">Overview</a><a href="#rules-decks">Deck Building</a><a href="#rules-setup">Setup & Mulligan</a><a href="#rules-turn">Turn Structure</a><a href="#rules-actions">Actions & Lessons</a><a href="#rules-cards">Card Types</a><a href="#rules-spells">Spell Chains</a><a href="#rules-creatures">Creatures & Damage</a><a href="#rules-keywords">Keywords</a><a href="#rules-tokens">Tokens</a><a href="#rules-online">Online & Local Play</a><a href="#rules-reference">Quick Reference</a>
@@ -1697,11 +1705,12 @@ function canSpendAction(p,c,lesson=false){
  if(p!==turn){toast('Only the active player may spend actions.');return false;}
  const s=P[p],cost=actionCost(c,p);
  if(c?.type==='Creature'&&P[3-p].play.some(x=>x.name==='Fwoopers'&&!x.frozen)&&(Number(s.creaturesPlayedTurnV194)||0)>=1){toast('Fwoopers: you can only play 1 Creature this turn.');return false;}
+ if(lesson&&P[3-p].play.some(x=>x.name==='Finite Incantatem'&&!x.frozen)&&!s.hand.length){toast('Finite Incantatem: you must discard a card to play a Lesson.');return false;}
  if(lesson&&(s.lessonsPlayed||0)>=2){toast('Maximum 2 Lessons per turn.');return false;}
  if((s.actionsLeft??2)<cost){toast('Not enough Actions ('+(s.actionsLeft??2)+' remaining).');return false;}
  return true;
 }
-function spendAction(p,c,lesson=false){if(phase!=='game')return;P[p].actionsLeft=(P[p].actionsLeft??2)-actionCost(c,p);if(lesson)P[p].lessonsPlayed=(P[p].lessonsPlayed||0)+1;}
+function spendAction(p,c,lesson=false){if(phase!=='game')return;P[p].actionsLeft=(P[p].actionsLeft??2)-actionCost(c,p);if(lesson){P[p].lessonsPlayed=(P[p].lessonsPlayed||0)+1; if(P[3-p].play.some(x=>x.name==='Finite Incantatem'&&!x.frozen))discardOneFromHandV238(p,'Finite Incantatem Lesson tax',3-p);}}
 let basicCastEventSerial=0,basicCastSeenSerial=0,basicCastEventPlayer=0;
 function showBasicCastNotice(p){
  const old=document.getElementById('basicCastNotice');if(old)old.remove();
@@ -1977,11 +1986,12 @@ const AUTO_DAMAGE_SPELLS={
  'Snowman':{steps:[{type:'freeze',scope:'creatureOrPlayer',onlyOpponent:true}]},
  'Yeti':{steps:[{type:'freeze',scope:'creatureOrPlayer',onlyOpponent:true}]},
  'Orb of Water':{steps:[{type:'orb',scope:'any',max:3}]},
- 'Slug Vomiting Charm':{steps:[{type:'freeze',scope:'starting',fixedOpponent:true},{type:'manual',message:'Opponent discards one card manually.'}]},
+ 'Slug Vomiting Charm':{steps:[{type:'freeze',scope:'starting',fixedOpponent:true}]},
  'Hot Air Charm':{steps:[{type:'clearFreeze'}]},
  'Oppugno':{steps:[{type:'oppugno',scope:'player',fixedOpponent:true}]},
  'Arrow Shooting Spell':{steps:[{type:'arrowChoice',scope:'player',fixedOpponent:true}]},
  'Gubridian Fire':{steps:[{type:'gubridian'}]},
+ 'Finite Incantatem':{steps:[{type:'finiteDestroyV247'}]},
  'Crucio':{steps:[{type:'damage',amount:2,scope:'any'}]},
   'Inflatus':{steps:[{type:'freeze',scope:'any',max:2}]},
   'Expulso':{steps:[{type:'damage',amount:2,scope:'player',fixedOpponent:true}]},
@@ -2361,6 +2371,7 @@ function autoStartFromCast(p,c){
   if(spec)return autoOpen(spec);
   toast(c.name+': resolve its On Play effect manually.');return true;
  }
+ if(c.name==='Apparate'){c.apparatePendingV247=true;return true;}
  if(['Homorphus','Imperio','Flagrate'].includes(c.name)){c.effectPendingV246=true;return true;}
  if(['Legillimens','Petrificus Totalus'].includes(c.name)){c.effectPendingV245=true;return true;}
  if(c.name==='Carpe Retractum'||c.name==='Wingardium Leviosa'){c.effectPendingV244=true;return true;}
@@ -2383,6 +2394,7 @@ function autoNextStep(){
 function autoFinish(){
  const s=autoEngine.pending;if(!s)return;
  if(s.name==='Expulso'&&s.source==='spell')discardOneFromHandV238(3-s.player,'Expulso',s.player);
+ if(s.name==='Slug Vomiting Charm'&&autoCanControl(s.player))discardOneFromHandV238(3-s.player,'Slug Vomiting Charm',s.player);
  // Completion belongs to the same resolution as its last applied step.
  if(s.shouldDiscard||s.expireAfter){const board=P[s.player].play;const i=board.findIndex(c=>c.id===s.cardId);if(i>=0){const c=board.splice(i,1)[0];c.tapped=false;if(!c.isToken)P[s.player][c.castFromDiscard?'exile':'discard'].push(c);}}
  autoEngine.pending=null;autoEngine.minimized=false;autoCleanLinked();
@@ -2391,7 +2403,7 @@ function autoFinish(){
  else{render();}
 }
 function autoEligible(s,step){
- if(step.type==='manual'||step.type==='clearFreeze'||step.type==='totalum'||step.type==='gubridian'||step.type==='orbBurst'||step.type==='shieldAll')return [];
+ if(step.type==='manual'||step.type==='clearFreeze'||step.type==='totalum'||step.type==='gubridian'||step.type==='orbBurst'||step.type==='shieldAll'||step.type==='finiteDestroyV247')return [];
  const scope=(s.name==='Obscurus'&&s.replicate&&step.type==='variable')?'any':((step.type==='arrowChoice'&&document.getElementById('autoArrowOption')?.value==='destroy')?'creature':(step.scope||'any')),opponentOnly=step.onlyOpponent||s.replicate||step.fixedOpponent||step.type==='incendio';
  let targets=autoTargetList(scope,s.player,opponentOnly);
  if(s.replicate&&s.name==='Expelliarmus'&&step.type==='damage')targets=autoTargetList('any',s.player,true);
@@ -2452,16 +2464,16 @@ function autoApplyChosen(){
  // V1.229: Expelliarmus can have zero legal targets (e.g. opposing Canuto).
  // Never leave its resolution trapped awaiting an impossible target; skip only
  // the damage stage, keeping its separately paid optional destruction stage.
- if(s.name==='Expelliarmus'&&step.type==='damage'&&!eligibility.some(r=>autoFind(r))){
-  autoLog(s.player,'Expelliarmus: no valid damage target; damage stage skipped.');
+ if(((s.name==='Expelliarmus'&&step.type==='damage')||(s.name==='Slug Vomiting Charm'&&step.type==='freeze'))&&!eligibility.some(r=>autoFind(r))){
+  autoLog(s.player,s.name+': no valid target; targeting stage skipped.');
   autoNextStep();render();
   if(lobbyMode==='invite'&&onlineStarted){clearTimeout(onlineSendTimer);onlinePublish('state');}
   return;
  }
- if(!['manual','clearFreeze','totalum','gubridian','orbBurst'].includes(step.type)&&!select.length&&!step.fixedOpponent&&!s.replicate&&s.name!=='Inflatus'){toast('Choose a valid target first.');return;}
+ if(!['manual','clearFreeze','totalum','gubridian','orbBurst','finiteDestroyV247'].includes(step.type)&&!select.length&&!step.fixedOpponent&&!s.replicate&&s.name!=='Inflatus'){toast('Choose a valid target first.');return;}
  const stageTargets=(s.replicate&&['damage','sectum','incendio','stupefyBonus','heal','freeze','crucio','variable'].includes(step.type))?autoTargetList('any',s.player,true).filter(r=>autoFind(r)):(step.fixedOpponent&&!select.length?eligibility.filter(r=>r.p!==s.player&&autoFind(r)):select);
  const unique=Array.from(new Map(stageTargets.map(r=>[autoRefKey(r),r])).values());
- if(!['manual','clearFreeze','totalum','gubridian','orbBurst','shieldAll'].includes(step.type)&&!unique.length&&step.type!=='stupefyBonus'&&!s.replicate&&s.name!=='Inflatus'){toast('No valid targets.');return;}
+ if(!['manual','clearFreeze','totalum','gubridian','orbBurst','shieldAll','finiteDestroyV247'].includes(step.type)&&!unique.length&&step.type!=='stupefyBonus'&&!s.replicate&&s.name!=='Inflatus'){toast('No valid targets.');return;}
  document.getElementById('autoResolutionOverlay')?.classList.remove('open');
  pushHistory();
  let damageLog=[];
@@ -2515,6 +2527,11 @@ function autoApplyChosen(){
   autoShield({p:s.player,kind:'starting',id:null},5);
   P[s.player].play.filter(c=>c.type==='Creature').forEach(c=>autoShield(autoRef(s.player,c),5));
  }
+ else if(step.type==='finiteDestroyV247'){
+  const enemy=3-s.player, destroyed=P[enemy].play.filter(c=>c.type==='Ongoing Spell'||/Dark\s*Spell/i.test(c.type||''));
+  for(const card of destroyed){const i=P[enemy].play.findIndex(c=>c.id===card.id);if(i>=0){P[enemy].play.splice(i,1);putInOwnersDiscardV191(card,enemy);if(card.name==='Protego Diabolica')queueMicrotask(()=>triggerProtegoDiabolicaDiscardV194(enemy,card));}}
+  autoCleanLinked();autoLog(s.player,'Finite Incantatem: destroyed '+destroyed.length+' opposing Ongoing/Dark Spells.');
+ }
  else if(step.type==='gubridian'){const source=P[s.player].play.find(c=>c.id===s.cardId);if(source)source.gubridianLastSerialV246=P[s.player].turnSerial;autoTargetList('creature',s.player,false).forEach(r=>dmg(r,2+extra));}
  else if(step.type==='clearFreeze'){for(const c of [P[s.player].char,...P[s.player].play])autoUnfreeze(c);if(s.name==='Hot Air Charm'){draw(s.player,1);autoLog(s.player,'Hot Air Charm: unfroze friendly cards and drew 1 card.');}}
  if(damageLog.length)autoLog(s.player,s.name+': '+damageLog.join('; '));
@@ -2552,7 +2569,7 @@ function autoRenderModal(){
  const hint=document.getElementById('autoEffectHint'),opts=document.getElementById('autoEffectTargets'),actions=document.getElementById('autoEffectActions');opts.replaceChildren();actions.replaceChildren();
  const step=s.steps[s.step],owner=autoCanControl(s.player);
  if(!step){autoFinish();return;}
- const note={damage:'Choose a valid target to damage.',heal:'Restore Health to a Creature or Player.',shield:'Grant Shield to valid targets.',freeze:'Freeze valid targets.',incendio:s.replicate?'Incarcerous: every opposing valid target receives 5 damage.':'Choose the primary target (4 damage). Other valid targets receive 1.',frozenBlast:'3 damage to every currently Frozen target.',stupefyBonus:'If the opponent has exactly one Creature, deal 2 additional damage to a valid target.',sectum:'3 damage +3 more if this target has already taken damage this turn.',orb:'Freeze up to 3 targets and deal 1 damage to each. When this card leaves play, deal 3 to the same targets.',orbBurst:'3 damage to the surviving original Orb of Water targets.',shieldAll:'Shield 2 to all your valid targets in play.',avada:'Choose a Creature or Ally to destroy. On the third casting, you may choose the opposing Player instead.',destroyItem:'Choose an opponent Item to destroy.',manual:step.message||'Complete the remaining actions manually.',crucio:'Select a target: cannot attack; suffers recurring 3 damage while Crucio remains in play.',arrowChoice:'Choose whether to deal damage or manually destroy a Creature.',variable:step.message||'Enter damage amount.',totalum:'Shield 5 to your Starting Ally and all Creatures you control.',gubridian:'2 damage to all Creatures on both boards.'};
+ const note={damage:'Choose a valid target to damage.',heal:'Restore Health to a Creature or Player.',shield:'Grant Shield to valid targets.',freeze:'Freeze valid targets.',incendio:s.replicate?'Incarcerous: every opposing valid target receives 5 damage.':'Choose the primary target (4 damage). Other valid targets receive 1.',frozenBlast:'3 damage to every currently Frozen target.',stupefyBonus:'If the opponent has exactly one Creature, deal 2 additional damage to a valid target.',sectum:'3 damage +3 more if this target has already taken damage this turn.',orb:'Freeze up to 3 targets and deal 1 damage to each. When this card leaves play, deal 3 to the same targets.',orbBurst:'3 damage to the surviving original Orb of Water targets.',shieldAll:'Shield 2 to all your valid targets in play.',avada:'Choose a Creature or Ally to destroy. On the third casting, you may choose the opposing Player instead.',destroyItem:'Choose an opponent Item to destroy.',manual:step.message||'Complete the remaining actions manually.',crucio:'Select a target: cannot attack; suffers recurring 3 damage while Crucio remains in play.',arrowChoice:'Choose whether to deal damage or manually destroy a Creature.',variable:step.message||'Enter damage amount.',totalum:'Shield 5 to your Starting Ally and all Creatures you control.',gubridian:'2 damage to all Creatures on both boards.',finiteDestroyV247:'Destroy all opposing Ongoing Spells and Dark Spells.'};
  hint.textContent=(s.name==='Diffindo'?'Select one target for 3 damage; then every Frozen target automatically takes 3 damage.':(note[step.type]||'Confirm this effect.'))+(s.replicate?' • Incarcerous active.':'')+(!owner?' • Waiting for controller.':'');
  const candidates=autoEligible(s,step);
  // A card protecting the opposing Starting Ally may legitimately leave
@@ -2576,7 +2593,7 @@ function autoRenderModal(){
   const meta=document.createElement('span');meta.className='autoArtMetaV225';meta.textContent=(selected?'✓ Selected':(autoIsDamagedThisTurn(r)?'Damaged this turn':'Select target'));
   b.append(frame,title,meta);b.disabled=!owner||s.source==='startTurn';b.onclick=()=>autoSelectTarget(r.p,r.kind,r.id);opts.appendChild(b);
  });
- const canBonus=['damage','sectum','incendio','frozenBlast','stupefyBonus','reducto','oppugno','variable','thestral','duel','arrowChoice','orb','gubridian','orbBurst'].includes(step.type)&&s.name!=='Obscurus';
+ const canBonus=['damage','sectum','incendio','frozenBlast','stupefyBonus','reducto','oppugno','variable','thestral','duel','arrowChoice','orb','gubridian','orbBurst','finiteDestroyV247'].includes(step.type)&&s.name!=='Obscurus';
  const bonusHolder=document.getElementById('autoBonusWrap');bonusHolder.style.display=canBonus?'flex':'none';document.getElementById('autoCandyInfo').textContent=s.autoCandyBonus?'Enchanted Candy +'+s.autoCandyBonus+' (already included)':'';
  const bonusInput=document.getElementById('autoBonusAmount');bonusInput.value=String(s.bonus??0);bonusInput.disabled=!owner;bonusInput.onchange=()=>{s.bonus=Math.max(0,Math.floor(Number(bonusInput.value)||0));};
  const arrow=document.getElementById('autoArrowWrap');arrow.style.display=step.type==='arrowChoice'?'flex':'none';
@@ -2584,7 +2601,7 @@ function autoRenderModal(){
  const btn=document.createElement('button');btn.textContent=expNoTargetV229?'✓ Continue — No Valid Target':(step.type==='manual'?'✓ Finished manual actions':'✓ Apply / Continue');btn.disabled=!owner;
  btn.onclick=()=>{
   if(step.type==='stupefyBonus'&&s.opponentCreatureCountAtStart!==1){pushHistory();autoNextStep();render();return;}
-  if(step.type==='frozenBlast'||step.type==='manual'||step.type==='gubridian'||step.type==='clearFreeze'||step.type==='totalum'||step.type==='orbBurst'){
+  if(step.type==='frozenBlast'||step.type==='manual'||step.type==='gubridian'||step.type==='finiteDestroyV247'||step.type==='clearFreeze'||step.type==='totalum'||step.type==='orbBurst'){
    if(step.type==='frozenBlast'){pushHistory();autoTargetList('any',s.player,!!s.replicate).filter(r=>autoFind(r)?.frozen).forEach(r=>{const result=autoDamage(s.player,r,3+s.autoCandyBonus+(Number(bonusInput.value)||0),s.name+' [area]');queueSpellImpactV162(r,result.damage);});autoLog(s.player,s.name+' Frozen area damage applied.');discardDefeatedCreaturesV159();autoNextStep();render();flushSpellImpactV162();if(lobbyMode==='invite'&&onlineStarted){clearTimeout(onlineSendTimer);onlinePublish('state');}return;}
    if(step.type==='manual'){pushHistory();autoNextStep();render();return;}
   }
@@ -2926,6 +2943,9 @@ function spellChainApprove(){
    }
   }
  }
+ // V1.247: Apparate's two alternatives resolve after the Quick Spell is approved.
+ // A response may destroy an explicitly player-targeting opponent Spell still on the stack.
+ if(done.card.name==='Apparate'&&!salvioActiveV217())queueMicrotask(()=>resolveApparateV247(done.player,done.card.id));
  // V1.219: draw and hand-shuffle effects resolve immediately on approval.
  if(done.card.name==='Duel of the Seekers'&&!salvioActiveV217()){
   draw(done.player,1);
@@ -3757,6 +3777,32 @@ function chooseEffectCardV218(title,description,cards){
 // V1.222 — Shared visual selectors for card-triggered choices. The existing
 // Beater card-image dialog is retained as the only choice presentation.
 let effectChoiceQueueV222=Promise.resolve();
+async function resolveApparateV247(p,id){
+ if(!autoCanControl(p))return;
+ const own=()=>P[p].play.find(c=>c.id===id&&c.name==='Apparate');
+ if(!own())return;
+ const opts=[];
+ for(let side=1;side<=2;side++)for(const c of P[side].play)if(c.type==='Location')opts.push({id:'location:'+side+':'+c.id,name:c.name+' · Location',image:c.image});
+ const targeted=spellChain.filter(entry=>entry.player!==p&&entry.card&&
+   (AUTO_DAMAGE_SPELLS[entry.card.name]?.steps||[]).some(step=>step.fixedOpponent&&step.scope==='player'));
+ for(const entry of targeted)opts.push({id:'spell:'+entry.card.id,name:entry.card.name+' · Targeting your Player',image:entry.card.image});
+ const chosen=opts.length?await queueCardChoiceV222('Apparate — Choose One','Destroy a Location, or an opposing Spell currently targeting you.',opts):null;
+ if(!autoCanControl(p)||!own())return;
+ let target=null;
+ if(typeof chosen==='string'&&chosen.startsWith('location:')){
+  const [,side,idStr]=chosen.split(':'),z=P[Number(side)]?.play;
+  const ix=z?.findIndex(c=>c.id===Number(idStr)&&c.type==='Location')??-1;
+  if(ix>=0){target=z.splice(ix,1)[0];putInOwnersDiscardV191(target,Number(side));}
+ }else if(typeof chosen==='string'&&chosen.startsWith('spell:')){
+  const ix=spellChain.findIndex(e=>e.player!==p&&e.card?.id===Number(chosen.slice(6))&&
+   (AUTO_DAMAGE_SPELLS[e.card.name]?.steps||[]).some(step=>step.fixedOpponent&&step.scope==='player'));
+  if(ix>=0){const entry=spellChain.splice(ix,1)[0];target=entry.card;putInOwnersDiscardV191(target,entry.player);}
+ }
+ const ix=P[p].play.findIndex(c=>c.id===id&&c.name==='Apparate');
+ if(ix>=0){const card=P[p].play.splice(ix,1)[0];putInOwnersDiscardV191(card,p);}
+ autoLog(p,target?'Apparate destroyed '+target.name+'.':'Apparate resolved without a selected target.');
+ autoCleanLinked();render();if(lobbyMode==='invite'&&onlineStarted)onlinePublish('state');
+}
 function queueCardChoiceV222(title,description,options){
  const task=effectChoiceQueueV222.then(()=>chooseEffectCardV218(title,description,options));
  effectChoiceQueueV222=task.then(()=>undefined,()=>undefined);
