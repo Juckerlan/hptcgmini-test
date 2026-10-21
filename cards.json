@@ -927,5 +927,19 @@
     "effect": "Enters with Shield 2. Your Basic Casts deal damage equal to this Creature's Damage. While this is in play, you can't play Spells, your Starting Ally remains Frozen and can't be targeted by your opponent. If this Creature is defeated, you lose the game.",
     "image": "cards/tokens/token_werewolf.png",
     "token": true
+  },
+  "Langlock": {
+    "type": "Dark Spell",
+    "domain": "Dark Arts",
+    "cost": 3,
+    "effect": "Countdown 1: Prevent your opponent from using Spells this turn.",
+    "image": "cards/dark/dark_langlock.png"
+  },
+  "Flagrate": {
+    "type": "Dark Spell",
+    "domain": "Dark Arts",
+    "cost": 3,
+    "effect": "Deal 2 damage to the opposing Player for each Item they control.",
+    "image": "cards/dark/dark_flagrate.png"
   }
 }
