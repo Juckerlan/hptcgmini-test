@@ -941,5 +941,12 @@
     "cost": 3,
     "effect": "Deal 2 damage to the opposing Player for each Item they control.",
     "image": "cards/dark/dark_flagrate.png"
+  },
+  "Confringo": {
+    "type": "Spell",
+    "domain": "Charms",
+    "cost": 5,
+    "effect": "Deal 2 damage to your opponent, plus 1 additional damage for each Creature and Ally they control, up to 5 additional damage.",
+    "image": "cards/charms/charm_confringo.png"
   }
 }
