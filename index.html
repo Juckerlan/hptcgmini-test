@@ -2747,8 +2747,25 @@ function autoRenderModal(){
   if(portrait){const img=document.createElement('img');img.src=portrait;img.alt=entity?.name||'Starting Ally';img.loading='lazy';frame.appendChild(img);}
   else{const fallback=document.createElement('span');fallback.className='autoArtFallbackV225';fallback.textContent=r.kind==='starting'?'★':(entity?.name||'Card');frame.appendChild(fallback);}
   const title=document.createElement('span');title.className='autoArtNameV225';title.textContent=r.kind==='starting'?'Player '+r.p+' • '+(entity?.name||'Starting Ally'):(entity?.name||'Card');
-  const meta=document.createElement('span');meta.className='autoArtMetaV225';meta.textContent=(selected?'✓ Selected':(autoIsDamagedThisTurn(r)?'Damaged this turn':'Select target'));
-  b.append(frame,title,meta);b.disabled=!owner||s.source==='startTurn';b.onclick=()=>autoSelectTarget(r.p,r.kind,r.id);opts.appendChild(b);
+  // V1.259: read-only target details; selection and spell resolution remain unchanged.
+  const details=document.createElement('span');details.className='autoTargetDetailsV259';
+  const health=document.createElement('span');health.className='autoTargetHealthV259';
+  if(r.kind==='starting')health.textContent='♥ Health: '+P[r.p].life;
+  else if(entity?.type==='Creature'&&entity.life!=null)health.textContent='♥ Health: '+entity.life;
+  else health.textContent='Health: —';
+  details.appendChild(health);
+  const statuses=document.createElement('span');statuses.className='autoTargetStatusesV259';
+  const addStatus=(label,active,style)=>{const tag=document.createElement('span');tag.className='autoTargetStatusV259 '+(active?style:'inactive');tag.textContent=label;statuses.appendChild(tag);};
+  addStatus('❄ Frozen',!!entity?.frozen,'frozen');
+  const shieldAmount=entity?.shield?Math.max(0,Number(entity.shieldValue)||1):0;
+  addStatus('🛡 Shield'+(shieldAmount?' '+shieldAmount:''),!!entity?.shield,'shield');
+  addStatus('☠ Cursed',!!entity?.curse,'cursed');
+  details.appendChild(statuses);
+  const meta=document.createElement('span');meta.className='autoArtMetaV225';
+  meta.textContent=(autoIsDamagedThisTurn(r)?'⚠ Damaged this turn':'Not damaged this turn');
+  details.appendChild(meta);
+  const selectionLabel=document.createElement('span');selectionLabel.className='autoTargetSelectionV259';selectionLabel.textContent=selected?'✓ Selected':'Select target';
+  b.append(frame,title,details,selectionLabel);b.disabled=!owner||s.source==='startTurn';b.onclick=()=>autoSelectTarget(r.p,r.kind,r.id);opts.appendChild(b);
  });
  const canBonus=['damage','sectum','incendio','frozenBlast','stupefyBonus','reducto','oppugno','variable','thestral','duel','arrowChoice','orb','gubridian','orbBurst','finiteDestroyV247'].includes(step.type)&&s.name!=='Obscurus';
  const bonusHolder=document.getElementById('autoBonusWrap');bonusHolder.style.display=canBonus?'flex':'none';document.getElementById('autoCandyInfo').textContent=s.autoCandyBonus?'Enchanted Candy +'+s.autoCandyBonus+' (already included)':'';
@@ -4877,6 +4894,19 @@ syncMobileGameMenu();
 .autoResolutionOverlay .autoArtNameV225{font:600 12px/1.25 Georgia,serif;margin-top:8px;min-height:29px;overflow-wrap:anywhere}
 .autoResolutionOverlay .autoArtMetaV225{color:#d5bd92;font-size:10px;margin-top:5px}
 @media(max-width:480px){.autoResolutionOverlay .autoEffectTargets{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.autoResolutionOverlay .autoArtTargetV225{padding:4px}.autoResolutionOverlay .autoArtNameV225{font-size:10px}}
+</style>
+<style id="autoTargetDetailsStyleV259">
+.autoResolutionOverlay .autoTargetDetailsV259{display:flex;flex-direction:column;align-items:center;gap:5px;margin-top:6px;font-size:10px;min-width:0}
+.autoResolutionOverlay .autoTargetHealthV259{font-weight:750;color:#ffb6b9}
+.autoResolutionOverlay .autoTargetStatusesV259{display:flex;flex-wrap:wrap;justify-content:center;gap:3px}
+.autoResolutionOverlay .autoTargetStatusV259{border:1px solid currentColor;border-radius:5px;padding:2px 4px;font-size:9px;line-height:1.2;white-space:nowrap}
+.autoResolutionOverlay .autoTargetStatusV259.inactive{color:#8e9aa9;border-color:#495567;opacity:.7}
+.autoResolutionOverlay .autoTargetStatusV259.frozen{color:#93d7ff}
+.autoResolutionOverlay .autoTargetStatusV259.shield{color:#b9caff}
+.autoResolutionOverlay .autoTargetStatusV259.cursed{color:#dfaaff}
+.autoResolutionOverlay .autoTargetSelectionV259{display:block;margin-top:auto;padding-top:7px;color:#e8c887;font-size:10px;font-weight:700}
+.autoResolutionOverlay .autoArtTargetV225.chosen .autoTargetSelectionV259{color:#9df0b3}
+@media(max-width:480px){.autoResolutionOverlay .autoTargetStatusV259{font-size:8px;padding:2px 3px}}
 </style>
 <style id="autoEngineStyleV160">
 .autoResolutionOverlay{display:none;position:fixed;inset:0;z-index:15010;background:#060a12e8;align-items:center;justify-content:center;padding:14px}
