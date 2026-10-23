@@ -1000,5 +1000,12 @@
     "cost": 0,
     "effect": "All your Item cards deal 1 additional damage.",
     "image": "cards/allies/char_ginny.png"
+  },
+  "Quaffle": {
+    "type": "Item",
+    "domain": "Quidditch",
+    "cost": 4,
+    "effect": "When this enters play, equip it to an Ally or Creature you control. Equipped Ally: You may activate one of this Ally's abilities an additional time each turn. Equipped Creature: This Creature gets +2 Damage during the Combat Phase.",
+    "image": "cards/quidditch/quidd_quaffle.png"
   }
 }
