@@ -1052,5 +1052,14 @@
     "damage": 5,
     "effect": "When this attacks: Deal 2 damage to the opposing Player. If you control another Dragon, deal 1 damage to all Creatures your opponent controls.",
     "image": "cards/creatures/creature_horntail.png"
+  },
+  "Tree-Headed Puppy": {
+    "type": "Creature",
+    "domain": "Neutral",
+    "cost": 8,
+    "health": 7,
+    "damage": 2,
+    "effect": "Block. This creature costs 1 less for each Lesson you control.",
+    "image": "cards/creatures/creature_puppy.png"
   }
 }
