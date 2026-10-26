@@ -345,9 +345,9 @@
     "type": "Creature",
     "domain": "Quidditch",
     "cost": 3,
-    "life": 3,
+    "health": 3,
     "damage": 2,
-    "effect": "Whenever this deals damage to a Player, look at the top card of your deck. You may put it on the bottom.",
+    "effect": "Whenever a card leaves the player board: deal 1 damage to an opposing target.",
     "image": "cards/quidditch/quidd_winged.png"
   },
   "Beater": {
@@ -361,14 +361,14 @@
     "type": "Ally",
     "domain": "Quidditch",
     "cost": "-",
-    "effect": "Once per turn, search your deck for a Golden Snitch or Quidditch Item, reveal it, put it into your hand, then shuffle.",
+    "effect": "Once per turn, look at the top 3 cards from your deck, reveal an Item and put it into your hand. If you have Golden Snitch, return an Item from the discard instead.",
     "image": "cards/quidditch/quidd_seeker.png"
   },
   "Guardian": {
     "type": "Ally",
     "domain": "Quidditch",
     "cost": "-",
-    "effect": "When any of the Quidditch Items you control are about to be destroyed, discard me instead to prevent it.",
+    "effect": "Once per turn, if you have any Quidditch Item on board, give Shield 1 to a target you control.",
     "image": "cards/quidditch/quidd_guardian.png"
   },
   "Memory Vial": {
@@ -1004,8 +1004,53 @@
   "Quaffle": {
     "type": "Item",
     "domain": "Quidditch",
-    "cost": 4,
-    "effect": "When this enters play, equip it to an Ally or Creature you control. Equipped Ally: You may activate one of this Ally's abilities an additional time each turn. Equipped Creature: This Creature gets +2 Damage during the Combat Phase.",
+    "cost": 2,
+    "effect": "When this enters play or discarded. Heal 2 from any of your targets.",
     "image": "cards/quidditch/quidd_quaffle.png"
+  },
+  "Chinese Fireball Dragon": {
+    "type": "Creature",
+    "domain": "Neutral",
+    "cost": 5,
+    "health": 4,
+    "damage": 3,
+    "effect": "When this enters play: Deal 2 damage to a target. If you control another Dragon, deal 2 damage to an additional target.",
+    "image": "cards/creatures/creature_fireball.png"
+  },
+  "Norwegian Ridgeback": {
+    "type": "Creature",
+    "domain": "Neutral",
+    "cost": 5,
+    "health": 5,
+    "damage": 2,
+    "effect": "When this enters play: Look at the top 3 cards of your deck. You may reveal a Creature and put it into your hand. If you control another Dragon, draw 1 card.",
+    "image": "cards/creatures/creature_rigeback.png"
+  },
+  "Ukrainian Ironbelly": {
+    "type": "Creature",
+    "domain": "Neutral",
+    "cost": 6,
+    "health": 7,
+    "damage": 3,
+    "effect": "When this enters play: This Creature gains Shield. If you control another Dragon, your other Dragons gain Shield 1.",
+    "image": "cards/creatures/creature_ironbelly.png"
+  },
+  "Antipodean Opaleye": {
+    "type": "Creature",
+    "domain": "Neutral",
+    "cost": 6,
+    "health": 5,
+    "damage": 4,
+    "effect": "When this enters play: Heal 3 damage from any of your targets. If you control another Dragon, heal 2 damage from each of your Dragons.",
+    "image": "cards/creatures/creature_opaleye.png"
+  },
+  "Hungarian Horntail": {
+    "type": "Creature",
+    "domain": "Neutral",
+    "cost": 7,
+    "health": 5,
+    "damage": 5,
+    "effect": "When this attacks: Deal 2 damage to the opposing Player. If you control another Dragon, deal 1 damage to all Creatures your opponent controls.",
+    "image": "cards/creatures/creature_horntail.png"
   }
 }
