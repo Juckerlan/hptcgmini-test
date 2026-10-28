@@ -136,7 +136,7 @@
     "type": "Spell",
     "domain": "Transfiguration",
     "cost": 2,
-    "effect": "Additional Cost — Discard 1 Transfiguration Lesson: Create 2 Bird Tokens.",
+    "effect": "Create 2 Magical Birds Tokens.",
     "image": "cards/transfiguration/transf_avis.png"
   },
   "Confundus": {
@@ -198,7 +198,7 @@
   "Piertotum Locomotor": {
     "type": "Spell",
     "domain": "Transfiguration",
-    "cost": 6,
+    "cost": 5,
     "effect": "Create 2 Stone Guardian Tokens.",
     "image": "cards/transfiguration/transf_piertotum.png"
   },
@@ -774,9 +774,9 @@
     "type": "Creature",
     "domain": "Neutral",
     "cost": 4,
-    "health": 4,
-    "life": 4,
-    "damage": 3,
+    "health": 5,
+    "life": 5,
+    "damage": 2,
     "effect": "While you control no other Creatures than Centaurs: This card gets +2 Damage.",
     "image": "cards/creatures/creature_centaur.png"
   },
