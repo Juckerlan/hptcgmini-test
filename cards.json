@@ -1135,7 +1135,7 @@
     "type": "Ally",
     "domain": "Neutral",
     "cost": 0,
-    "effect": "When you play a Spell and a Dark Spell in the same turn, play a Decree token on your opponent's board.",
+    "effect": "When you play a card and a Dark Spell in the same turn, play a Decree token on your opponent's board.",
     "image": "cards/allies/char_umbridge.png"
   },
   "Fianto Duri": {
@@ -1156,7 +1156,7 @@
     "type": "Ally",
     "domain": "Neutral",
     "cost": "-",
-    "effect": "Curse effects resolve twice. Whenever you play a Spell from your discard pile, look at the top 3 cards of your deck. You may add a Death Eater or Crucio to your hand.",
+    "effect": "Curse effects resolve twice. Whenever you play a Dark Spell from your discard pile, look at the top 3 cards of your deck. You may add a Death Eater or Crucio to your hand.",
     "image": "cards/allies/char_bellatrix.png"
   },
   "Conjunctivitis Curse": {
