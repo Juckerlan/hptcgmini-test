@@ -1075,5 +1075,20 @@
     "cost": 5,
     "effect": "Deal 4 damage to a target. Draw 1 card.",
     "image": "cards/neutral/neutral_desmaius.png"
+  },
+  "Alastor Moody": {
+    "type": "Ally",
+    "domain": "Neutral",
+    "cost": 0,
+    "effect": "Once per turn, when your opponent plays a Spell that targets one of your cards, you may change its target to another target you control. At the beggining of your first turn play a Moody's Magical Eye.",
+    "image": "cards/allies/char_moody.png"
+  },
+  "Moody's Magical Eye": {
+    "type": "Item",
+    "domain": "Neutral",
+    "cost": 0,
+    "effect": "Your opponent's card effects can't prevent you from targeting their Allies or Creatures. When redirecting a Spell, you may choose any valid target.",
+    "image": "cards/tokens/token_eye.png",
+    "token": true
   }
 }
