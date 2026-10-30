@@ -670,7 +670,7 @@
     "type": "Dark Spell",
     "domain": "Dark Arts",
     "cost": 4,
-    "effect": "Countdown 1: Deal 2 damage to a target. If it's a Creature and survives, curse it. If it's the opposing Player, curse it and they discard 1 Lesson.",
+    "effect": "Countdown 1: Deal 2 damage to a target. If it's a Creature and survives, curse it. If it's the opposing Player, curse it.",
     "image": "cards/dark/dark_crucio.png"
   },
   "Hot Air Charm": {
@@ -1137,5 +1137,33 @@
     "cost": 0,
     "effect": "When you play a Spell and a Dark Spell in the same turn, play a Decree token on your opponent's board.",
     "image": "cards/allies/char_umbridge.png"
+  },
+  "Fianto Duri": {
+    "type": "Quick Spell",
+    "domain": "Neutral",
+    "cost": 3,
+    "effect": "Give a Creature you control Block.",
+    "image": "cards/neutral/neutral_fianto.png"
+  },
+  "Kingsley Shackelbolt": {
+    "type": "Ally",
+    "domain": "Neutral",
+    "cost": "-",
+    "effect": "Whenever you play a neutral spell, draw 1 card.",
+    "image": "cards/allies/char_shackelbolt.png"
+  },
+  "Bellatrix Lestrange": {
+    "type": "Ally",
+    "domain": "Neutral",
+    "cost": "-",
+    "effect": "Curse effects resolve twice. Whenever you play a Spell from your discard pile, look at the top 3 cards of your deck. You may add a Death Eater or Crucio to your hand.",
+    "image": "cards/allies/char_bellatrix.png"
+  },
+  "Conjunctivitis Curse": {
+    "type": "Dark Spell",
+    "domain": "Dark Arts",
+    "cost": 4,
+    "effect": "Countdown 1: Your opponent must keep their hand face down on the table. Give your opponent Curse.",
+    "image": "cards/dark/dark_conjuntivitis.png"
   }
 }
