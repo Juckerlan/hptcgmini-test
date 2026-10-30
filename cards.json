@@ -833,7 +833,7 @@
     "health": 3,
     "life": 3,
     "damage": 5,
-    "effect": "This card cannot be targeted by other creatures.",
+    "effect": "This card can only be damaged by other creatures.",
     "image": "cards/creatures/creature_demiguise.png"
   },
   "Ashwinder": {
@@ -1165,5 +1165,12 @@
     "cost": 4,
     "effect": "Countdown 1: Your opponent must keep their hand face down on the table. Give your opponent Curse.",
     "image": "cards/dark/dark_conjuntivitis.png"
+  },
+  "Renevate": {
+    "type": "Spell",
+    "domain": "Neutral",
+    "cost": 2,
+    "effect": "Remove all status conditions from a target you control.",
+    "image": "cards/neutral/neutral_renevate.png"
   }
 }
