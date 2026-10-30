@@ -195,6 +195,13 @@
     "effect": "Additional Cost — Discard a Lesson. Return up to 2 Items you control to your hand; if you paid the additional cost, return 2 Items your opponent controls instead.",
     "image": "cards/transfiguration/transf_carperetractum.png"
   },
+  "Bombarda": {
+    "type": "Spell",
+    "domain": "Transfiguration",
+    "cost": 7,
+    "effect": "Destroy all cards on the board. Deal 1 damage to your opponent for each of their cards destroyed this way.",
+    "image": "cards/transfiguration/transf_bombarda.png"
+  },
   "Piertotum Locomotor": {
     "type": "Spell",
     "domain": "Transfiguration",
@@ -255,6 +262,15 @@
     "damage": 1,
     "effect": "When this enters play, Freeze an opposing target.",
     "image": "cards/creatures/creature_snowman.png"
+  },
+  "Erumpent": {
+    "type": "Creature",
+    "domain": "Neutral",
+    "cost": 5,
+    "health": 5,
+    "damage": 3,
+    "effect": "Whenever this card is targeted by a Spell, deal 1 damage to that Spell's controller.",
+    "image": "cards/creatures/creature_erumpent.png"
   },
   "Firecrab": {
     "type": "Creature",
@@ -1090,5 +1106,36 @@
     "effect": "Your opponent's card effects can't prevent you from targeting their Allies or Creatures. When redirecting a Spell, you may choose any valid target.",
     "image": "cards/tokens/token_eye.png",
     "token": true
+  },
+  "Umbridge Lesson Decree": {
+    "type": "Item",
+    "domain": "Neutral",
+    "cost": 0,
+    "effect": "Whenever you play a Lesson, discard 1 card from your hand.",
+    "image": "cards/tokens/token_decree_lesson.png",
+    "token": true
+  },
+  "Umbridge Spell Decree": {
+    "type": "Item",
+    "domain": "Neutral",
+    "cost": 0,
+    "effect": "Your Spells cost 1 additional Lesson to play.",
+    "image": "cards/tokens/token_decree_spell.png",
+    "token": true
+  },
+  "Umbridge Card Decree": {
+    "type": "Item",
+    "domain": "Neutral",
+    "cost": 0,
+    "effect": "Whenever you draw a card, take 1 damage.",
+    "image": "cards/tokens/token_decree_card.png",
+    "token": true
+  },
+  "Dolores Umbridge": {
+    "type": "Ally",
+    "domain": "Neutral",
+    "cost": 0,
+    "effect": "When you play a Spell and a Dark Spell in the same turn, play a Decree token on your opponent's board.",
+    "image": "cards/allies/char_umbridge.png"
   }
 }
