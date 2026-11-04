@@ -2199,7 +2199,13 @@
 @media(max-width:900px){#lobby .dedicatedLobbyLayout{display:flex!important;flex-direction:column!important;gap:16px!important}#lobby .dedicatedLobbySecondary{order:-1}#lobby .dedicatedLobbyPrimary,#lobby .dedicatedLobbySecondary{gap:13px!important}#lobby .dedicatedLobbyPage{width:100%}}
 @media(max-width:600px){#lobby .lobbyBar #lobbyStatus{display:none!important}#lobby .lobbyBody{width:calc(100% - 22px)!important;padding:15px 0 25px!important}#lobby .dedicatedLobbyIntro{padding:0 2px 14px;margin-bottom:14px}#lobby .dedicatedLobbyIntro h1{font-size:28px}#lobby .modeGrid{grid-template-columns:1fr!important;gap:9px!important}#lobby .modeCard{min-height:0!important;padding:12px!important}#lobby .lobbyGrid{grid-template-columns:1fr!important;gap:10px!important}#lobby .lobbyFooter{flex-wrap:wrap!important;padding:13px!important;gap:10px!important}#lobby .lobbyFooter #lobbyStart{width:100%;min-width:0!important}#lobby .onlineRoomPanel>div:first-child{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}#lobby .magicLobbyDeckPreview{grid-template-columns:1fr!important}#lobby .dedicatedOfflineModeBlock,#lobby .dedicatedOnlineRoomBlock{padding:13px}#lobby .dedicatedLobbyPage .magicMatchFormat{order:initial!important}}
 </style>
-</head><body><div id="lobbyArrivalV186" class="lobbyArrivalV186" aria-live="polite"><div class="lobbyArrivalContentV186"><strong>✦ Duelist Joined! ✦</strong><small id="lobbyArrivalNameV186">Your challenger has entered the chamber.</small></div></div><div id="mobileHandMenu"><button onclick="mobileHandAction('play')">Play</button><button onclick="mobileHandAction('reveal')">Reveal</button><button onclick="mobileHandAction('shuffle')">Shuffle into Deck</button><button onclick="mobileHandAction('discard')">Discard</button></div><button id="mobilePileToggleV1295" type="button" onclick="toggleMobileUtilityMenuV1298(event)">Menu</button><div id="mobilePileDockV1295" aria-hidden="true"><div class="mobilePileDockHeadV1295"><strong>Card Piles</strong><button type="button" onclick="closeMobilePileDockV1295(event)">Close</button></div><div class="mobilePileDockGridV1295"><button class="mobilePileDockItemV1295" id="mobilePileLessonV1295" type="button" onclick="openMobilePileKindV1295('lesson',event)"></button><button class="mobilePileDockItemV1295" id="mobilePileDiscardV1295" type="button" onclick="openMobilePileKindV1295('discard',event)"></button><button class="mobilePileDockItemV1295" id="mobilePileLessonDiscardV1295" type="button" onclick="openMobilePileKindV1295('ldiscard',event)"></button></div></div><div id="mobileUtilityMenuV1298" aria-hidden="true"><button type="button" data-mobile-util="shuffle" onclick="runMobileUtilityActionV1298('shuffle',event)">Shuffle Hand Into Deck</button><button type="button" id="mobileUtilityRevealV1298" data-mobile-util="reveal" onclick="runMobileUtilityActionV1298('reveal',event)">Reveal Hand</button><button type="button" data-mobile-util="chat" onclick="runMobileUtilityActionV1298('chat',event)">Chat / Log</button><button type="button" data-mobile-util="close" onclick="runMobileUtilityActionV1298('close',event)">Close</button></div><div id="startingAllyMobileOverlay" role="dialog" aria-modal="true" aria-label="Starting Ally card" onclick="closeStartingAllyMobile(event)"><div class="allyPopup"><img id="startingAllyMobileImage" alt="Starting Ally full card"><button type="button" onclick="closeStartingAllyMobile(event)">Close</button></div></div><div id="sideboardModal" style="display:none;position:fixed;inset:0;z-index:30000;background:rgba(5,10,24,.94);overflow:auto;padding:24px;color:#f2e6cb"><div style="max-width:960px;margin:auto;background:#14243a;border:2px solid #a98a54;border-radius:14px;padding:22px"><h2 id="sideboardTitle">Sideboard</h2><p id="sideboardHelp">Swap up to five cards. Choose a card from each column to exchange.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px"><section><h3>Main Deck <span id="sideMainCount"></span></h3><div id="sideMainCards" style="max-height:55vh;overflow:auto"></div></section><section><h3>Sideboard <span id="sideReserveCount"></span></h3><div id="sideReserveCards" style="max-height:55vh;overflow:auto"></div></section></div><p id="sideboardStatus"></p><button id="sideboardConfirm" onclick="confirmSideboard()" style="padding:12px 24px;background:#ac8d54;color:#101827;font-weight:bold">Confirm Sideboard</button></div></div><audio id="gameplayBackgroundMusic" src="backgrounds/back_music.mp3" preload="none" loop playsinline></audio><div id="home" class="home"><div class="landingCardStream" aria-hidden="true"><img class="landingFlyingCard" src="cards/creatures/creature_snowman.png" alt="" loading="lazy" draggable="false" style="--flight:16s;--delay:-1s;--start-x:110vw;--start-y:-30vh;--end-x:-28vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/charms/charm_stupefy.png" alt="" loading="lazy" draggable="false" style="--flight:19.2s;--delay:-8s;--start-x:58vw;--start-y:-22vh;--end-x:-52vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/quidditch/quidd_firebolt.png" alt="" loading="lazy" draggable="false" style="--flight:15.2s;--delay:-13s;--start-x:110vw;--start-y:27vh;--end-x:-18vw;--end-y:130vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/transfiguration/transf_glacius.png" alt="" loading="lazy" draggable="false" style="--flight:21.6s;--delay:-19s;--start-x:80vw;--start-y:-22vh;--end-x:-40vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/potions/potinos_crystalball.png" alt="" loading="lazy" draggable="false" style="--flight:18.4s;--delay:-4s;--start-x:110vw;--start-y:43vh;--end-x:-14vw;--end-y:140vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/dark/dark_crucio.png" alt="" loading="lazy" draggable="false" style="--flight:20s;--delay:-16s;--start-x:40vw;--start-y:-22vh;--end-x:-65vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/creatures/creature_bowtruckle.png" alt="" loading="lazy" draggable="false" style="--flight:16.8s;--delay:-11s;--start-x:110vw;--start-y:5vh;--end-x:-28vw;--end-y:120vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/charms/charm_stupefy.png" alt="" loading="lazy" draggable="false" style="--flight:17s;--delay:-5s;--start-x:94vw;--start-y:-25vh;--end-x:-34vw;--end-y:118vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/creatures/creature_snowman.png" alt="" loading="lazy" draggable="false" style="--flight:19s;--delay:-14s;--start-x:53vw;--start-y:-30vh;--end-x:-55vw;--end-y:118vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/dark/dark_crucio.png" alt="" loading="lazy" draggable="false" style="--flight:18s;--delay:-9s;--start-x:112vw;--start-y:32vh;--end-x:-20vw;--end-y:135vh" onerror="this.style.display='none'"></div><img class="landingSnitch" src="backgrounds/snitch.gif" alt="" aria-hidden="true" onerror="this.style.display='none'"><div class="homeBox"><h1 class="homeTitle"><img src="backgrounds/hpmini_title.png" alt="Pocket TCG Simulator" onerror="this.style.display='none';this.parentNode.appendChild(document.createTextNode('Pocket TCG Simulator'))"></h1><div class="homeActions"><button class="homeBtn homeOfflineV1353" onclick="openDedicatedLobbyV1353('offline')">⌂ Play Offline</button><button class="homeBtn homeOnlineV1353" onclick="openDedicatedLobbyV1353('online')">✦ Play Online</button><button class="homeBtn" onclick="openModeUtilityV1354('builder')">▦ Deck Builder</button><button class="homeBtn" onclick="openModeUtilityV1354('database')">▤ Database</button><button class="homeBtn" onclick="openModeUtilityV1354('rules')">📖 Rules</button></div></div><div class="landingVersion">Pocket Magic Awakened · v1.357</div></div><div id="rules" class="rulesScreen screenHidden" aria-label="Game rules">
+<style id="modeColorConsistencyV1358">
+#playModeChoiceV1354{background:#0d1015!important;color:#f2e4c2!important}
+.playChoiceModeV1354{background:#171c24!important;border-color:#ad905e!important;color:#f2e4c2!important}
+.playChoiceModeV1354:hover,.playChoiceModeV1354:focus-visible{background:#242b35!important;border-color:#e2c58b!important}
+.playChoiceBackV1354{background:#171c24!important;color:#f2e4c2!important}
+.playChoiceHeadV1354 p,.playChoiceModeV1354 .infoV1354{color:#b6b8bd!important}
+</style></head><body><div id="lobbyArrivalV186" class="lobbyArrivalV186" aria-live="polite"><div class="lobbyArrivalContentV186"><strong>✦ Duelist Joined! ✦</strong><small id="lobbyArrivalNameV186">Your challenger has entered the chamber.</small></div></div><div id="mobileHandMenu"><button onclick="mobileHandAction('play')">Play</button><button onclick="mobileHandAction('reveal')">Reveal</button><button onclick="mobileHandAction('shuffle')">Shuffle into Deck</button><button onclick="mobileHandAction('discard')">Discard</button></div><button id="mobilePileToggleV1295" type="button" onclick="toggleMobileUtilityMenuV1298(event)">Menu</button><div id="mobilePileDockV1295" aria-hidden="true"><div class="mobilePileDockHeadV1295"><strong>Card Piles</strong><button type="button" onclick="closeMobilePileDockV1295(event)">Close</button></div><div class="mobilePileDockGridV1295"><button class="mobilePileDockItemV1295" id="mobilePileLessonV1295" type="button" onclick="openMobilePileKindV1295('lesson',event)"></button><button class="mobilePileDockItemV1295" id="mobilePileDiscardV1295" type="button" onclick="openMobilePileKindV1295('discard',event)"></button><button class="mobilePileDockItemV1295" id="mobilePileLessonDiscardV1295" type="button" onclick="openMobilePileKindV1295('ldiscard',event)"></button></div></div><div id="mobileUtilityMenuV1298" aria-hidden="true"><button type="button" data-mobile-util="shuffle" onclick="runMobileUtilityActionV1298('shuffle',event)">Shuffle Hand Into Deck</button><button type="button" id="mobileUtilityRevealV1298" data-mobile-util="reveal" onclick="runMobileUtilityActionV1298('reveal',event)">Reveal Hand</button><button type="button" data-mobile-util="chat" onclick="runMobileUtilityActionV1298('chat',event)">Chat / Log</button><button type="button" data-mobile-util="close" onclick="runMobileUtilityActionV1298('close',event)">Close</button></div><div id="startingAllyMobileOverlay" role="dialog" aria-modal="true" aria-label="Starting Ally card" onclick="closeStartingAllyMobile(event)"><div class="allyPopup"><img id="startingAllyMobileImage" alt="Starting Ally full card"><button type="button" onclick="closeStartingAllyMobile(event)">Close</button></div></div><div id="sideboardModal" style="display:none;position:fixed;inset:0;z-index:30000;background:rgba(5,10,24,.94);overflow:auto;padding:24px;color:#f2e6cb"><div style="max-width:960px;margin:auto;background:#14243a;border:2px solid #a98a54;border-radius:14px;padding:22px"><h2 id="sideboardTitle">Sideboard</h2><p id="sideboardHelp">Swap up to five cards. Choose a card from each column to exchange.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px"><section><h3>Main Deck <span id="sideMainCount"></span></h3><div id="sideMainCards" style="max-height:55vh;overflow:auto"></div></section><section><h3>Sideboard <span id="sideReserveCount"></span></h3><div id="sideReserveCards" style="max-height:55vh;overflow:auto"></div></section></div><p id="sideboardStatus"></p><button id="sideboardConfirm" onclick="confirmSideboard()" style="padding:12px 24px;background:#ac8d54;color:#101827;font-weight:bold">Confirm Sideboard</button></div></div><audio id="gameplayBackgroundMusic" src="backgrounds/back_music.mp3" preload="none" loop playsinline></audio><div id="home" class="home"><div class="landingCardStream" aria-hidden="true"><img class="landingFlyingCard" src="cards/creatures/creature_snowman.png" alt="" loading="lazy" draggable="false" style="--flight:16s;--delay:-1s;--start-x:110vw;--start-y:-30vh;--end-x:-28vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/charms/charm_stupefy.png" alt="" loading="lazy" draggable="false" style="--flight:19.2s;--delay:-8s;--start-x:58vw;--start-y:-22vh;--end-x:-52vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/quidditch/quidd_firebolt.png" alt="" loading="lazy" draggable="false" style="--flight:15.2s;--delay:-13s;--start-x:110vw;--start-y:27vh;--end-x:-18vw;--end-y:130vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/transfiguration/transf_glacius.png" alt="" loading="lazy" draggable="false" style="--flight:21.6s;--delay:-19s;--start-x:80vw;--start-y:-22vh;--end-x:-40vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/potions/potinos_crystalball.png" alt="" loading="lazy" draggable="false" style="--flight:18.4s;--delay:-4s;--start-x:110vw;--start-y:43vh;--end-x:-14vw;--end-y:140vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/dark/dark_crucio.png" alt="" loading="lazy" draggable="false" style="--flight:20s;--delay:-16s;--start-x:40vw;--start-y:-22vh;--end-x:-65vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/creatures/creature_bowtruckle.png" alt="" loading="lazy" draggable="false" style="--flight:16.8s;--delay:-11s;--start-x:110vw;--start-y:5vh;--end-x:-28vw;--end-y:120vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/charms/charm_stupefy.png" alt="" loading="lazy" draggable="false" style="--flight:17s;--delay:-5s;--start-x:94vw;--start-y:-25vh;--end-x:-34vw;--end-y:118vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/creatures/creature_snowman.png" alt="" loading="lazy" draggable="false" style="--flight:19s;--delay:-14s;--start-x:53vw;--start-y:-30vh;--end-x:-55vw;--end-y:118vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/dark/dark_crucio.png" alt="" loading="lazy" draggable="false" style="--flight:18s;--delay:-9s;--start-x:112vw;--start-y:32vh;--end-x:-20vw;--end-y:135vh" onerror="this.style.display='none'"></div><img class="landingSnitch" src="backgrounds/snitch.gif" alt="" aria-hidden="true" onerror="this.style.display='none'"><div class="homeBox"><h1 class="homeTitle"><img src="backgrounds/hpmini_title.png" alt="Pocket TCG Simulator" onerror="this.style.display='none';this.parentNode.appendChild(document.createTextNode('Pocket TCG Simulator'))"></h1><div class="homeActions"><button class="homeBtn homeOfflineV1353" onclick="openDedicatedLobbyV1353('offline')">⌂ Play Offline</button><button class="homeBtn homeOnlineV1353" onclick="openDedicatedLobbyV1353('online')">✦ Play Online</button><button class="homeBtn" onclick="openModeUtilityV1354('builder')">▦ Deck Builder</button><button class="homeBtn" onclick="openModeUtilityV1354('database')">▤ Database</button><button class="homeBtn" onclick="openModeUtilityV1354('rules')">📖 Rules</button></div></div><div class="landingVersion">Pocket Magic Awakened · v1.357</div></div><div id="rules" class="rulesScreen screenHidden" aria-label="Game rules">
 <div class="rulesBar"><h2>📖 Official Game Guide</h2><span style="flex:1"></span><button onclick="showHome()">← Back to Menu</button></div>
 <div class="rulesLayout"><nav class="rulesNav" aria-label="Rulebook sections">
 <a href="#rules-overview">Overview</a><a href="#rules-decks">Deck Building</a><a href="#rules-setup">Setup & Mulligan</a><a href="#rules-turn">Turn Structure</a><a href="#rules-actions">Actions & Lessons</a><a href="#rules-cards">Card Types</a><a href="#rules-spells">Spell Chains</a><a href="#rules-creatures">Creatures & Damage</a><a href="#rules-keywords">Keywords</a><a href="#rules-tokens">Tokens</a><a href="#rules-online">Online & Local Play</a><a href="#rules-reference">Quick Reference</a>
@@ -7717,6 +7723,7 @@ document.addEventListener('contextmenu',e=>{if(e.target.closest('#game .card,#ga
    }
    // In a preliminary AI version we avoid selecting from complex effect popups.
    if(autoEngine.pending||autoEngine.queue.length||targetSelection||document.getElementById('declareOverlayV1322'))return;
+   if(typeof tutorialSessionV1354!=='undefined'&&tutorialSessionV1354)return;
    if(turn!==2)return;
    if(P[2].turnSerial!==turnSerial){turnSerial=P[2].turnSerial;stepsInTurn=0;stuck=0;}
    if(stepsInTurn++>18){console.warn('AI: safety end turn');endTurn();return;}
@@ -7882,18 +7889,18 @@ body.tutorialRunningV1354 #undoBtn,body.tutorialRunningV1354 #nextGameBtnV252,bo
  const home=document.querySelector('#home .homeActions');
  if(home)home.innerHTML='<button class="homeBtn" onclick="showModeChoiceV1354()">✦ Play</button><button class="homeBtn" onclick="openModeUtilityV1354(\'builder\')">▦ Deck Builder</button><button class="homeBtn" onclick="openModeUtilityV1354(\'database\')">▤ Database</button><button class="homeBtn" onclick="openModeUtilityV1354(\'rules\')">📖 Rules</button>';
  const panel=document.createElement('section');panel.id='playModeChoiceV1354';panel.className='screenHidden';
- panel.innerHTML='<div class="playChoiceWrapV1354"><button class="playChoiceBackV1354" onclick="showHome()">← Volver</button><header class="playChoiceHeadV1354"><small>✦ THE DUELLING CHAMBER ✦</small><h1>Choose your mode</h1><p>Selecciona cómo quieres jugar.</p></header><div class="playChoiceModesV1354"><button class="playChoiceModeV1354" onclick="enterPlayModeV1354(\'offline\')"><span class="bigV1354">⌂ Modo offline</span><span class="infoV1354">2 Seats · Vs AI · Tutorial interactivo</span></button><button class="playChoiceModeV1354" onclick="enterPlayModeV1354(\'online\')"><span class="bigV1354">✦ Modo online</span><span class="infoV1354">Crea una sala privada o únete a una partida con un amigo.</span></button></div></div>';
+ panel.innerHTML='<div class="playChoiceWrapV1354"><button class="playChoiceBackV1354" onclick="showHome()">← Back</button><header class="playChoiceHeadV1354"><small>✦ THE DUELLING CHAMBER ✦</small><h1>Choose your mode</h1><p>Choose how you want to play.</p></header><div class="playChoiceModesV1354"><button class="playChoiceModeV1354" onclick="enterPlayModeV1354(\'offline\')"><span class="bigV1354">⌂ Offline Mode</span><span class="infoV1354">2 Seats · Vs AI · Interactive Tutorial</span></button><button class="playChoiceModeV1354" onclick="enterPlayModeV1354(\'online\')"><span class="bigV1354">✦ Online Mode</span><span class="infoV1354">Create a private room or join a friend.</span></button></div></div>';
  document.body.insertBefore(panel,document.getElementById('lobby'));
  const intro=document.getElementById('offlineLobbyPage');
  const optDock=document.getElementById('offlineOptionsDockV1353');
- const tut=document.createElement('div');tut.id='tutorialModeV1354';tut.className='modeCard';tut.setAttribute('role','button');tut.tabIndex=0;tut.innerHTML='<h3>📖 Tutorial — Play & Learn</h3><p>Minipartidas guiadas, en niveles cortos. Sin mazos ni rivales online.</p>';
+ const tut=document.createElement('div');tut.id='tutorialModeV1354';tut.className='modeCard';tut.setAttribute('role','button');tut.tabIndex=0;tut.innerHTML='<h3>📖 Tutorial — Play & Learn</h3><p>Short, guided practice matches. No decks or online opponents needed.</p>';
  tut.onclick=()=>showTutorialPickerV1354();tut.onkeydown=e=>{if(e.key==='Enter'||e.key===' ')showTutorialPickerV1354()};
  optDock.querySelector('.modeGrid').appendChild(tut);
  const picker=document.createElement('div');picker.id='tutorialPickerV1354';
- picker.innerHTML='<button class="tutorialPickerBackV1354" onclick="closeTutorialPickerV1354()">← Volver a Offline</button><h2 style="font:700 34px Georgia,serif;margin:18px 0 6px;color:#352515">Tutorial interactivo</h2><p style="color:#4e402e">Práctica en mesas predefinidas. Juegas las acciones tú mismo, una mecánica a la vez.</p><div class="tutorialLevelGridV1354" id="tutorialLevelsV1354"></div>';
+ picker.innerHTML='<button class="tutorialPickerBackV1354" onclick="closeTutorialPickerV1354()">← Back to Offline</button><h2 style="font:700 34px Georgia,serif;margin:18px 0 6px;color:#352515">Interactive Tutorial</h2><p style="color:#4e402e">Practice on preconfigured boards, learning one mechanic at a time.</p><div class="tutorialLevelGridV1354" id="tutorialLevelsV1354"></div>';
  intro.appendChild(picker);
  const guide=document.createElement('div');guide.id='tutorialGuideV1354';guide.setAttribute('aria-live','polite');
- guide.innerHTML='<div class="tutorialGuideTopV1354"><small id="tutorialProgressTextV1354">LEVEL</small><div style="display:flex;gap:5px"><button onclick="restartTutorialV1354()">↻ Reiniciar</button><button onclick="exitTutorialV1354()">✕ Salir</button></div></div><div id="tutorialTaskV1354"></div><p id="tutorialHintV1354"></p><div class="tutorialGuideProgressV1354" id="tutorialStepDotsV1354"></div><button type="button" id="tutorialGuideActionV1354" onclick="tutorialGuideActionV1354()"></button>';
+ guide.innerHTML='<div class="tutorialGuideTopV1354"><small id="tutorialProgressTextV1354">LEVEL</small><div style="display:flex;gap:5px"><button onclick="restartTutorialV1354()">↻ Restart</button><button onclick="exitTutorialV1354()">✕ Exit</button></div></div><div id="tutorialTaskV1354"></div><p id="tutorialHintV1354"></p><div class="tutorialGuideProgressV1354" id="tutorialStepDotsV1354"></div><button type="button" id="tutorialGuideActionV1354" onclick="tutorialGuideActionV1354()"></button>';
  document.getElementById('game').insertBefore(guide,document.getElementById('table'));
  document.querySelector('#lobby .lobbyBar button[onclick="showHome()"]')?.setAttribute('onclick','backFromLobbyV1354()');
 })();
@@ -7927,50 +7934,50 @@ function closeTutorialPickerV1354(silent=false){
  if(!silent)renderLobby();
 }
 const TUTORIAL_LEVELS_V1354=[
- {title:'Lessons y acciones',desc:'Juega tu Lesson, invoca una Creature y termina el turno.'},
- {title:'Combate de criaturas',desc:'Ataca a una criatura rival y avanza a tu fase de acciones.'},
- {title:'Spells y Spell Chain',desc:'Lanza Aquamenti, declara un objetivo y resuelve la respuesta del rival.'},
- {title:'Quick Spells y escudos',desc:'Responde a un Spell enemigo con Protego y protege a tu personaje.'},
- {title:'Estados y Curse',desc:'Observa cómo Curse afecta al jugador y cómo se remueve con Renevate.'},
- {title:'Countdown, Banish y Exile',desc:'Lanza Conjunctivitis Curse; observa el destierro aleatorio y el efecto persistente.'}
+ {title:'Lessons and Actions',desc:'Play a Lesson, summon a Creature, and end your turn.'},
+ {title:'Creature Combat',desc:'Attack an opposing Creature and enter your Action Phase.'},
+ {title:'Spells and Spell Chain',desc:'Cast Aquamenti, declare a target, and let the AI respond.'},
+ {title:'Quick Spells and Shields',desc:'Respond to an enemy Spell with Protego and protect your character.'},
+ {title:'Status Effects and Curse',desc:'See how Curse affects players and remove it with Renevate.'},
+ {title:'Countdown, Banish and Exile',desc:'Cast Conjunctivitis Curse and observe Banish and its ongoing effect.'}
 ];
 let tutorialSessionV1354=null,tutorialWatchV1354=null;
 const tutorialStepsV1354=[
  [
-  {name:'Juega una Lesson',hint:'Toca tu Lesson Deck y elige «Play Lesson — 1 Action». Las Lessons permanecen en el campo para habilitar costos.',done:()=>P[1].lessons.length>=2},
-  {name:'Invoca a Niffler',hint:'Toca Niffler en tu mano y elige Play. Cuesta 2 Lessons y 1 Action; las Lessons NO se consumen al pagar un costo.',done:()=>P[1].play.some(c=>c.name==='Niffler')},
-  {name:'Termina tu turno',hint:'Ya invertiste tus 2 acciones. Usa «End Turn» para iniciar el turno del otro jugador.',done:()=>turn===2}
+  {name:'Play a Lesson',hint:'Select your Lesson Deck, then Play Lesson — 1 Action. Lessons remain in play to meet card costs.',done:()=>P[1].lessons.length>=2},
+  {name:'Summon Niffler',hint:'Select Niffler in your hand and choose Play. It requires 2 Lessons and 1 Action; Lessons are not consumed.',done:()=>P[1].play.some(c=>c.name==='Niffler')},
+  {name:'End your turn',hint:'You have spent both Actions. Press End Turn.',done:()=>turn===2}
  ],
  [
-  {name:'Ataca con Erumpent',hint:'Toca a Erumpent en tu campo, pulsa «Attack» y elige el Niffler enemigo. Las criaturas asignan daño en la fase de combate.',done:()=>!P[2].play.some(c=>c.name==='Niffler')},
-  {name:'Entra a la Action Phase',hint:'Pulsa «Continue to Action Phase». Cada turno pasa por combate y después por las acciones.',done:()=>P[1].combatStep==='actions'}
+  {name:'Attack with Erumpent',hint:'Select Erumpent, press Attack, and target the opposing Niffler.',done:()=>!P[2].play.some(c=>c.name==='Niffler')},
+  {name:'Enter the Action Phase',hint:'Press Continue to Action Phase.',done:()=>P[1].combatStep==='actions'}
  ],
  [
-  {name:'Lanza Aquamenti',hint:'Toca Aquamenti en tu mano y selecciona Play para lanzarlo. Necesitas 2 Lessons de Charms y una acción.',done:()=>spellChain.some(e=>e.card.name==='Aquamenti')},
-  {name:'Declara el objetivo',hint:'En el cuadro «Declare target», elige a Niffler. El rival conoce el objetivo antes de responder.',done:()=>spellChain.some(e=>e.card.name==='Aquamenti'&&e.card.hasDeclarationV1322&&!e.declaringV1322)},
-  {name:'El rival aprueba la cadena',hint:'Normalmente el oponente puede responder con un Quick Spell o aprobar. Aquí simularemos su aprobación.',action:'Aprobar como rival',fn:()=>tutorialApproveV1354(),done:()=>!spellChain.some(e=>e.card.name==='Aquamenti')},
-  {name:'Resuelve los 2 puntos de daño',hint:'Si el motor muestra un cuadro para Aquamenti, confirma a Niffler y aplica el daño. El Spell se enviará a Discard.',done:()=>!P[2].play.some(c=>c.name==='Niffler')}
+  {name:'Cast Aquamenti',hint:'Select Aquamenti from your hand and choose Play. It requires 2 Charm Lessons and one Action.',done:()=>spellChain.some(e=>e.card.name==='Aquamenti')},
+  {name:'Declare your target',hint:'In Declare target, select the opposing Niffler.',done:()=>spellChain.some(e=>e.card.name==='Aquamenti'&&e.card.hasDeclarationV1322&&!e.declaringV1322)},
+  {name:'Wait for the AI response',hint:'The AI opponent will approve your Spell Chain automatically.',done:()=>!spellChain.some(e=>e.card.name==='Aquamenti')},
+  {name:'Resolve 2 damage',hint:'If the Aquamenti effect dialog appears, confirm Niffler and apply 2 damage.',done:()=>!P[2].play.some(c=>c.name==='Niffler')}
  ],
  [
-  {name:'Responde con Protego',hint:'Aquamenti del rival ya está en Spell Chain y apunta a tu jugador. Selecciona Protego de tu mano como respuesta Quick Spell. Cuesta descartar una Lesson adicional.',done:()=>spellChain.some(e=>e.card.name==='Protego')},
-  {name:'Declara a quién proteger',hint:'Cuando te pregunte por el objetivo, selecciona a tu jugador para darle Shield 5.',done:()=>spellChain.some(e=>e.card.name==='Protego'&&!e.declaringV1322)},
-  {name:'El rival aprueba Protego',hint:'Tu rival da prioridad a la respuesta. Resolvemos primero el Quick Spell de arriba de la cadena.',action:'Aprobar Protego',fn:()=>tutorialApproveV1354(),done:()=>!spellChain.some(e=>e.card.name==='Protego')},
-  {name:'Se aplica Shield',hint:'Confirma la selección de tu jugador si el motor te la solicita. Luego resolveremos Aquamenti.',done:()=>!!P[1].char?.shield},
-  {name:'Resuelve Aquamenti',hint:'Gracias a Shield 5, 2 de daño se absorben y tu vida no debería bajar. Aprueba el Spell original.',action:'Aprobar Aquamenti',fn:()=>tutorialApproveV1354(),done:()=>spellChain.length===0},
-  {name:'Comprueba la protección',hint:'El rival intenta aplicar los 2 puntos de Aquamenti. Confirma el daño para comprobar que Shield protege tus 20 Health.',action:'Aplicar Aquamenti rival',fn:()=>tutorialApplyIncomingV1354(),done:()=>P[1].life===20&&!autoEngine.pending&&spellChain.length===0}
+  {name:'Respond with Protego',hint:'The enemy Aquamenti is already on the Spell Chain. Play Protego from your hand as a Quick Spell.',done:()=>spellChain.some(e=>e.card.name==='Protego')},
+  {name:'Choose who to protect',hint:'Choose your own Starting Ally to grant Shield 5.',done:()=>spellChain.some(e=>e.card.name==='Protego'&&!e.declaringV1322)},
+  {name:'Wait for the AI response',hint:'The AI will approve Protego; the last Spell played resolves first.',done:()=>!spellChain.some(e=>e.card.name==='Protego')},
+  {name:'Apply Shield',hint:'If the effect engine asks you to select a target, select your Starting Ally.',done:()=>!!P[1].char?.shield},
+  {name:'Resolve incoming Aquamenti',hint:'The tutorial will resolve the original enemy Spell after Shield is active.',done:()=>spellChain.length===0},
+  {name:'Check the protection',hint:'The AI will apply the incoming damage. Your Shield should absorb it, leaving you at 20 Health.',done:()=>P[1].life===20&&!autoEngine.pending&&spellChain.length===0}
  ],
  [
-  {name:'Observa Curse en el rival',hint:'Tu rival comienza con Curse 1. En una partida real, Curse causa daño periódico al jugador y no lo intercepta Block.',action:'Ver efecto de Curse',fn:()=>{P[2].char.curse=true;P[2].char.curseCount=1;render()},done:()=>!!P[2].char.curse},
-  {name:'Elimina un estado con Renevate',hint:'Renevate cuesta 2 Lessons y elimina estados del objetivo que controlas. Para practicarlo, tu propio jugador comienza con Curse.',action:'Aplicar Curse de práctica',fn:()=>{P[1].char.curse=true;P[1].char.curseCount=1;render()},done:()=>!!P[1].char.curse},
-  {name:'Lanza Renevate',hint:'Toca Renevate de tu mano, elige Play y selecciona a tu jugador para retirar Curse.',done:()=>spellChain.some(e=>e.card.name==='Renevate')},
-  {name:'Aprueba Renevate',hint:'Un Spell también debe pasar por la Spell Chain. El rival lo deja resolver.',action:'Aprobar Renevate',fn:()=>tutorialApproveV1354(),done:()=>!spellChain.some(e=>e.card.name==='Renevate')},
-  {name:'Confirma la limpieza',hint:'Completa el cuadro de Renevate si aparece. Tu jugador ya no debería tener Curse.',done:()=>!P[1].char?.curse}
+  {name:'Observe Curse on the opponent',hint:'Your opponent begins with one Curse stack. Curse deals recurring damage and ignores Block.',action:'Show Curse',fn:()=>{P[2].char.curse=true;P[2].char.curseCount=1;render()},done:()=>!!P[2].char.curse},
+  {name:'Practice removing a status',hint:'Apply a Curse to your own Starting Ally to practice cleansing it.',action:'Apply practice Curse',fn:()=>{P[1].char.curse=true;P[1].char.curseCount=1;render()},done:()=>!!P[1].char.curse},
+  {name:'Cast Renevate',hint:'Play Renevate from your hand and target your Starting Ally.',done:()=>spellChain.some(e=>e.card.name==='Renevate')},
+  {name:'Wait for the AI response',hint:'The AI opponent will approve Renevate automatically.',done:()=>!spellChain.some(e=>e.card.name==='Renevate')},
+  {name:'Confirm the cleanse',hint:'Complete Renevate’s effect dialog if shown. Curse should disappear.',done:()=>!P[1].char?.curse}
  ],
  [
-  {name:'Lanza Conjunctivitis Curse',hint:'Tienes 4 Dark Arts Lessons. Lanza Conjunctivitis Curse desde tu mano: cuesta 1 Action y utiliza una Spell Chain.',done:()=>spellChain.some(e=>e.card.name==='Conjunctivitis Curse')},
-  {name:'Aprueba el Spell desde el rival',hint:'En una partida el rival podría responder. Aquí simulamos que aprueba la Spell Chain.',action:'Aprobar como rival',fn:()=>tutorialApproveV1354(),done:()=>!spellChain.some(e=>e.card.name==='Conjunctivitis Curse')},
-  {name:'Observa Banish, Exile y Curse',hint:'Se desterró 1 carta aleatoria de la mano rival a Exile, no al Discard; el rival recibió Curse. Revisa las zonas y pulsa Continuar.',action:'Entendido — continuar',fn:()=>{if(tutorialSessionV1354)tutorialSessionV1354.viewedBanish=true;},done:()=>!!tutorialSessionV1354?.viewedBanish&&P[2].exile.length===1&&!!P[2].char?.curse},
-  {name:'Identifica el Countdown',hint:'Conjunctivitis permanece en el campo durante su Countdown. Cuando termine, saldrá del campo; Banish y Curse ya se aplicaron al resolver.',action:'Completar nivel',fn:()=>{if(tutorialSessionV1354)tutorialSessionV1354.viewedCountdown=true;},done:()=>!!tutorialSessionV1354?.viewedCountdown&&P[1].play.some(c=>c.name==='Conjunctivitis Curse')}
+  {name:'Cast Conjunctivitis Curse',hint:'You have 4 Dark Arts Lessons. Play Conjunctivitis Curse from your hand.',done:()=>spellChain.some(e=>e.card.name==='Conjunctivitis Curse')},
+  {name:'Wait for the AI response',hint:'The AI opponent will approve the Spell Chain automatically.',done:()=>!spellChain.some(e=>e.card.name==='Conjunctivitis Curse')},
+  {name:'Observe Banish, Exile and Curse',hint:'One random enemy hand card was moved to Exile rather than Discard, and the opponent received Curse.',action:'Continue',fn:()=>{if(tutorialSessionV1354)tutorialSessionV1354.viewedBanish=true;},done:()=>!!tutorialSessionV1354?.viewedBanish&&P[2].exile.length===1&&!!P[2].char?.curse},
+  {name:'Identify the Countdown',hint:'Conjunctivitis remains on the board until its Countdown expires. Banish and Curse were applied on resolution.',action:'Complete level',fn:()=>{if(tutorialSessionV1354)tutorialSessionV1354.viewedCountdown=true;},done:()=>!!tutorialSessionV1354?.viewedCountdown&&P[1].play.some(c=>c.name==='Conjunctivitis Curse')}
  ]
 ];
 function tutorialBuildSceneV1354(level){
@@ -7978,7 +7985,7 @@ function tutorialBuildSceneV1354(level){
  // These are curated mid-match situations, never saved as player's decks.
  spellChainReset();targetCancel();history=[];resetComm();
  for(let p=1;p<=2;p++)Object.assign(P[p],newP());
- lobbyMode='local';aiModeV1352=false;viewPlayer=1;phase='game';turn=1;onlineStarted=false;
+ lobbyMode='local';aiModeV1352=true;viewPlayer=1;document.getElementById('game').classList.remove('view2');phase='game';turn=1;onlineStarted=false;
  const l1=()=>cardFromDB('Charm Lesson');
  const l2=()=>cardFromDB('Dark Arts Lesson');
  P[1].char=cardFromDB('Harry Potter');P[2].char=cardFromDB('Hermione Granger');
@@ -8010,13 +8017,18 @@ function startTutorialV1354(level){
  document.querySelector('#game').classList.remove('screenHidden');document.querySelector('#lobby').classList.add('screenHidden');
  document.querySelector('#home').classList.add('screenHidden');document.body.classList.add('tutorialRunningV1354');
  document.getElementById('switchSideBtn').style.display='none';
- render();tutorialRefreshV1354();
+ document.getElementById('game').classList.remove('view2');render();tutorialRefreshV1354();
  if(tutorialWatchV1354)clearInterval(tutorialWatchV1354);
  tutorialWatchV1354=setInterval(tutorialTickV1354,300);
  window.scrollTo(0,0);
 }
 function tutorialTickV1354(){
  const st=tutorialSessionV1354;if(!st||st.completed)return;
+ if(st.level===3 && st.step>=4 && spellChain.length===1 && spellChain[0].player===2 && !autoEngine.pending && P[1].char?.shield){
+  // The lesson's preloaded enemy Spell is resolved by the tutorial, not by switching to Seat 2.
+  if(viewPlayer!==1){viewPlayer=1;document.getElementById('game').classList.remove('view2');}
+  spellChainApprove();
+ }
  const steps=tutorialStepsV1354[st.level];let changed=false;
  while(st.step<steps.length){
   let ok=false;try{ok=!!steps[st.step].done()}catch(e){}
@@ -8030,11 +8042,11 @@ function tutorialRefreshV1354(){
  const t=tutorialSessionV1354;if(!t)return;
  const steps=tutorialStepsV1354[t.level],current=steps[t.step];
  document.getElementById('tutorialProgressTextV1354').textContent='LEVEL '+(t.level+1)+' / '+TUTORIAL_LEVELS_V1354.length+' · '+TUTORIAL_LEVELS_V1354[t.level].title;
- document.getElementById('tutorialTaskV1354').textContent=t.completed?'✓ Nivel completado':(t.step+1)+'. '+current.name;
- document.getElementById('tutorialHintV1354').textContent=t.completed?'¡Bien hecho! Puedes pasar a la siguiente lección o repetir esta escena.':current.hint;
+ document.getElementById('tutorialTaskV1354').textContent=t.completed?'✓ Level complete':(t.step+1)+'. '+current.name;
+ document.getElementById('tutorialHintV1354').textContent=t.completed?'Well done! Continue to the next lesson or replay this one.':current.hint;
  document.getElementById('tutorialStepDotsV1354').innerHTML=steps.map((x,i)=>'<span class="'+(i<t.step?'done':'')+'"></span>').join('');
  const btn=document.getElementById('tutorialGuideActionV1354');
- if(t.completed){btn.style.display='inline-block';btn.textContent=t.level<TUTORIAL_LEVELS_V1354.length-1?'Siguiente nivel →':'Volver a Tutorial';}
+ if(t.completed){btn.style.display='inline-block';btn.textContent=t.level<TUTORIAL_LEVELS_V1354.length-1?'Next level →':'Back to Tutorial';}
  else if(current.action){btn.style.display='inline-block';btn.textContent=current.action;}
  else btn.style.display='none';
 }
@@ -8064,7 +8076,7 @@ function exitTutorialV1354(){
  if(tutorialWatchV1354){clearInterval(tutorialWatchV1354);tutorialWatchV1354=null;}
  tutorialSessionV1354=null;document.body.classList.remove('tutorialRunningV1354');
  spellChainReset();targetCancel();for(const x of ['declareOverlayV1322','autoModal'])document.getElementById(x)?.remove();
- phase='setup';viewPlayer=1;turn=1;
+ phase='setup';viewPlayer=1;turn=1;aiModeV1352=false;document.getElementById('game').classList.remove('view2');
  document.getElementById('game').classList.add('screenHidden');
  document.getElementById('lobby').classList.remove('screenHidden');
  dedicatedLobbyKindV1353='offline';setLobbyMode('local');showTutorialPickerV1354();
@@ -8132,16 +8144,16 @@ body.tutorialRunningV1354 #tutorialGuideV1354{
  const guide=document.getElementById('tutorialGuideV1354');
  if(!guide)return;
  const reopen=document.createElement('button');
- reopen.id='tutorialShowPromptV1355';reopen.type='button';reopen.textContent='📖 Ver instrucción';
+ reopen.id='tutorialShowPromptV1355';reopen.type='button';reopen.textContent='📖 View instruction';
  reopen.addEventListener('click',()=>tutorialOpenPromptV1355());
  const task=document.getElementById('tutorialTaskV1354');
  task.insertAdjacentElement('afterend',reopen);
  const layer=document.createElement('div');layer.id='tutorialModalOverlayV1355';
  layer.innerHTML='<section id="tutorialModalBoxV1355" role="dialog" aria-modal="true" aria-labelledby="tutorialModalTitleV1355" aria-describedby="tutorialModalInstructionV1355">'
    +'<div id="tutorialModalTagV1355"></div><div id="tutorialModalDotsV1355"></div>'
-   +'<h2 id="tutorialModalTitleV1355"></h2><div class="tutorialPromptEyebrowV1355">QUÉ TIENES QUE HACER</div>'
+   +'<h2 id="tutorialModalTitleV1355"></h2><div class="tutorialPromptEyebrowV1355">WHAT TO DO</div>'
    +'<p id="tutorialModalInstructionV1355"></p><p id="tutorialModalWhyV1355"></p>'
-   +'<div id="tutorialModalActionsV1355"><button type="button" id="tutorialModalBackV1355">Entendido, ir al tablero</button>'
+   +'<div id="tutorialModalActionsV1355"><button type="button" id="tutorialModalBackV1355">Got it, go to board</button>'
    +'<button type="button" id="tutorialModalDoV1355"></button></div></section>';
  document.body.appendChild(layer);
  document.getElementById('tutorialModalBackV1355').addEventListener('click',()=>tutorialClosePromptV1355());
@@ -8153,40 +8165,40 @@ body.tutorialRunningV1354 #tutorialGuideV1354{
 // Short, self-contained instructions; the extra explanation teaches the rule, not only the UI click.
 const tutorialLessonsV1355=[
  [
-  ['Pulsa tu Lesson Deck y elige «Play Lesson — 1 Action».','Cada Lesson queda en tu campo y permite pagar el costo de las cartas. Esta jugada consume una de tus dos acciones.'],
-  ['Toca Niffler en tu mano y elige «Play».','Necesitas 2 Lessons disponibles. Al jugarlo, las Lessons permanecen en tu campo: no se gastan ni se descartan.'],
-  ['Pulsa «End Turn».','Ya utilizaste tus acciones. En una partida normal, le tocaría jugar al oponente.']
+  ['Select your Lesson Deck and choose Play Lesson — 1 Action.','Lessons stay in play and let you meet card costs. Playing one uses an Action.'],
+  ['Select Niffler in your hand and choose Play.','You need 2 Lessons. Lessons remain in play when you play a card.'],
+  ['Press End Turn.','You have used your Actions. Your opponent would play next in a normal match.']
  ],
  [
-  ['Toca Erumpent, elige «Attack» y selecciona el Niffler enemigo.','Las criaturas atacan durante la Combat Phase y hacen daño según sus estadísticas.'],
-  ['Pulsa «Continue to Action Phase».','Después del combate viene la fase en la que puedes jugar cartas y usar acciones.']
+  ['Select Erumpent, choose Attack, and target the enemy Niffler.','Creatures attack during Combat Phase and deal damage according to their stats.'],
+  ['Press Continue to Action Phase.','Combat happens before your Action Phase.']
  ],
  [
-  ['Toca Aquamenti en tu mano y selecciona «Play».','Los Spells se colocan en la Spell Chain: antes de resolverse, el oponente tiene oportunidad de responder.'],
-  ['Cuando aparezca «Declare target», selecciona al Niffler enemigo.','Primero anuncias a qué carta apuntas. El rival conoce ese objetivo antes de decidir su respuesta.'],
-  ['Pulsa «Aprobar como rival» para simular que el oponente no responde.','En una partida real, el rival podría usar un Quick Spell. Aquí vamos a continuar con la resolución.'],
-  ['Si aparece el cuadro de Aquamenti, confirma el Niffler y sus 2 puntos de daño.','Al terminar el efecto, el Spell va al Discard.']
+  ['Select Aquamenti in your hand and choose Play.','Spells enter the Spell Chain, giving the opponent an opportunity to respond.'],
+  ['When Declare target appears, select the opposing Niffler.','Your opponent sees the declared target before responding.'],
+  ['The AI opponent will approve the Spell automatically.','An opponent may respond with a Quick Spell, but this tutorial AI will pass.'],
+  ['If the Aquamenti dialog appears, confirm Niffler and apply 2 damage.','When the effect finishes, the Spell goes to Discard.']
  ],
  [
-  ['Con Aquamenti enemigo en la Spell Chain, juega Protego desde tu mano.','Un Quick Spell puede jugarse como respuesta. Protego requiere descartar una Lesson adicional.'],
-  ['En la ventana de objetivos, elige a tu jugador.','Protego dará Shield 5 al objetivo que selecciones.'],
-  ['Pulsa «Aprobar Protego».','La Spell Chain resuelve primero el último Spell añadido, por eso Protego se resuelve antes que Aquamenti.'],
-  ['Confirma la aplicación del escudo a tu jugador si aparece una ventana de selección.','Shield absorbe el próximo daño hasta agotar los puntos del escudo.'],
-  ['Pulsa «Aprobar Aquamenti» para resolver el Spell original.','Como ahora tienes Shield, los 2 puntos de Aquamenti deberían ser absorbidos.'],
-  ['Pulsa «Aplicar Aquamenti rival» y comprueba tu vida.','Tu vida debe seguir en 20: el daño lo recibió el escudo, no tu jugador.']
+  ['Play Protego in response to the enemy Aquamenti.','Quick Spells can respond to another Spell. Protego requires you to discard an additional Lesson.'],
+  ['Choose your own Starting Ally as the target.','Protego grants Shield 5 to the selected target.'],
+  ['The AI will approve Protego automatically.','The last Spell added to the chain resolves first.'],
+  ['If prompted, apply Shield to your Starting Ally.','Shield absorbs damage until its points run out.'],
+  ['The tutorial resolves the enemy Aquamenti after Shield is active.','Shield should absorb the incoming 2 damage.'],
+  ['Check your Health once the enemy Spell resolves.','Your Health should still be 20 because Shield took the damage.']
  ],
  [
-  ['Pulsa «Ver efecto de Curse».','Curse se acumula y causa daño periódico al jugador. Block no protege contra ese daño.'],
-  ['Pulsa «Aplicar Curse de práctica» para poner Curse en tu propio jugador.','Así podrás practicar cómo eliminar un estado negativo.'],
-  ['Juega Renevate desde la mano y elige a tu propio jugador.','Renevate cuesta 2 Lessons y elimina estados negativos del objetivo que controlas.'],
-  ['Pulsa «Aprobar Renevate».','El oponente debe tener la oportunidad de responder antes de que se resuelva el Spell.'],
-  ['Si aparece un cuadro de resolución, confirma tu jugador.','El estado Curse debe desaparecer al aplicar Renevate.']
+  ['Press Show Curse.','Curse stacks and deals recurring damage. Block does not prevent it.'],
+  ['Press Apply practice Curse.','This adds Curse to your own Starting Ally so you can practice removing it.'],
+  ['Play Renevate and select your Starting Ally.','Renevate costs 2 Lessons and removes status conditions from a target you control.'],
+  ['The AI will approve Renevate automatically.','The opponent can respond before any Spell resolves.'],
+  ['If prompted, confirm your own Starting Ally.','Curse should disappear after Renevate resolves.']
  ],
  [
-  ['Juega Conjunctivitis Curse desde tu mano.','Este Dark Spell cuesta 4 Lessons y pasa por la Spell Chain antes de resolver su efecto.'],
-  ['Pulsa «Aprobar como rival».','Simulamos que el oponente permite que se resuelva el Spell.'],
-  ['Observa el resultado y pulsa «Entendido — continuar».','Una carta aleatoria rival va a Exile, no al Discard. El jugador rival también recibe Curse.'],
-  ['Observa Conjunctivitis en el campo y pulsa «Completar nivel».','Countdown determina cuánto permanece el Spell en el campo. Banish y Curse ya se aplicaron al resolverlo.']
+  ['Play Conjunctivitis Curse from your hand.','This Dark Spell costs 4 Lessons and enters the Spell Chain before resolving.'],
+  ['The AI will approve the Spell automatically.','The opponent passes priority and the Spell resolves.'],
+  ['Observe the result, then press Continue.','A random enemy card goes to Exile, not Discard; the enemy also gains Curse.'],
+  ['Inspect Conjunctivitis on the board and press Complete level.','Countdown controls how long the Spell remains in play. Banish and Curse took effect on resolution.']
  ]
 ];
 let tutorialLastPromptKeyV1355=null;
@@ -8199,19 +8211,19 @@ function tutorialOpenPromptV1355(){
  const steps=tutorialStepsV1354[t.level];
  const current=steps[t.step];
  const completed=t.completed;
- document.getElementById('tutorialModalTagV1355').textContent='NIVEL '+(t.level+1)+' DE '+TUTORIAL_LEVELS_V1354.length+' · PASO '+Math.min(t.step+1,steps.length)+' DE '+steps.length;
- document.getElementById('tutorialModalTitleV1355').textContent=completed?'✓ ¡Nivel completado!':current?.name||'Tutorial';
- document.getElementById('tutorialModalInstructionV1355').textContent=completed?'¡Excelente! Ya terminaste esta lección. Puedes pasar al siguiente nivel.':data?.[0]||current?.hint||'';
+ document.getElementById('tutorialModalTagV1355').textContent='LEVEL '+(t.level+1)+' OF '+TUTORIAL_LEVELS_V1354.length+' · STEP '+Math.min(t.step+1,steps.length)+' OF '+steps.length;
+ document.getElementById('tutorialModalTitleV1355').textContent=completed?'✓ Level complete!':current?.name||'Tutorial';
+ document.getElementById('tutorialModalInstructionV1355').textContent=completed?'Excellent! You finished this lesson. Continue to the next level.':data?.[0]||current?.hint||'';
  const why=document.getElementById('tutorialModalWhyV1355');
- why.textContent=completed?'Puedes repetir el nivel si quieres practicar otra vez.':data?.[1]||'';
+ why.textContent=completed?'You can replay this level for more practice.':data?.[1]||'';
  const dots=document.getElementById('tutorialModalDotsV1355');
  dots.innerHTML=steps.map((s,i)=>'<span class="'+(i<t.step?'done':'')+'"></span>').join('');
  const action=document.getElementById('tutorialModalDoV1355');
- if(completed){action.style.display='block';action.textContent=t.level<TUTORIAL_LEVELS_V1354.length-1?'Siguiente nivel →':'Volver al Tutorial';}
+ if(completed){action.style.display='block';action.textContent=t.level<TUTORIAL_LEVELS_V1354.length-1?'Next level →':'Back to Tutorial';}
  else if(current?.action){action.style.display='block';action.textContent=current.action;}
  else action.style.display='none';
  const back=document.getElementById('tutorialModalBackV1355');
- back.textContent=completed?'Volver al tablero':'Entendido, ir al tablero';
+ back.textContent=completed?'Back to board':'Got it, go to board';
  document.getElementById('tutorialModalOverlayV1355').classList.add('open');
 }
 const originalTutorialRefreshV1355=tutorialRefreshV1354;
@@ -9812,4 +9824,7 @@ body.tutorialRunningV1354 #game #tutorialGuideV1354 {
   }
 }
 </style>
-</body></html>
+<style id="tutorialPerspectiveFixV1358">
+body.tutorialRunningV1354 #game.view2{transform:none!important}
+body.tutorialRunningV1354 #game #tutorialGuideV1354{position:fixed!important;top:52px!important;right:12px!important;left:auto!important;margin:0!important;width:min(430px,calc(100vw - 24px))!important;max-height:190px!important;overflow:auto!important}
+</style></body></html>
