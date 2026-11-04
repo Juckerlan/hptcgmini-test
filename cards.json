@@ -171,7 +171,7 @@
     "type": "Ongoing Spell",
     "domain": "Transfiguration",
     "cost": 4,
-    "effect": "Countdown 2: Freeze up to 3 targets.",
+    "effect": "Countdown 2: Freeze up to 3 opposing targets.",
     "image": "cards/transfiguration/transf_glaciusmaxima.png"
   },
   "Oppugno": {
@@ -803,7 +803,7 @@
     "health": 1,
     "life": 1,
     "damage": 1,
-    "effect": "When this is discarted, you may return a creature from the discard pile to your hand.",
+    "effect": "When this card is discarded, you may return a Creature from your discard pile to your hand.",
     "image": "cards/creatures/creature_hinkypunk.png"
   },
   "Manticore": {
@@ -948,7 +948,7 @@
     "type": "Dark Spell",
     "domain": "Dark Arts",
     "cost": 3,
-    "effect": "Countdown 1: Prevent your opponent from using Spells this turn.",
+    "effect": "Countdown 1: Your opponent can't play Spells during their next turn.",
     "image": "cards/dark/dark_langlock.png"
   },
   "Flagrate": {
@@ -1021,7 +1021,7 @@
     "type": "Item",
     "domain": "Quidditch",
     "cost": 2,
-    "effect": "When this enters play or discarded. Heal 2 from any of your targets.",
+    "effect": "When this enters play or is discarded, restore 2 Health to one of your targets.",
     "image": "cards/quidditch/quidd_quaffle.png"
   },
   "Chinese Fireball Dragon": {
@@ -1096,7 +1096,7 @@
     "type": "Ally",
     "domain": "Neutral",
     "cost": 0,
-    "effect": "Once per turn, when your opponent plays a Spell that targets one of your cards, you may change its target to another target you control. At the beggining of your first turn play a Moody's Magical Eye.",
+    "effect": "Once per turn, when your opponent plays a Spell targeting you or a card you control, you may redirect it to another target you control, even if that target is not normally valid for that Spell. At the beginning of your first turn, play a Moody's Magical Eye.",
     "image": "cards/allies/char_moody.png"
   },
   "Moody's Magical Eye": {
@@ -1163,7 +1163,7 @@
     "type": "Dark Spell",
     "domain": "Dark Arts",
     "cost": 4,
-    "effect": "Countdown 1: Your opponent must keep their hand face down on the table. Give your opponent Curse.",
+    "effect": "Countdown 1: Banish 1 random card from your opponent's hand. Give your opponent Curse.",
     "image": "cards/dark/dark_conjuntivitis.png"
   },
   "Renevate": {
