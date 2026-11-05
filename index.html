@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pocket Magic Awakened V1.375 — Trainer</title><style>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pocket Magic Awakened V1.376 — Trainer</title><style>
 *{box-sizing:border-box}body{margin:0;background:#0d1015;color:#eee;font:14px system-ui;overflow:hidden}button{background:#242a34;color:#eee;border:1px solid #46505e;border-radius:7px;padding:7px 11px;cursor:pointer}button:hover{background:#303743}#bar{height:56px;background:#15191f;border-bottom:1px solid #353c47;display:flex;gap:7px;align-items:center;padding:8px 12px}#bar b{margin-right:8px}#status{margin-left:auto;color:#8ab4ff}.table{height:calc(100vh - 56px);display:grid;grid-template-rows:1fr 1fr}.player.p1{order:2}.player.opponent{order:1;transform:rotate(180deg)}.player{display:grid;grid-template-columns:160px 1fr;grid-template-rows:54px minmax(0,1fr) 108px;gap:7px;padding:8px;border-bottom:1px solid #353c47;min-height:0}.opponent .playerLife{transform:rotate(180deg)}.view2 .player.p1{order:1;transform:rotate(180deg)}.view2 .player.p2{order:2;transform:none}.view2 .player.p1 .playerLife{transform:rotate(180deg)}.view2 .player.p2 .playerLife{transform:none}.player.active{box-shadow:inset 0 0 0 2px #8ab4ff40}.head{grid-column:1/-1;display:flex;align-items:center;gap:8px}.badge{font-weight:800;padding:5px 8px;border:1px solid #454d59;border-radius:6px}.badge.on{color:#8ab4ff;border-color:#8ab4ff}.playerLife{display:flex;align-items:center;gap:5px;margin-left:4px}.playerLife strong{font-size:20px;min-width:58px;text-align:center;color:#ff8d9d}.playerLife button{padding:3px 8px;font-weight:900}.char{height:66px;min-width:52px;width:52px;border:1px dashed #596271;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#aab1bd;font-size:10px;overflow:hidden;background:#11151b;position:relative}.char img{width:100%;height:100%;object-fit:cover;display:block}.char span{position:absolute;bottom:0;left:0;right:0;background:#000b;color:#fff;font-size:7px;padding:2px;text-align:center}.piles{display:grid;grid-template-rows:1fr 1fr;gap:7px}.pileRow{display:grid;grid-template-columns:1fr 1fr;gap:7px}.pile{position:relative;width:100%;aspect-ratio:63/88;border:1px solid #48515e;border-radius:9px;background:linear-gradient(145deg,#292f39,#191d24);display:grid;place-items:center;overflow:hidden;cursor:pointer}.pile.lesson{border-color:#806a3d}.pile img.pileBack{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);object-fit:fill;border-radius:7px;opacity:.95;pointer-events:none}.pileWrap{min-width:0;display:flex;flex-direction:column;gap:4px;align-items:stretch}.pileLabel{text-align:center;color:#aab3c0;font-size:9px;letter-spacing:.7px;line-height:1.1;min-height:20px;display:flex;flex-direction:column;justify-content:center}.pileLabel small{color:#687180;font-size:8px;letter-spacing:0}.pile b,.pile small{z-index:2;text-shadow:0 1px 3px #000}.center{display:grid;grid-template-rows:minmax(100px,1fr) 82px;gap:7px;min-width:0;min-height:0}.zone{position:relative;border:1px solid #353c47;border-radius:9px;background:#ffffff03;overflow:hidden}.label{position:absolute;top:5px;left:8px;color:#687180;font-size:9px;letter-spacing:1px;pointer-events:none}.play .card{position:absolute}.lessons{display:flex;align-items:center;gap:8px;padding:18px 8px 4px;overflow:auto}.hand{grid-column:1/-1;display:flex;justify-content:center;align-items:end;gap:7px;overflow-x:auto;padding:22px 8px 3px;position:relative;min-height:0}.handTools{position:absolute;top:3px;right:8px;display:flex;gap:5px;z-index:40}.handTools button{font-size:9px;padding:4px 7px}.card.hasImage{background:#111;overflow:hidden}.cardBackImage{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:7px;display:block}.backFallback{display:none;color:#b9c0ca}.card.hasImage>img.cardImage{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:7px;z-index:1;pointer-events:none}.card.hasImage .name,.card.hasImage .type,.card.hasImage .cost{z-index:4}.card.hasImage .state,.card.hasImage .counter,.card.hasImage .life{z-index:6}.card{width:76px;height:104px;flex:0 0 auto;border-radius:8px;border:1px solid #6a7482;background:linear-gradient(145deg,#f0f0f0,#c1c6ce);color:#17191d;position:relative;box-shadow:0 4px 12px #0007;cursor:grab;user-select:none;transition:transform .12s,box-shadow .12s;transform-origin:center}.card:hover{transform:translateY(-9px) scale(1.04);z-index:30;box-shadow:0 12px 24px #000b}.card .cost{position:absolute;right:4px;top:4px;width:19px;height:19px;border-radius:50%;background:#252a32;color:#fff;display:grid;place-items:center;font-size:9px;font-weight:800}.card .name{font-size:9px;font-weight:800;line-height:1.05;padding:7px 5px}.card .type{font-size:8px;color:#505762;padding:0 5px}.card .counter{position:absolute;right:4px;bottom:4px;background:#171a20;color:white;border:1px solid #8ab4ff;border-radius:5px;padding:3px 6px;font-size:9px;font-weight:800;z-index:5}.card .life{position:absolute;left:4px;bottom:4px;background:#8b1e2d;color:white;border-radius:10px;padding:2px 6px;font-size:9px;font-weight:800}.card .state{position:absolute;left:4px;top:4px;display:flex;gap:3px;font-size:9px;z-index:6;pointer-events:none}.state span{background:#171a20ee;border:1px solid #596271;border-radius:4px;padding:3px 5px;font-weight:800;box-shadow:0 2px 5px #0008}.state .frozen{color:#8fd3ff}.state .shield{color:#b9c8ff}.state .curse{color:#d9a8ff}.card.tapped{transform:rotate(90deg);margin:0 15px}.card.selected{outline:3px solid #8ab4ff;outline-offset:2px}.card.back{background:linear-gradient(135deg,#29313c,#11151b);color:#b9c0ca}.zoom{position:fixed;display:none;z-index:100;width:min(340px,88vw);height:auto;aspect-ratio:190/260;pointer-events:none;transform:none;border:1px solid #68717e;border-radius:12px;background:#111;color:#17191d;box-shadow:0 20px 50px #000d;overflow:hidden}.zoom img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:11px}.zoom .zfallback{padding:14px;color:#eee}.zoom .zname{font-size:18px;font-weight:900;margin-bottom:8px}.zoom .ztype{color:#aab3c0}.zoom .zcost{margin-top:15px;font-size:14px}.menu{position:fixed;display:none;z-index:200;background:#171a20;border:1px solid #505967;border-radius:8px;padding:4px;min-width:170px;box-shadow:0 15px 45px #000c}.menu button{display:block;width:100%;text-align:left;border:0;background:transparent}.menu button:hover{background:#2b313b}.modal{display:none;position:fixed;z-index:150;left:50%;top:50%;transform:translate(-50%,-50%);width:min(720px,92vw);background:#171a20;border:1px solid #565f6d;border-radius:12px;padding:16px;box-shadow:0 20px 80px #000e}.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mbox{border:1px solid #353c47;border-radius:8px;padding:8px}.mcards{display:flex;gap:6px;flex-wrap:wrap;min-height:110px}.modal p{color:#9aa3b0}.toast{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:#282f39;border:1px solid #515b69;border-radius:8px;padding:8px 13px;opacity:0;transition:.2s;z-index:300}.toast.show{opacity:1}
 .deckModal{display:none;position:fixed;inset:0;z-index:500;background:#000b;align-items:center;justify-content:center}.deckBox{width:min(940px,94vw);height:min(700px,90vh);background:#171a20;border:1px solid #596270;border-radius:13px;box-shadow:0 25px 90px #000e;display:flex;flex-direction:column;padding:14px}.deckHead{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.deckControls{display:flex;gap:7px;flex-wrap:wrap;align-items:center;border-bottom:1px solid #353c47;padding-bottom:10px}.deckControls input{background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:8px 10px;min-width:240px}.deckCards{display:grid;grid-template-columns:repeat(auto-fill,minmax(95px,1fr));gap:12px;overflow:auto;padding:14px 4px}.viewerCard{display:flex;flex-direction:column;align-items:center;gap:5px}.viewerCard .card{width:78px;height:108px}.viewerCard small{color:#929baa;font-size:9px;text-align:center}.public{color:#83d19a;font-size:11px}.topInfo{color:#929baa;font-size:11px}
 .lobby{position:fixed;inset:0;background:#0d1015;z-index:950;display:flex;flex-direction:column}.lobby.database{position:fixed;inset:0;background:#0d1015;z-index:920;display:flex;flex-direction:column}.databaseBar{height:58px;background:#15191f;border-bottom:1px solid #353c47;display:flex;align-items:center;gap:8px;padding:8px 12px}.databaseBar h2{margin:0 12px 0 0}.databaseBody{padding:12px;min-height:0;flex:1;overflow:auto}.dbControls{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap}.dbGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}.dbCard{background:#15191f;border:1px solid #3a4350;border-radius:9px;padding:12px}.dbCard h3{margin:0 0 6px;font-size:14px}.dbMeta{font-size:11px;color:#929baa;margin-bottom:7px}.dbDomain{display:inline-block;padding:3px 6px;border-radius:5px;background:#222a34;font-size:10px}.dbNote{color:#7f8795;font-size:11px}.domainBar{padding:9px;background:#11151b;border:1px solid #353c47;border-radius:8px;margin-bottom:10px}.domainBar b{display:block;margin-bottom:5px}.domainPills{display:flex;gap:6px;flex-wrap:wrap}.domainPill{border:1px solid #48515e;background:#171c24;color:#aaa;padding:4px 8px;border-radius:999px;font-size:10px}.domainPill.active{border-color:#8ab4ff;color:#eee;background:#202a38}.builderDomainInfo{font-size:11px;color:#929baa;margin-top:7px}.builderDomainInfo strong{color:#83d19a}.builderDomainInfo.warn strong{color:#ffb36b}.homeActions{display:grid;grid-template-columns:repeat(3,minmax(190px,230px));justify-content:center;gap:18px;margin:0 auto;width:max-content;max-width:100%}.screenHidden{display:none!important}.lobbyBar{height:58px;background:#15191f;border-bottom:1px solid #353c47;display:flex;align-items:center;gap:9px;padding:8px 12px}.lobbyBar h2{margin:0 10px 0 0}.lobbyBody{width:min(1050px,94vw);margin:0 auto;padding:22px 0;overflow:auto}.modeGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}.modeCard{background:#15191f;border:1px solid #3c4552;border-radius:10px;padding:16px;text-align:left;cursor:pointer}.modeCard.active{border-color:#8ab4ff;box-shadow:0 0 0 1px #8ab4ff55 inset}.modeCard h3{margin:0 0 6px}.modeCard p{margin:0;color:#929baa;font-size:12px}.lobbyGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.seat{background:#15191f;border:1px solid #353c47;border-radius:10px;padding:16px;min-height:240px}.seat.joined{border-color:#83d19a}.seat h3{margin:0 0 10px}.seatStatus{font-size:12px;color:#929baa;margin:7px 0 12px}.seatStatus.ready{color:#83d19a}.lobbySelect{width:100%;background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:10px}.lobbyFooter{display:flex;align-items:center;gap:10px;margin-top:14px;background:#15191f;border:1px solid #353c47;border-radius:10px;padding:12px}.lobbyFooter .spacer{flex:1}.inviteBox{display:none;background:#11151b;border:1px dashed #596271;border-radius:8px;padding:10px;margin-top:10px;color:#aab3c0;font-size:12px}.inviteBox.show{display:block}.confirmBtn{width:100%;margin-top:12px}.startLobby{font-size:16px;font-weight:900;padding:10px 18px}..home{position:fixed;inset:0;background:#0d1015;display:flex;align-items:center;justify-content:center;z-index:1000}.homeBox{width:min(1000px,92vw);text-align:center;margin:0 auto}.homeBox h1{font-size:38px;margin:0 0 10px}.homeBox p{color:#929baa;margin:0 0 30px}.homeActions{display:grid;grid-template-columns:1fr 1fr;gap:18px}.homeBtn{height:170px;font-size:28px;font-weight:900;border:1px solid #4d5867;background:#171c24}.homeBtn:hover{background:#242b35;transform:translateY(-2px)}.screenHidden{display:none!important}.builder{position:fixed;inset:0;background:#0d1015;z-index:900;display:flex;flex-direction:column}.builderBar{height:58px;background:#15191f;border-bottom:1px solid #353c47;display:flex;align-items:center;gap:8px;padding:8px 12px}.builderBar h2{margin:0 12px 0 0}.builderBody{display:grid;grid-template-columns:250px 1fr 320px;gap:10px;padding:10px;min-height:0;flex:1}.builderPanel{background:#15191f;border:1px solid #353c47;border-radius:9px;padding:12px;min-height:0;overflow:auto}.deckList{display:flex;flex-direction:column;gap:6px}.deckList button{text-align:left}.deckList button.active{border-color:#8ab4ff;background:#202a38}.builderCards{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:7px}.bcard{border:1px solid #3f4855;border-radius:7px;padding:8px;background:#11151b;display:flex;justify-content:space-between;gap:5px;align-items:center}.bcard small{color:#929baa}.bcard .qty{font-weight:900;min-width:25px;text-align:center}.bcard button{padding:3px 7px}.builderSection{margin-bottom:16px}.builderSection h3{margin:0 0 8px;font-size:13px;color:#aab3c0}.builderStat{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #252b33}.complete{color:#83d19a}.incomplete{color:#ffb36b}.builderSelect{width:100%;background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:8px}.builderSearch{width:100%;background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:9px;margin-bottom:8px}.builderNote{color:#7f8795;font-size:11px;line-height:1.4}. .modal.show{display:block}.homeActions{grid-template-columns:1fr;width:min(100%,420px)}
@@ -2256,7 +2256,7 @@ body.aiMatchV1352 #game .player.p2 .zone.play .card.targetCandidate{
  <strong>Trainer — tactical practice AI</strong><p style="color:#aab7cd;font-size:12px;margin:5px 0 10px">Choose any saved deck or one of 15 Trainer archetypes for Seat 2. Trainer plans combos and responses, but difficult card effects may still need manual handling.</p>
  <label for="aiDifficultyV1352" style="font-size:12px">AI difficulty</label>
  <select id="aiDifficultyV1352" onchange="fillLobbyDecks();renderLobby()" style="margin:0 0 0 9px;padding:7px;border-radius:6px;background:#1b2737;color:white"><option value="easy">Easy</option><option value="normal">Normal</option><option value="hard">Hard — Deck-aware</option><option value="trainer" selected>Trainer — Tactical AI</option></select>
- </div><div id="onlineRoomPanel" class="onlineRoomPanel" style="display:none;margin-bottom:14px;background:#15191f;border:1px solid #3c4552;border-radius:10px;padding:14px"><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><label for="onlinePlayerName" style="font-size:12px;color:#b9c8dd">Your name</label><input id="onlinePlayerName" maxlength="24" placeholder="Player name" style="background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:9px;width:145px" oninput="onlineNameChanged()"><button onclick="createOnlineRoom()">Create Room</button><input id="onlineRoomCode" maxlength="8" placeholder="ROOM CODE" style="background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:9px;text-transform:uppercase;letter-spacing:2px;width:145px" oninput="this.value=this.value.toUpperCase().replace(/[^A-Z2-9]/g,'')"><button onclick="joinOnlineRoom()">Join Room</button><button onclick="copyOnlineRoomCode()">Copy Code</button><button onclick="leaveOnlineRoom()">Leave Room</button></div><div id="onlineRoomStatus" style="margin-top:9px;color:#aab3c0;font-size:12px">Create a room or enter your friend's code.</div><div style="margin-top:5px;color:#929baa;font-size:11px">Online game: each player controls their own seat. Manual card effects; both players must stay connected.</div></div></div><div class="lobbyGrid"><div id="seat1" class="seat"><h3>Seat 1 — Player 1</h3><div class="seatStatus" id="seat1Status">Waiting for deck.</div><select id="lobbyDeck1" class="lobbySelect" onchange="lobbyDeckChanged(1,this.value)"></select><button id="seat1Confirm" class="confirmBtn" onclick="confirmSeat(1)">Confirm</button></div><div id="seat2" class="seat"><h3>Seat 2 — Player 2</h3><div class="seatStatus" id="seat2Status">Waiting for deck.</div><select id="lobbyDeck2" class="lobbySelect" onchange="lobbyDeckChanged(2,this.value)"></select><button id="seat2Join" class="confirmBtn" onclick="joinSeat2()">Join as Player 2</button><button id="seat2Confirm" class="confirmBtn" onclick="confirmSeat(2)" style="display:none">Confirm</button><div id="inviteBox" class="inviteBox">Connected to the private room.</div></div></div><div class="lobbyFooter"><span id="lobbyReadyText" style="color:#929baa">Both seats must confirm.</span><span class="spacer"></span><button id="lobbyStart" class="startLobby" onclick="startGameFromLobby()" disabled>Start Game</button></div></div></div><div id="game" class="screenHidden"><div id="bar"><b>Pocket TCG Simulator <span style="color:#7f8795">V1.375 • Trainer</span></b><button id="undoBtn" onclick="undoMove()">↶ Undo</button><button onclick="endTurn()">End Turn</button><button id="switchSideBtn" onclick="switchSide()" style="display:none">Switch Side</button><button id="nextGameBtnV252" onclick="nextGame()">Next Game</button><button id="gameplayMuteBtn" type="button" onclick="toggleGameplayMusic()" aria-label="Mute background music" aria-pressed="false" title="Mute background music">🔊 Music</button><button onclick="leaveGame()">Leave Game</button><button id="mobileGameMenuToggle" type="button" aria-expanded="false" onclick="toggleMobileGameMenu()">☰ Menu</button><div id="mobileGameMenu" aria-label="Game actions"></div><span id="status">Player 1 Turn</span></div><div class="table" id="table"></div><button id="commToggle" class="commToggle" onclick="toggleCommDock()" style="display:none">💬 Chat / Log <span id="commUnread" class="commUnread" style="display:none">0</span></button><div id="commDock" class="commDock" aria-label="Chat and action history"><div class="commHead"><b>Match communication</b><button onclick="toggleCommDock(false)" aria-label="Close">✕</button></div><div class="commTabs"><button id="commChatTab" class="active" onclick="setCommTab('chat')">💬 Chat</button><button id="commLogTab" onclick="setCommTab('log')">📜 Action Log</button></div><div id="commChatFeed" class="commFeed" role="log" aria-live="polite"></div><div id="commLogFeed" class="commFeed" role="log" aria-live="polite" style="display:none"></div><form id="commForm" class="commComposer" onsubmit="sendCommMessage(event)"><input id="commInput" maxlength="350" placeholder="Message to your opponent..." autocomplete="off" aria-label="Chat message"><button type="submit">Send</button></form></div></div><div class="modal" id="loadDeckModal"><h2>Load Deck</h2><p>Select the saved deck for each player.</p><div class="mgrid"><div class="mbox"><b>Player 1</b><select id="playDeck1" class="builderSelect" onchange="selectSavedDeck(1,this.value)"></select><p id="playDeck1Info" class="topInfo"></p></div><div class="mbox"><b>Player 2</b><select id="playDeck2" class="builderSelect" onchange="selectSavedDeck(2,this.value)"></select><p id="playDeck2Info" class="topInfo"></p></div></div><div style="text-align:right;margin-top:12px"><button onclick="closeLoadDecks()">Cancel</button><button onclick="confirmLoadDecks()">Confirm</button></div></div><div class="modal" id="dbDetailModal"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><h2 id="dbDetailName" style="margin:0">Card</h2><button onclick="closeCardDetail()">Close</button></div><div id="dbDetailBody" style="margin-top:14px"></div></div><div id="undoApproval" class="undoApproval" role="dialog" aria-modal="true" aria-labelledby="undoApprovalTitle"><div class="undoApprovalBox"><h2 id="undoApprovalTitle">Undo request</h2><p id="undoApprovalMessage">Your opponent wants to undo their last action. Approve?</p><div class="undoApprovalButtons"><button class="approve" onclick="answerOnlineUndo(true)">✓ Approve</button><button class="deny" onclick="answerOnlineUndo(false)">✕ Deny</button></div></div></div><div id="spellOverlay" class="spellOverlay" role="dialog" aria-modal="true" aria-labelledby="spellTitle"><div class="spellPanel"><h2 id="spellTitle">Spell Chain</h2><p id="spellHint"></p><div class="spellStack" id="spellStack"></div><div class="spellQuickList" id="spellQuickList"></div><div class="spellActions" id="spellActions"></div></div></div><div id="turnBanner" class="turnBanner" aria-live="polite"><div class="turnBannerContent"><strong>Turn Start</strong><small id="turnBannerSub"></small></div></div><div id="mobileZoomDismissV1330" role="button" tabindex="0" aria-label="Close enlarged card"></div><div class="zoom" id="zoom"><img class="zimage" alt=""><div class="zfallback"><div class="zname"></div><div class="ztype"></div><div class="zcost"></div></div></div><div class="menu" id="menu"><button id="shuffleSingleCard" style="display:none" onclick="menuAct('shuffleCard')">Shuffle Card Into Deck</button><button id="tokenSourceAction" style="display:none" onclick="menuAct('tokenCreate')">Create Tokens</button><button onclick="menuAct('view')">View Card</button><button onclick="menuAct('hand')">Move to Hand</button><button onclick="menuAct('play')">Move to Play Area</button><button onclick="menuAct('lessons')">Move to Lessons</button><button onclick="menuAct('discard')">Move to Discard</button><button onclick="menuAct('counter+')">+1 Counter</button><button onclick="menuAct('counter-')">-1 Counter</button><button onclick="menuAct('lifeSet')">Set Creature Life</button><button onclick="menuAct('frozen')">Toggle Frozen</button><button onclick="menuAct('shield')">Toggle Shield</button><button onclick="menuAct('curse')">Toggle Curse</button><button id="switchWildBoarAction" style="display:none" onclick="menuAct('wildBoar')">Switch to Wild Boar</button></div><div class="menu" id="startingAllyMenu"><button id="dracoAbilityV242" onclick="activateDracoV242(startingAllyMenuPlayer)" style="display:none">✦ Draco — Activate (1 Action)</button><button id="dobbyBoardAbilityV1342" onclick="useDobbyAbility(true);document.getElementById('startingAllyMenu').style.display='none'" style="display:none">✦ Dobby — Destroy active Spell (Discard 1 Lesson)</button><button onclick="startingAllyStatus('frozen')">Toggle Frozen</button><button onclick="startingAllyStatus('shield')">Toggle Shield</button><button onclick="startingAllyStatus('curse')">Toggle Curse</button></div><div class="menu" id="deckMenu"><button id="deckDraw" onclick="deckMenuAct('draw')">Draw</button><button id="deckPlayLesson" onclick="deckMenuAct('playLesson')" style="display:none">Play Lesson — 1 Action</button><button id="deckLook" onclick="deckMenuAct('look')">Look ▸</button><button id="deckSearch" onclick="deckMenuAct('search')">Search</button></div><div class="menu" id="deckLookSubmenu"><button onclick="deckMenuAct('look1')">Look 1</button><button onclick="deckMenuAct('look3')">Look 3</button><button onclick="deckMenuAct('look5')">Look 5</button></div><div class="modal" id="turnOrderModal"><div style="text-align:center;padding:18px"><div style="font-size:14px;opacity:.75;text-transform:uppercase;letter-spacing:2px">Match Setup</div><h1 id="turnOrderTitle" style="margin:10px 0 6px">Randomizing Turn Order...</h1><p id="turnOrderText" style="font-size:18px;margin:0 0 18px"></p><button id="turnOrderContinue" onclick="continueToMulligan()" disabled>Continue to Mulligan</button></div></div><div class="modal" id="onlineMullModal" style="z-index:1200;width:min(780px,95vw)"><h2 id="onlineMullTitle">Online Mulligan</h2><p id="onlineMullInfo">Select up to 2 cards to replace. Your opponent cannot see your hand.</p><div class="mcards" id="onlineMullCards" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:16px 0"></div><div style="display:flex;justify-content:space-between;gap:10px;align-items:center"><span id="onlineMullReady" style="color:#aab3c0;font-size:12px"></span><button id="onlineMullConfirm" onclick="confirmOnlineMulligan()">Confirm Mulligan</button></div></div><div class="modal" id="modal"><h2>Mulligan — up to 2 cards</h2><p>Select 0–2 cards to replace. Replaced cards return to their Main Deck and are shuffled.</p><div class="mgrid"><div class="mbox"><b>Player 1</b><div class="mcards" id="m1"></div></div><div class="mbox"><b>Player 2</b><div class="mcards" id="m2"></div></div></div><div style="text-align:right;margin-top:12px"><button onclick="confirmMulligan()">Confirm Mulligan</button></div></div><div class="toast" id="toast"></div>
+ </div><div id="onlineRoomPanel" class="onlineRoomPanel" style="display:none;margin-bottom:14px;background:#15191f;border:1px solid #3c4552;border-radius:10px;padding:14px"><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><label for="onlinePlayerName" style="font-size:12px;color:#b9c8dd">Your name</label><input id="onlinePlayerName" maxlength="24" placeholder="Player name" style="background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:9px;width:145px" oninput="onlineNameChanged()"><button onclick="createOnlineRoom()">Create Room</button><input id="onlineRoomCode" maxlength="8" placeholder="ROOM CODE" style="background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:9px;text-transform:uppercase;letter-spacing:2px;width:145px" oninput="this.value=this.value.toUpperCase().replace(/[^A-Z2-9]/g,'')"><button onclick="joinOnlineRoom()">Join Room</button><button onclick="copyOnlineRoomCode()">Copy Code</button><button onclick="leaveOnlineRoom()">Leave Room</button></div><div id="onlineRoomStatus" style="margin-top:9px;color:#aab3c0;font-size:12px">Create a room or enter your friend's code.</div><div style="margin-top:5px;color:#929baa;font-size:11px">Online game: each player controls their own seat. Manual card effects; both players must stay connected.</div></div></div><div class="lobbyGrid"><div id="seat1" class="seat"><h3>Seat 1 — Player 1</h3><div class="seatStatus" id="seat1Status">Waiting for deck.</div><select id="lobbyDeck1" class="lobbySelect" onchange="lobbyDeckChanged(1,this.value)"></select><button id="seat1Confirm" class="confirmBtn" onclick="confirmSeat(1)">Confirm</button></div><div id="seat2" class="seat"><h3>Seat 2 — Player 2</h3><div class="seatStatus" id="seat2Status">Waiting for deck.</div><select id="lobbyDeck2" class="lobbySelect" onchange="lobbyDeckChanged(2,this.value)"></select><button id="seat2Join" class="confirmBtn" onclick="joinSeat2()">Join as Player 2</button><button id="seat2Confirm" class="confirmBtn" onclick="confirmSeat(2)" style="display:none">Confirm</button><div id="inviteBox" class="inviteBox">Connected to the private room.</div></div></div><div class="lobbyFooter"><span id="lobbyReadyText" style="color:#929baa">Both seats must confirm.</span><span class="spacer"></span><button id="lobbyStart" class="startLobby" onclick="startGameFromLobby()" disabled>Start Game</button></div></div></div><div id="game" class="screenHidden"><div id="bar"><b>Pocket TCG Simulator <span style="color:#7f8795">V1.376 • Trainer</span></b><button id="undoBtn" onclick="undoMove()">↶ Undo</button><button onclick="endTurn()">End Turn</button><button id="switchSideBtn" onclick="switchSide()" style="display:none">Switch Side</button><button id="nextGameBtnV252" onclick="nextGame()">Next Game</button><button id="gameplayMuteBtn" type="button" onclick="toggleGameplayMusic()" aria-label="Mute background music" aria-pressed="false" title="Mute background music">🔊 Music</button><button onclick="leaveGame()">Leave Game</button><button id="mobileGameMenuToggle" type="button" aria-expanded="false" onclick="toggleMobileGameMenu()">☰ Menu</button><div id="mobileGameMenu" aria-label="Game actions"></div><span id="status">Player 1 Turn</span></div><div class="table" id="table"></div><button id="commToggle" class="commToggle" onclick="toggleCommDock()" style="display:none">💬 Chat / Log <span id="commUnread" class="commUnread" style="display:none">0</span></button><div id="commDock" class="commDock" aria-label="Chat and action history"><div class="commHead"><b>Match communication</b><button onclick="toggleCommDock(false)" aria-label="Close">✕</button></div><div class="commTabs"><button id="commChatTab" class="active" onclick="setCommTab('chat')">💬 Chat</button><button id="commLogTab" onclick="setCommTab('log')">📜 Action Log</button></div><div id="commChatFeed" class="commFeed" role="log" aria-live="polite"></div><div id="commLogFeed" class="commFeed" role="log" aria-live="polite" style="display:none"></div><form id="commForm" class="commComposer" onsubmit="sendCommMessage(event)"><input id="commInput" maxlength="350" placeholder="Message to your opponent..." autocomplete="off" aria-label="Chat message"><button type="submit">Send</button></form></div></div><div class="modal" id="loadDeckModal"><h2>Load Deck</h2><p>Select the saved deck for each player.</p><div class="mgrid"><div class="mbox"><b>Player 1</b><select id="playDeck1" class="builderSelect" onchange="selectSavedDeck(1,this.value)"></select><p id="playDeck1Info" class="topInfo"></p></div><div class="mbox"><b>Player 2</b><select id="playDeck2" class="builderSelect" onchange="selectSavedDeck(2,this.value)"></select><p id="playDeck2Info" class="topInfo"></p></div></div><div style="text-align:right;margin-top:12px"><button onclick="closeLoadDecks()">Cancel</button><button onclick="confirmLoadDecks()">Confirm</button></div></div><div class="modal" id="dbDetailModal"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><h2 id="dbDetailName" style="margin:0">Card</h2><button onclick="closeCardDetail()">Close</button></div><div id="dbDetailBody" style="margin-top:14px"></div></div><div id="undoApproval" class="undoApproval" role="dialog" aria-modal="true" aria-labelledby="undoApprovalTitle"><div class="undoApprovalBox"><h2 id="undoApprovalTitle">Undo request</h2><p id="undoApprovalMessage">Your opponent wants to undo their last action. Approve?</p><div class="undoApprovalButtons"><button class="approve" onclick="answerOnlineUndo(true)">✓ Approve</button><button class="deny" onclick="answerOnlineUndo(false)">✕ Deny</button></div></div></div><div id="spellOverlay" class="spellOverlay" role="dialog" aria-modal="true" aria-labelledby="spellTitle"><div class="spellPanel"><h2 id="spellTitle">Spell Chain</h2><p id="spellHint"></p><div class="spellStack" id="spellStack"></div><div class="spellQuickList" id="spellQuickList"></div><div class="spellActions" id="spellActions"></div></div></div><div id="turnBanner" class="turnBanner" aria-live="polite"><div class="turnBannerContent"><strong>Turn Start</strong><small id="turnBannerSub"></small></div></div><div id="mobileZoomDismissV1330" role="button" tabindex="0" aria-label="Close enlarged card"></div><div class="zoom" id="zoom"><img class="zimage" alt=""><div class="zfallback"><div class="zname"></div><div class="ztype"></div><div class="zcost"></div></div></div><div class="menu" id="menu"><button id="shuffleSingleCard" style="display:none" onclick="menuAct('shuffleCard')">Shuffle Card Into Deck</button><button id="tokenSourceAction" style="display:none" onclick="menuAct('tokenCreate')">Create Tokens</button><button onclick="menuAct('view')">View Card</button><button onclick="menuAct('hand')">Move to Hand</button><button onclick="menuAct('play')">Move to Play Area</button><button onclick="menuAct('lessons')">Move to Lessons</button><button onclick="menuAct('discard')">Move to Discard</button><button onclick="menuAct('counter+')">+1 Counter</button><button onclick="menuAct('counter-')">-1 Counter</button><button onclick="menuAct('lifeSet')">Set Creature Life</button><button onclick="menuAct('frozen')">Toggle Frozen</button><button onclick="menuAct('shield')">Toggle Shield</button><button onclick="menuAct('curse')">Toggle Curse</button><button id="switchWildBoarAction" style="display:none" onclick="menuAct('wildBoar')">Switch to Wild Boar</button></div><div class="menu" id="startingAllyMenu"><button id="dracoAbilityV242" onclick="activateDracoV242(startingAllyMenuPlayer)" style="display:none">✦ Draco — Activate (1 Action)</button><button id="dobbyBoardAbilityV1342" onclick="useDobbyAbility(true);document.getElementById('startingAllyMenu').style.display='none'" style="display:none">✦ Dobby — Destroy active Spell (Discard 1 Lesson)</button><button onclick="startingAllyStatus('frozen')">Toggle Frozen</button><button onclick="startingAllyStatus('shield')">Toggle Shield</button><button onclick="startingAllyStatus('curse')">Toggle Curse</button></div><div class="menu" id="deckMenu"><button id="deckDraw" onclick="deckMenuAct('draw')">Draw</button><button id="deckPlayLesson" onclick="deckMenuAct('playLesson')" style="display:none">Play Lesson — 1 Action</button><button id="deckLook" onclick="deckMenuAct('look')">Look ▸</button><button id="deckSearch" onclick="deckMenuAct('search')">Search</button></div><div class="menu" id="deckLookSubmenu"><button onclick="deckMenuAct('look1')">Look 1</button><button onclick="deckMenuAct('look3')">Look 3</button><button onclick="deckMenuAct('look5')">Look 5</button></div><div class="modal" id="turnOrderModal"><div style="text-align:center;padding:18px"><div style="font-size:14px;opacity:.75;text-transform:uppercase;letter-spacing:2px">Match Setup</div><h1 id="turnOrderTitle" style="margin:10px 0 6px">Randomizing Turn Order...</h1><p id="turnOrderText" style="font-size:18px;margin:0 0 18px"></p><button id="turnOrderContinue" onclick="continueToMulligan()" disabled>Continue to Mulligan</button></div></div><div class="modal" id="onlineMullModal" style="z-index:1200;width:min(780px,95vw)"><h2 id="onlineMullTitle">Online Mulligan</h2><p id="onlineMullInfo">Select up to 2 cards to replace. Your opponent cannot see your hand.</p><div class="mcards" id="onlineMullCards" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:16px 0"></div><div style="display:flex;justify-content:space-between;gap:10px;align-items:center"><span id="onlineMullReady" style="color:#aab3c0;font-size:12px"></span><button id="onlineMullConfirm" onclick="confirmOnlineMulligan()">Confirm Mulligan</button></div></div><div class="modal" id="modal"><h2>Mulligan — up to 2 cards</h2><p>Select 0–2 cards to replace. Replaced cards return to their Main Deck and are shuffled.</p><div class="mgrid"><div class="mbox"><b>Player 1</b><div class="mcards" id="m1"></div></div><div class="mbox"><b>Player 2</b><div class="mcards" id="m2"></div></div></div><div style="text-align:right;margin-top:12px"><button onclick="confirmMulligan()">Confirm Mulligan</button></div></div><div class="toast" id="toast"></div>
 <div class="modal" id="deckCodeModal" style="z-index:1100;width:min(620px,94vw)"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h2 id="deckCodeTitle" style="margin:0">Deck Code</h2><button onclick="closeDeckCodeModal()">Close</button></div><p id="deckCodeHelp"></p><textarea id="deckCodeInput" spellcheck="false" style="width:100%;height:135px;resize:vertical;background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:10px;font:12px monospace;margin:8px 0"></textarea><div style="display:flex;justify-content:flex-end;gap:8px"><button id="deckCodeCopy" onclick="copyDeckCode()">Copy Code</button><button id="deckCodeImport" onclick="importDeckCode()">Import Deck</button></div></div><div id="lookRevealOverlay" class="lookRevealOverlay" style="display:none"><div class="lookRevealPanel"><div class="lookRevealHeader"><b id="lookRevealTitle">Opponent reveals cards</b><button onclick="closeLookReveal()">Close</button></div><div id="lookRevealCards" class="lookRevealCards"></div></div></div><div class="deckModal" id="deckModal"><div class="deckBox"><div class="deckHead"><b id="deckTitle">Deck</b><button onclick="closeDeckViewer()">Close</button></div><div class="deckControls" id="deckControls"></div><div class="deckCards" id="deckCards"></div></div></div><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script>
 /* V1.156 — Preserve mobile section when builder rerenders; desktop keeps three columns. */
@@ -2727,7 +2727,7 @@ async function umbridgeTryResolveLessonV1333(){
  try{
   let changed=false;
   if(umbridgeDecreeOnBoardV1333(p,'Umbridge Lesson Decree')&&P[p].hand.length){
-   const chosen=await queueCardChoiceV222('Umbridge Lesson Decree — Discard 1','You played a Lesson. Choose one card from your hand to discard.',[...P[p].hand],true);
+   const chosen=await aiOwnedCardChoiceV1360(p,'Umbridge Lesson Decree — Discard 1','You played a Lesson. Choose one card from your hand to discard.',[...P[p].hand],true);
    if(phase==='game'&&autoCanControl(p)&&umbridgeDecreeOnBoardV1333(p,'Umbridge Lesson Decree')){
     const ix=P[p].hand.findIndex(c=>String(c.id)===String(chosen));
     if(ix>=0){pushHistory();const card=P[p].hand.splice(ix,1)[0];putInOwnersDiscardV191(card,p);sendSpotlightV239(p,card,true);changed=true;autoLog(p,'Umbridge Lesson Decree: discarded '+card.name+'.');}
@@ -2769,7 +2769,7 @@ async function umbridgeTryResolveV1333(){
   umbridgeReturnStraysV1333();
   const options=umbridgeAvailableV1333(p);
   if(!options.length){P[p].umbridgeDecreePendingV1333=false;render();return;}
-  const chosen=await queueCardChoiceV222('Dolores Umbridge — Choose a Decree',
+  const chosen=await aiOwnedCardChoiceV1360(p,'Dolores Umbridge — Choose a Decree',
    'Choose a Decree for the opponent. A destroyed or discarded Decree cannot be chosen again until you play a different Decree.',
    options.map(name=>({id:name,name,image:CARD_DB[name].image})),true);
   if(phase!=='game'||!autoCanControl(p)||!P[p].umbridgeDecreePendingV1333)return;
@@ -2908,7 +2908,7 @@ function destroyCounteredSpellV1342(entry){
  putInOwnersDiscardV191(card,p);return card;
 }
 function spellChainActive(){return phase==='game'&&spellChain.length>0&&(lobbyMode==='local'||(lobbyMode==='invite'&&onlineStarted))}
-function spellChainReset(){document.getElementById('declareOverlayV1322')?.remove();spellChain=[];spellChainSerial=0;pendingSpellEffect=null;autoEngine={pending:null,queue:[],turnKey:1,turnSwitchPending:false,minimized:false};autoRenderModal();renderSpellChain()}
+function spellChainReset(){document.getElementById('activationTargetsV1342')?.cancelSelectionV1376?.();document.getElementById('declareOverlayV1322')?.remove();spellChain=[];spellChainSerial=0;pendingSpellEffect=null;autoEngine={pending:null,queue:[],turnKey:1,turnSwitchPending:false,minimized:false};autoRenderModal();renderSpellChain()}
 // Dark Arts: every Dark Arts card may be played once from Discard at +1 Lesson; exile afterward.
 // Printed additional costs on individual cards still apply. Lessons are paid manually in this simulator.
 function darkArtsCard(c){return CARD_DB[c?.name]?.domain==='Dark Arts';}
@@ -3031,7 +3031,7 @@ async function spellChainCast(p,cardId,quick=false){
    const options=quickResponseLessonOptionsV179(p,found.c);
    if(options.length===1)quickLessonId=options[0].lesson.id;
    else{
-    const selected=await costDialogV178({title:'Quick Spell Response',description:'Discard 1 '+(CARD_DB[found.c.name].domain==='Neutral'?'Lesson':CARD_DB[found.c.name].domain+' Lesson')+' to respond with '+name+'.',choices:options.map(o=>({label:o.lesson.name+' • Lesson '+(o.index+1),value:o.lesson.id}))});
+    const selected=(p===2&&window.PocketTrainerAI?.isTrainer())?options[0].lesson.id:await costDialogV178({title:'Quick Spell Response',description:'Discard 1 '+(CARD_DB[found.c.name].domain==='Neutral'?'Lesson':CARD_DB[found.c.name].domain+' Lesson')+' to respond with '+name+'.',choices:options.map(o=>({label:o.lesson.name+' • Lesson '+(o.index+1),value:o.lesson.id}))});
     if(selected===null)return false;
     quickLessonId=selected;
    }
@@ -3703,13 +3703,13 @@ async function resolvePrioriV227(p,sourceId){
  if(!autoCanControl(p))return;
  // Priori requires a discard; choose its cost before selecting a Spell to return.
  const hand=[...P[p].hand];if(!hand.length){toast('Priori Incantatem: no card to discard.');const i=P[p].play.findIndex(c=>c.id===sourceId);if(i>=0)putInOwnersDiscardV191(P[p].play.splice(i,1)[0],p);render();return;}
- const toDiscard=await queueCardChoiceV222('Priori Incantatem — Discard','Choose a card from your hand to discard.',hand);
+ const toDiscard=await aiOwnedCardChoiceV1360(p,'Priori Incantatem — Discard','Choose a card from your hand to discard.',hand);
  if(toDiscard===null||!autoCanControl(p)){const card=P[p].play.find(c=>c.id===sourceId);if(card)card.prioriPendingV227=true;return;}
  const at=P[p].hand.findIndex(c=>c.id===toDiscard);if(at<0)return;
  pushHistory();const discarded=P[p].hand.splice(at,1)[0];putInOwnersDiscardV191(discarded,p);sendSpotlightV239(p,discarded,true);
  const eligible=P[p].discard.filter(c=>isSpellCard(c)&&c.id!==sourceId);
  if(!eligible.length){const i=P[p].play.findIndex(c=>c.id===sourceId);if(i>=0)putInOwnersDiscardV191(P[p].play.splice(i,1)[0],p);render();return;}
- const recovered=await queueCardChoiceV222('Priori Incantatem — Return Spell','Choose a Spell in your Discard to return to your hand.',eligible);
+ const recovered=await aiOwnedCardChoiceV1360(p,'Priori Incantatem — Return Spell','Choose a Spell in your Discard to return to your hand.',eligible);
  if(recovered!==null&&autoCanControl(p)){const ix=P[p].discard.findIndex(c=>c.id===recovered&&isSpellCard(c));if(ix>=0){P[p].hand.push(P[p].discard.splice(ix,1)[0]);}}
  const pos=P[p].play.findIndex(c=>c.id===sourceId&&c.name==='Priori Incantatem');if(pos>=0){const spell=P[p].play.splice(pos,1)[0];putInOwnersDiscardV191(spell,p);}
  render();
@@ -3768,7 +3768,7 @@ async function resolveBatBogeyV231(p,id){
  try{
  const candidates=batBogeyEligibleV1349(id);
  let selected=null;
- if(candidates.length)selected=await queueCardChoiceV222('Bat Bogey Hex — Destroy Spell','Choose a Spell of cost 4 or less to destroy. Draw 1 card only if a Spell is destroyed.',candidates);
+ if(candidates.length)selected=await aiOwnedCardChoiceV1360(p,'Bat Bogey Hex — Destroy Spell','Choose a Spell of cost 4 or less to destroy. Draw 1 card only if a Spell is destroyed.',candidates);
  else toast('Bat Bogey Hex: no eligible Spell to destroy.');
  if(!autoCanControl(p))return;
  if(!P[p].play.some(c=>c.id===id&&c.name==='Bat Bogey Hex'))return;
@@ -3797,13 +3797,13 @@ async function resolveCardEffectV228(p,id){
   pushHistory();for(let side=1;side<=2;side++){P[side].main.push(...P[side].hand.splice(0));sh(P[side].main);draw(side,4);}
  }else if(card.name==='Accio'){
   const choices=P[p].lessonDiscard.slice();
-  if(choices.length){const selected=await queueCardChoiceV222('Accio — Return Lesson','Choose a Lesson in your Lesson Discard to put in play.',choices);
+  if(choices.length){const selected=await aiOwnedCardChoiceV1360(p,'Accio — Return Lesson','Choose a Lesson in your Lesson Discard to put in play.',choices);
    if(selected!==null&&autoCanControl(p)){const ix=P[p].lessonDiscard.findIndex(c=>c.id===selected);if(ix>=0){pushHistory();P[p].lessons.push(P[p].lessonDiscard.splice(ix,1)[0]);}}}
  }else if(card.name==='Flipendo'){
   const targets=[1,2].flatMap(side=>P[side].play.filter(c=>c.type==='Creature'||c.type==='Item').map(c=>({id:side+':'+c.id,name:c.name+' • Player '+side,image:c.image})));
   if(targets.length){
    const declared=card.hasDeclarationV1322?card.declaredTargetV1322:null;
-   const selected=card.hasDeclarationV1322?(declared?declared.p+':'+declared.id:null):await queueCardChoiceV222('Flipendo — Return Creature or Item','Choose a Creature or Item to return to its owner’s hand. The other Player takes damage equal to its Lesson cost.',targets);
+   const selected=card.hasDeclarationV1322?(declared?declared.p+':'+declared.id:null):await aiOwnedCardChoiceV1360(p,'Flipendo — Return Creature or Item','Choose a Creature or Item to return to its owner’s hand. The other Player takes damage equal to its Lesson cost.',targets);
    if(selected!==null&&autoCanControl(p)&&P[p].play.some(c=>c.id===id)){
     const [sideText,idText]=String(selected).split(':');const side=Number(sideText);
     const ix=P[side]?.play.findIndex(c=>String(c.id)===idText&&(c.type==='Creature'||c.type==='Item'))??-1;
@@ -3823,12 +3823,12 @@ async function resolveCardEffectV228(p,id){
    }
   }
  }else if(card.name==='Side Along Apparition'){
-  const mode=card.hasDeclarationV1322?card.declaredModeV1322:await queueCardChoiceV222('Side Along Apparition — Choose One','Choose one effect to resolve.',[{id:'ally',name:'Look at the top 5 cards of your deck. Play an Ally for 0 Actions.',image:card.image},{id:'return',name:'Return a Creature or Ally you control to your hand.',image:card.image}]);
+  const mode=card.hasDeclarationV1322?card.declaredModeV1322:await aiOwnedCardChoiceV1360(p,'Side Along Apparition — Choose One','Choose one effect to resolve.',[{id:'ally',name:'Look at the top 5 cards of your deck. Play an Ally for 0 Actions.',image:card.image},{id:'return',name:'Return a Creature or Ally you control to your hand.',image:card.image}]);
   if(mode==='ally'&&autoCanControl(p)){
    const top=P[p].main.slice(-5);
    const allies=top.filter(c=>c.type==='Ally'&&canMeetLessonCostV226(p,c,false));
    if(allies.length){
-    const selected=await queueCardChoiceV222('Side Along Apparition — Top 5','Choose an Ally to play for 0 Actions, or cancel to skip.',allies);
+    const selected=await aiOwnedCardChoiceV1360(p,'Side Along Apparition — Top 5','Choose an Ally to play for 0 Actions, or cancel to skip.',allies);
     if(selected!==null&&autoCanControl(p)&&P[p].play.some(x=>x.id===id)){
      const deckIndex=P[p].main.findIndex(c=>c.id===selected&&top.some(t=>t.id===selected));
      if(deckIndex>=0){const ally=P[p].main.splice(deckIndex,1)[0];positionNewPlayCard(p,ally);initializeCountdown(ally);ally.autoCandyBonus=(Number(ally.autoCandyBonus)||0)+(invisibilityCloakBonusV256(p,ally)||0);P[p].play.push(ally);autoLog(p,'Side Along Apparition played '+ally.name+' from the top 5.');}
@@ -3837,7 +3837,7 @@ async function resolveCardEffectV228(p,id){
   }else if(mode==='return'&&autoCanControl(p)){
    const options=P[p].play.filter(c=>(c.type==='Creature'||c.type==='Ally')&&!c.isToken);
    if(options.length){
-    const selected=card.hasDeclarationV1322?card.declaredTargetV1322?.id:await queueCardChoiceV222('Side Along Apparition — Return a card','Choose a Creature or Ally you control to return to your hand.',options);
+    const selected=card.hasDeclarationV1322?card.declaredTargetV1322?.id:await aiOwnedCardChoiceV1360(p,'Side Along Apparition — Return a card','Choose a Creature or Ally you control to return to your hand.',options);
     if(selected!==null&&autoCanControl(p)&&P[p].play.some(x=>x.id===id)){
      const ix=P[p].play.findIndex(c=>c.id===selected&&(c.type==='Creature'||c.type==='Ally')&&!c.isToken);
      if(ix>=0){const target=P[p].play.splice(ix,1)[0];target.tapped=false;delete target.autoEntered;P[originalOwnerV191(target,p)].hand.push(target);autoLog(p,'Side Along Apparition returned '+target.name+' to hand.');}
@@ -3859,7 +3859,7 @@ async function resolveSpellV245(p,id){
   // only whether a Spell exists is shared in the state/log.
   const spells=P[foe].hand.filter(c=>/Spell$/.test(c.type));
   if(P[foe].hand.length){
-   await queueCardChoiceV222('Legillimens — Opponent Hand','Inspect the cards. Close this window to continue.',P[foe].hand);
+   await aiOwnedCardChoiceV1360(p,'Legillimens — Opponent Hand','Inspect the cards. Close this window to continue.',P[foe].hand);
   }
   if(!autoCanControl(p)||!P[p].play.some(c=>c.id===id))return;
   if(spells.length&&P[foe].lessons.length){
@@ -3874,7 +3874,7 @@ async function resolveSpellV245(p,id){
   if(targets.length){
    // V1.344: use the spell being resolved, including Moody's new declared target.
    const declaration=spell.hasDeclarationV1322?spell.declaredTargetV1322:undefined;
-   const pick=spell.hasDeclarationV1322?(declaration?declaration.p+':'+declaration.id:null):await queueCardChoiceV222('Petrificus Totalus — Choose a Target','Choose an Ally to destroy or a Creature to Freeze.',targets);
+   const pick=spell.hasDeclarationV1322?(declaration?declaration.p+':'+declaration.id:null):await aiOwnedCardChoiceV1360(p,'Petrificus Totalus — Choose a Target','Choose an Ally to destroy or a Creature to Freeze.',targets);
    if(pick!==null&&autoCanControl(p)){
     const [sideStr,idStr]=String(pick).split(':');const side=Number(sideStr);
     if(side===1||side===2){
@@ -3914,7 +3914,18 @@ function ongoingActiveV169(c){return !!c&&((c.name==='Protego Diabolica'||c.name
 // V1.342: Declare field-activation targets BEFORE the opponent's response.
 // This also supports multi-target ongoing Spells, so a Player cannot be added
 // after the counter window has already closed.
-function activationTargetDialogV1342(name,options,maxCount){
+function activationTargetDialogV1342(name,options,maxCount,owner=null){
+ // Defensive ownership layer: no Seat 2 Trainer selection dialog ever leaks to
+ // the Seat 1 screen. This guard is at the dialog boundary, not in a card list.
+ const difficulty=document.getElementById('aiDifficultyV1352')?.value;
+ if(owner===2&&aiModeV1352&&lobbyMode==='local'&&difficulty==='trainer'){
+  const spec={type:'freeze',max:maxCount};
+  const picked=window.PocketTrainerAI?.chooseActivationTargets?.(name,options,
+   AUTO_DAMAGE_SPELLS[name]?.steps?.[0]||spec);
+  if(picked?.length)return Promise.resolve(picked.slice(0,Math.max(1,maxCount)));
+  const opposing=options.filter(r=>r.p===1);
+  return Promise.resolve((opposing.length?opposing:options).slice(0,Math.max(1,maxCount)));
+ }
  return new Promise(resolve=>{
   const shade=document.createElement('div');shade.id='activationTargetsV1342';
   shade.style.cssText='position:fixed;inset:0;z-index:2147483000;background:#080e1be8;display:flex;align-items:center;justify-content:center;padding:15px';
@@ -3924,6 +3935,8 @@ function activationTargetDialogV1342(name,options,maxCount){
   const choices=document.createElement('div');choices.style.cssText='display:flex;flex-wrap:wrap;gap:8px';panel.appendChild(choices);
   const selected=[];let finished=false;
   function finish(result){if(finished)return;finished=true;shade.remove();resolve(result);}
+  // A new match / chain reset must not retain an old unfinished selection.
+  shade.cancelSelectionV1376=()=>finish(null);
   options.forEach(ref=>{
    const button=document.createElement('button');button.type='button';button.textContent=autoTargetText(ref);
    button.style.cssText='padding:9px;background:#e4d0a9;color:#172332;border-radius:7px;border:2px solid transparent;cursor:pointer';
@@ -3938,12 +3951,19 @@ function activationTargetDialogV1342(name,options,maxCount){
   actions.append(ok,cancel);panel.appendChild(actions);shade.appendChild(panel);document.body.appendChild(shade);
  });
 }
+let activationTargetPendingV1376=false;
 async function activateOngoingV169(p,id){
+ if(activationTargetPendingV1376)return;
  if(phase!=='game'||!onlineCanPlay(p)||turn!==p){toast('Activate only during your turn.');return;}
  if(spellChainActive()||autoEngine.pending){toast('Resolve the current effect first.');return;}
  const f=locate(p,id);if(!f||f.a!==P[p].play||!ongoingActiveV169(f.c))return;
  const c=f.c;if(c.frozen){toast('Frozen cards cannot activate.');return;}
  if(c.abilityUsedTurn===P[p].turnSerial){toast('Already activated this turn.');return;}
+ // Claim this activation before any await so a 450ms AI tick cannot spawn a
+ // second copy of the target dialog or a second stack entry. try/finally also
+ // releases the lock on cancel and invalid targets.
+ activationTargetPendingV1376=true;
+ try{
  if(c.name==='Howler'){document.getElementById('menu').style.display='none';queueMicrotask(()=>resolveHowlerV256(p,id));return;}
  document.getElementById('menu').style.display='none';
  const spec=autoBuildSpec(p,c,{source:'field',shouldDiscard:false,expireAfter:false});
@@ -3977,7 +3997,7 @@ async function activateOngoingV169(p,id){
      });
      targets=sorted.slice(0,Math.max(1,Number(first.max)||1));
     }
-   }else targets=await activationTargetDialogV1342(c.name,candidates,Math.max(1,Number(first.max)||1));
+   }else targets=await activationTargetDialogV1342(c.name,candidates,Math.max(1,Number(first.max)||1),p);
    if(!targets?.length)return;
    if(!onlineCanPlay(p)||phase!=='game'||turn!==p||spellChainActive()||autoEngine.pending||
        !P[p].play.some(x=>x.id===id)||c.frozen||c.abilityUsedTurn===P[p].turnSerial)return;
@@ -3998,6 +4018,7 @@ async function activateOngoingV169(p,id){
  else if(c.name==='Felix Felicis')queueFelixActivationV268(p);
  else toast(c.name+': activate its printed effect manually.');
  render();autoRenderModal();
+ }finally{activationTargetPendingV1376=false;}
 }
 // V1.335 — Bombarda is an untargeted board wipe. It resolves once the Spell
 // Chain is approved, not while players are still responding to the Spell.
@@ -4489,7 +4510,7 @@ async function activateItemV230(p,id){
  const count=c.name==='Time Turner'?3:1;const picks=[];
  for(let i=0;i<count;i++){
   const available=hand.filter(x=>!picks.includes(x.id));
-  const chosen=await queueCardChoiceV222(c.name+' — Select Card',(i+1)+' of '+count+' • '+(c.name==='Portkey'?'Shuffle a card into your deck':'Choose a card to discard'),available);
+  const chosen=await aiOwnedCardChoiceV1360(p,c.name+' — Select Card',(i+1)+' of '+count+' • '+(c.name==='Portkey'?'Shuffle a card into your deck':'Choose a card to discard'),available);
   if(chosen===null||!validFieldAbilityV230(p,id))return;
   picks.push(chosen);
  }
@@ -4511,7 +4532,7 @@ async function wingedCatapultLookV230(p,sourceId){
 async function expectoPatronusV230(p,cardId){
  if(!autoCanControl(p))return;const source=P[p].play.find(c=>c.id===cardId&&c.name==='Expecto Patronus');if(!source)return;
  const targets=[1,2].flatMap(side=>P[side].play.filter(c=>c.type==='Creature'&&Number(CARD_DB[c.name]?.cost??c.cost)<=5).map(c=>({...c,id:side+':'+c.id})));
- let pick=null;if(targets.length)pick=await queueCardChoiceV222('Expecto Patronus — Destroy Creature','Choose a Creature costing 5 or less to destroy.',targets);
+ let pick=null;if(targets.length)pick=await aiOwnedCardChoiceV1360(p,'Expecto Patronus — Destroy Creature','Choose a Creature costing 5 or less to destroy.',targets);
  if(!autoCanControl(p)||!P[p].play.some(c=>c.id===cardId))return;
  pushHistory();if(pick!==null){const [sideRaw,cardRaw]=String(pick).split(':');const side=Number(sideRaw);const index=P[side]?.play.findIndex(c=>String(c.id)===cardRaw&&c.type==='Creature'&&Number(CARD_DB[c.name]?.cost??c.cost)<=5)??-1;
   if(index>=0){
@@ -4550,7 +4571,7 @@ async function playHowlerV257(p,id){
  if(!options.length){toast('Howler needs an Item or Potion in play to pay its additional cost.');return false;}
  howlerCostBusyV257=true;
  try{
-  const selected=await queueCardChoiceV222('Howler — Additional Cost','Discard an Item or Potion you control. This is a mandatory cost paid before Howler resolves.',options);
+  const selected=await aiOwnedCardChoiceV1360(p,'Howler — Additional Cost','Discard an Item or Potion you control. This is a mandatory cost paid before Howler resolves.',options);
   if(selected===null)return false;
   if(!onlineCanPlay(p)||turn!==p||phase!=='game'||spellChainActive()||autoEngine.pending)return false;
   const from=locate(p,id),ix=P[p].play.findIndex(c=>c.id===selected&&(c.type==='Item'||c.type==='Potion'));
@@ -4595,7 +4616,7 @@ async function autoActivateField(p,id){
    const chosen=[];
    for(let n=0;n<2;n++){
     const options=P[p].lessons.filter(l=>!chosen.includes(l.id));
-    const selected=await queueCardChoiceV222("Luna's Thestral — Discard Lessons","Choose Lesson "+(n+1)+" of 2 to discard. Cancel to keep all cards.",options);
+    const selected=await aiOwnedCardChoiceV1360(p,"Luna's Thestral — Discard Lessons","Choose Lesson "+(n+1)+" of 2 to discard. Cancel to keep all cards.",options);
     if(selected==null||!options.some(l=>l.id===selected))return;
     chosen.push(selected);
    }
@@ -4642,7 +4663,7 @@ async function resolveReturnSpellV244(p,spellId){
  for(let step=0;step<max;step++){
   if(!autoCanControl(p)||!P[p].play.some(c=>c.id===spellId))break;
   const cards=P[side].play.filter(c=>c.type==='Item');if(!cards.length)break;
-  const chosen=await queueCardChoiceV222(spell.name+' — Return Item', 'Choose an Item to return to its owner’s hand. Cancel to skip remaining selections.',cards);
+  const chosen=await aiOwnedCardChoiceV1360(p,spell.name+' — Return Item', 'Choose an Item to return to its owner’s hand. Cancel to skip remaining selections.',cards);
   if(chosen===null)break;
   if(!autoCanControl(p))break;
   if(returnItemFromPlayV244(p,side,chosen))done++;
@@ -4650,7 +4671,7 @@ async function resolveReturnSpellV244(p,spellId){
  if(wing&&spell.wingExtraV244&&autoCanControl(p)){
   const cards=P[p].discard.filter(c=>c.type==='Item');
   if(cards.length){
-   const chosen=await queueCardChoiceV222('Wingardium Leviosa — Recover Item','Choose an Item from your discard to add to your hand.',cards);
+   const chosen=await aiOwnedCardChoiceV1360(p,'Wingardium Leviosa — Recover Item','Choose an Item from your discard to add to your hand.',cards);
    if(chosen!==null&&autoCanControl(p)){
     const ix=P[p].discard.findIndex(c=>c.id===chosen&&c.type==='Item');
     if(ix>=0){const item=P[p].discard.splice(ix,1)[0];P[originalOwnerV191(item,p)].hand.push(item);done++;autoLog(p,'Wingardium Leviosa recovered '+item.name+' from discard.');}
@@ -4714,7 +4735,7 @@ async function resolveSpellV246(p,id){
   const choices=[1,2].flatMap(side=>P[side].play.filter(c=>(c.type==='Creature'||c.type==='Ally')&&!c.isToken||c.type==='Creature').map(c=>({id:side+':'+c.id,name:c.name+' · P'+side,image:c.image||CARD_DB[c.name]?.image||''})));
   if(!choices.length){autoLog(p,card.name+': no eligible targets.');}
   else{
-   const pick=await queueCardChoiceV222(card.name+' — Choose Target',card.name==='Imperio'?'Take control of a Creature or Ally until Imperio leaves play.':'Replace a Creature or Ally with a Wild Boar Token.',choices);
+   const pick=await aiOwnedCardChoiceV1360(p,card.name+' — Choose Target',card.name==='Imperio'?'Take control of a Creature or Ally until Imperio leaves play.':'Replace a Creature or Ally with a Wild Boar Token.',choices);
    if(!autoCanControl(p)||!P[p].play.some(c=>c.id===id))return;
    const [sideText,targetId]=String(pick||'').split(':');const side=Number(sideText);
    if((side===1||side===2)&&targetId){
@@ -4816,7 +4837,7 @@ async function resolveCountdownV238(p,expired){
  const targets=expired.name==='Essence of Dittany'?autoTargetList('any',p,false).filter(r=>r.p===p):autoTargetList('any',p,true);
  if(!targets.length)return;
  const choices=targets.map(r=>({id:autoRefKey(r),name:autoTargetText(r),image:autoFind(r)?.image||''}));
- const pick=await queueCardChoiceV222(expired.name+' — Countdown resolved','Select the target for the Countdown effect.',choices);
+ const pick=await aiOwnedCardChoiceV1360(p,expired.name+' — Countdown resolved','Select the target for the Countdown effect.',choices);
  if(pick===null||!autoCanControl(p))return;
  const target=targets.find(r=>autoRefKey(r)===pick);if(!target)return;
  pushHistory();
@@ -4851,7 +4872,7 @@ async function resolveFelixV245(p){
  if(!top.length){autoLog(p,'Felix Felicis: deck is empty.');return;}
  const playChoices=top.filter(c=>c.type==='Item'||c.type==='Potion');
  if(!playChoices.length){autoLog(p,'Felix Felicis: no Item or Potion in the top 3.');return;}
- const pick=await queueCardChoiceV222('Felix Felicis — Top 3','Choose an Item or Potion to play for no Lesson cost, or skip.',playChoices);
+ const pick=await aiOwnedCardChoiceV1360(p,'Felix Felicis — Top 3','Choose an Item or Potion to play for no Lesson cost, or skip.',playChoices);
  if(!autoCanControl(p)||pick===null)return;
  const idx=P[p].main.findIndex(c=>c.id===pick);
  if(idx<0||!top.some(c=>c.id===pick))return;
@@ -4921,7 +4942,7 @@ async function resolveConfundusV255(p,id){
  const candidates=spellChain.filter(entry=>entry.player!==p&&isSpellCard(entry.card)).map(entry=>({id:'stack:'+entry.card.id,name:entry.card.name+' • Spell Chain',image:entry.card.image}));
  let selected=null;
  if(candidates.length){
-  selected=await queueCardChoiceV222('Confundus — Return Spell','Choose an opposing Spell still in Spell Chain. It returns to its owner’s hand without resolving.',candidates);
+  selected=await aiOwnedCardChoiceV1360(p,'Confundus — Return Spell','Choose an opposing Spell still in Spell Chain. It returns to its owner’s hand without resolving.',candidates);
  }else toast('Confundus: no opposing Spell remains in Spell Chain.');
  if(!autoCanControl(p))return;
  const index=P[p].play.findIndex(c=>c.id===id&&c.name==='Confundus');
@@ -5100,7 +5121,7 @@ async function useMoodyAbilityV1332(forceSeatV1374=null){
  const choices=moodyRedirectChoicesV1332(entry,defender);
  if(!choices.length){toast('Moody: no other legal target for this Spell.');return;}
  const optionCards=choices.map((choice,i)=>({id:'moody:'+i,name:choice.label,image:autoFind(choice.ref)?.image||CARD_DB[P[choice.ref.p].char?.name]?.image||''}));
- const picked=await queueCardChoiceV222('Alastor Moody — Redirect '+entry.card.name,
+ const picked=await aiOwnedCardChoiceV1360(defender,'Alastor Moody — Redirect '+entry.card.name,
   'Optional ability • Select another legal target. Cancel to leave the original target unchanged.',optionCards);
  if(picked===null||!spellChainActive()||spellChain[spellChain.length-1]!==entry||!moodyCanRedirectV1332(entry,defender))return;
  const ix=Number(String(picked).split(':')[1]);if(!Number.isInteger(ix)||!choices[ix])return;
@@ -5131,11 +5152,11 @@ async function useDobbyAbility(fromBoardV1342=false,forceSeatV1374=null){
  if(!canChain&&!board.length){toast('No opposing Spell currently targets or affects you.');return;}
  let chosen=null;
  if(canChain){
-  const pick=await queueCardChoiceV222('Dobby — Counter Spell',
+  const pick=await aiOwnedCardChoiceV1360(me,'Dobby — Counter Spell',
    'Discard 1 Lesson to destroy '+top.card.name+' before its effect resolves.',[{id:'stack',name:'Destroy '+top.card.name,image:top.card.image||''}]);
   if(pick==='stack')chosen={kind:'stack',entry:top};
  }else{
-  const pick=await queueCardChoiceV222('Dobby — Destroy an active Spell',
+  const pick=await aiOwnedCardChoiceV1360(me,'Dobby — Destroy an active Spell',
    'Discard 1 Lesson to destroy an opposing Spell currently affecting you.',board.map(c=>({id:'board:'+c.id,name:c.name,image:c.image||''})));
   if(pick!=null){const target=board.find(c=>'board:'+c.id===String(pick));if(target)chosen={kind:'board',card:target};}
  }
@@ -6096,7 +6117,7 @@ async function resolveApparateV247(p,id){
  for(const c of opposingPlayerSpellsOnBoardV1342(p)){
   if(!inChain.has(String(c.id)))opts.push({id:'field:'+c.id,name:c.name+' · Active Spell affecting you',image:c.image});
  }
- const chosen=opts.length?await queueCardChoiceV222('Apparate — Choose One','Destroy a Location or a Spell affecting your Player (including a pending activation).',opts):null;
+ const chosen=opts.length?await aiOwnedCardChoiceV1360(p,'Apparate — Choose One','Destroy a Location or a Spell affecting your Player (including a pending activation).',opts):null;
  if(!autoCanControl(p)||!own())return;
  let target=null;
  if(typeof chosen==='string'&&chosen.startsWith('location:')){
@@ -6235,7 +6256,7 @@ async function activateDeathEaterV222(p,cardId){
  // The top three are visible to this player; non-Dark cards cannot be selected.
  const allowed=top.filter(c=>c.type==='Dark Spell');
  if(!allowed.length){pushHistory();eater.abilityUsedTurn=P[p].turnSerial;quaffleMarkAllyUsedV1306(p,'deathEater',cardId);sh(P[p].main);render();toast('Death Eater: no Dark Spell among the top 3. Deck shuffled.');return;}
- const chosen=await queueCardChoiceV222('Death Eater — Top 3','Choose a Dark Spell to play for 2 fewer Lessons, or skip. Remaining cards are shuffled into your Main Deck.',allowed);
+ const chosen=await aiOwnedCardChoiceV1360(p,'Death Eater — Top 3','Choose a Dark Spell to play for 2 fewer Lessons, or skip. Remaining cards are shuffled into your Main Deck.',allowed);
  if(!autoCanControl(p)||!source()||source().frozen||quaffleAllyUsedV1306(p,'deathEater',cardId)>=quaffleAllyLimitV1306(p,cardId))return;
  pushHistory();source().abilityUsedTurn=P[p].turnSerial;quaffleMarkAllyUsedV1306(p,'deathEater',cardId);
  if(chosen!==null){
@@ -6589,7 +6610,7 @@ async function activateDracoV242(p){
  if((s.actionsLeft??0)<1||!s.hand.length){toast('Draco requires 1 Action and 1 card to discard.');return;}
  s.dracoPendingV242=true;
  try{
-  const chosen=await queueCardChoiceV222('Draco Malfoy — Discard a Card','Spend 1 Action and discard one card from your hand.',[...s.hand]);
+  const chosen=await aiOwnedCardChoiceV1360(p,'Draco Malfoy — Discard a Card','Spend 1 Action and discard one card from your hand.',[...s.hand]);
   if(chosen===null||!autoCanControl(p)||turn!==p||s.char?.frozen)return;
   const index=s.hand.findIndex(c=>String(c.id)===String(chosen));
   if(index<0||(s.actionsLeft??0)<1||quaffleAllyUsedV1306(p,'draco')>=quaffleAllyLimitV1306(p,'starting'))return;
@@ -6599,7 +6620,7 @@ async function activateDracoV242(p){
   autoLog(p,'Draco Malfoy discarded '+cost.name+' to activate his ability.');
   render();if(lobbyMode==='invite'&&onlineStarted)onlinePublish('state');
   if(!foe.hand.length){toast('Opponent has no cards in hand.');return;}
-  const target=await queueCardChoiceV222('Draco Malfoy — Opponent Hand','Choose one card from your opponent’s hand to discard.',[...foe.hand]);
+  const target=await aiOwnedCardChoiceV1360(p,'Draco Malfoy — Opponent Hand','Choose one card from your opponent’s hand to discard.',[...foe.hand]);
   if(target===null||!autoCanControl(p)){
    autoLog(p,'Draco Malfoy: no opponent card chosen.');return;
   }
@@ -6817,7 +6838,7 @@ async function createLunaToken(p){
   const chosen=[];
   for(let step=0;step<2;step++){
    const options=player.lessons.filter(lesson=>!chosen.includes(lesson.id));
-   const id=await queueCardChoiceV222('Luna Lovegood — Discard 2 Lessons',
+   const id=await aiOwnedCardChoiceV1360(p,'Luna Lovegood — Discard 2 Lessons',
     'Choose Lesson '+(step+1)+' of 2. Cancel to keep both Lessons and create no token.',options);
    if(id===null||!options.some(lesson=>lesson.id===id))return;
    chosen.push(id);
@@ -8126,14 +8147,14 @@ document.addEventListener('contextmenu',e=>{if(e.target.closest('#game .card,#ga
 </script>
 
 <script id="trainerAIScriptV1374">
-/* Pocket Magic Awakened — Trainer v1.374 (offline Seat 2 only)
+/* Pocket Magic Awakened — Trainer v1.376 (offline Seat 2 only)
    This controller NEVER writes hidden opponent data, overrides damage, or applies cards
    directly. All plays, targets, counters and combat go through the original game rules.
    The controller delegates card effects to the game engine, which has not been
    exhaustively validated for every card/interaction. This is heuristic, not trained self-play. */
 (function(){
 'use strict';
-const AI_VERSION='1.374';
+const AI_VERSION='1.376';
 const PRIORITY={
  'Harry Potter':['Kelpie','Pixies','Niffler','Mategot','Avis','Piertotum Locomotor'],
  'Ron Weasley':['Beater','Seeker','Guardian','Golden Snitch','Bludger','Quidditch Kit'],
@@ -8228,8 +8249,11 @@ function targetScore(r,step={},name=''){
 }
 function choseTargets(refs,step={},name='',count=1){
  const ordered=[...refs].sort((a,b)=>targetScore(b,step,name)-targetScore(a,step,name));
- // Never select unrelated/illegal targets just to fill a multi-target effect.
- return ordered.slice(0,Math.max(1,Math.min(count,ordered.length)));
+ // Effects that say "up to" must not fill spare target slots with the AI's own cards.
+ // Retain a fallback for mandatory choices with no positive-scoring candidates.
+ const preferred=ordered.filter(ref=>targetScore(ref,step,name)>=0);
+ const pool=preferred.length?preferred:ordered;
+ return pool.slice(0,Math.max(1,Math.min(count,pool.length)));
 }
 function chooseActivationTargets(name,candidates,step={}){
  // Select from the verified engine candidates; no direct damage, hidden hand,
@@ -8529,6 +8553,7 @@ function tick(){
   if(spellChain.length){respond();return;}
   if(autoEngine.pending){if(autoEngine.pending.player===2)resolvePending();return;}
   if(costDecisionBusyV178){const root=document.getElementById('costDecisionV178');const opts=[...(root?.querySelectorAll('#costDecisionChoicesV178 button')||[])];if(root?.classList.contains('open')&&opts.length){(opts.find(x=>/without additional|no additional|no cost/i.test(x.textContent))||opts[0]).click();}return;}
+  if(activationTargetPendingV1376||document.getElementById('activationTargetsV1342'))return;
   if(autoEngine.queue.length||pendingSpellEffect||targetSelection||document.getElementById('declareOverlayV1322'))return;
   if(typeof tutorialSessionV1354!=='undefined'&&tutorialSessionV1354)return;
   if(turn!==2)return;
