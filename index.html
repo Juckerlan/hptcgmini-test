@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pocket TCG Simulator V1.363</title><style>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pocket Magic Awakened V1.374 — Trainer</title><style>
 *{box-sizing:border-box}body{margin:0;background:#0d1015;color:#eee;font:14px system-ui;overflow:hidden}button{background:#242a34;color:#eee;border:1px solid #46505e;border-radius:7px;padding:7px 11px;cursor:pointer}button:hover{background:#303743}#bar{height:56px;background:#15191f;border-bottom:1px solid #353c47;display:flex;gap:7px;align-items:center;padding:8px 12px}#bar b{margin-right:8px}#status{margin-left:auto;color:#8ab4ff}.table{height:calc(100vh - 56px);display:grid;grid-template-rows:1fr 1fr}.player.p1{order:2}.player.opponent{order:1;transform:rotate(180deg)}.player{display:grid;grid-template-columns:160px 1fr;grid-template-rows:54px minmax(0,1fr) 108px;gap:7px;padding:8px;border-bottom:1px solid #353c47;min-height:0}.opponent .playerLife{transform:rotate(180deg)}.view2 .player.p1{order:1;transform:rotate(180deg)}.view2 .player.p2{order:2;transform:none}.view2 .player.p1 .playerLife{transform:rotate(180deg)}.view2 .player.p2 .playerLife{transform:none}.player.active{box-shadow:inset 0 0 0 2px #8ab4ff40}.head{grid-column:1/-1;display:flex;align-items:center;gap:8px}.badge{font-weight:800;padding:5px 8px;border:1px solid #454d59;border-radius:6px}.badge.on{color:#8ab4ff;border-color:#8ab4ff}.playerLife{display:flex;align-items:center;gap:5px;margin-left:4px}.playerLife strong{font-size:20px;min-width:58px;text-align:center;color:#ff8d9d}.playerLife button{padding:3px 8px;font-weight:900}.char{height:66px;min-width:52px;width:52px;border:1px dashed #596271;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#aab1bd;font-size:10px;overflow:hidden;background:#11151b;position:relative}.char img{width:100%;height:100%;object-fit:cover;display:block}.char span{position:absolute;bottom:0;left:0;right:0;background:#000b;color:#fff;font-size:7px;padding:2px;text-align:center}.piles{display:grid;grid-template-rows:1fr 1fr;gap:7px}.pileRow{display:grid;grid-template-columns:1fr 1fr;gap:7px}.pile{position:relative;width:100%;aspect-ratio:63/88;border:1px solid #48515e;border-radius:9px;background:linear-gradient(145deg,#292f39,#191d24);display:grid;place-items:center;overflow:hidden;cursor:pointer}.pile.lesson{border-color:#806a3d}.pile img.pileBack{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);object-fit:fill;border-radius:7px;opacity:.95;pointer-events:none}.pileWrap{min-width:0;display:flex;flex-direction:column;gap:4px;align-items:stretch}.pileLabel{text-align:center;color:#aab3c0;font-size:9px;letter-spacing:.7px;line-height:1.1;min-height:20px;display:flex;flex-direction:column;justify-content:center}.pileLabel small{color:#687180;font-size:8px;letter-spacing:0}.pile b,.pile small{z-index:2;text-shadow:0 1px 3px #000}.center{display:grid;grid-template-rows:minmax(100px,1fr) 82px;gap:7px;min-width:0;min-height:0}.zone{position:relative;border:1px solid #353c47;border-radius:9px;background:#ffffff03;overflow:hidden}.label{position:absolute;top:5px;left:8px;color:#687180;font-size:9px;letter-spacing:1px;pointer-events:none}.play .card{position:absolute}.lessons{display:flex;align-items:center;gap:8px;padding:18px 8px 4px;overflow:auto}.hand{grid-column:1/-1;display:flex;justify-content:center;align-items:end;gap:7px;overflow-x:auto;padding:22px 8px 3px;position:relative;min-height:0}.handTools{position:absolute;top:3px;right:8px;display:flex;gap:5px;z-index:40}.handTools button{font-size:9px;padding:4px 7px}.card.hasImage{background:#111;overflow:hidden}.cardBackImage{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:7px;display:block}.backFallback{display:none;color:#b9c0ca}.card.hasImage>img.cardImage{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:7px;z-index:1;pointer-events:none}.card.hasImage .name,.card.hasImage .type,.card.hasImage .cost{z-index:4}.card.hasImage .state,.card.hasImage .counter,.card.hasImage .life{z-index:6}.card{width:76px;height:104px;flex:0 0 auto;border-radius:8px;border:1px solid #6a7482;background:linear-gradient(145deg,#f0f0f0,#c1c6ce);color:#17191d;position:relative;box-shadow:0 4px 12px #0007;cursor:grab;user-select:none;transition:transform .12s,box-shadow .12s;transform-origin:center}.card:hover{transform:translateY(-9px) scale(1.04);z-index:30;box-shadow:0 12px 24px #000b}.card .cost{position:absolute;right:4px;top:4px;width:19px;height:19px;border-radius:50%;background:#252a32;color:#fff;display:grid;place-items:center;font-size:9px;font-weight:800}.card .name{font-size:9px;font-weight:800;line-height:1.05;padding:7px 5px}.card .type{font-size:8px;color:#505762;padding:0 5px}.card .counter{position:absolute;right:4px;bottom:4px;background:#171a20;color:white;border:1px solid #8ab4ff;border-radius:5px;padding:3px 6px;font-size:9px;font-weight:800;z-index:5}.card .life{position:absolute;left:4px;bottom:4px;background:#8b1e2d;color:white;border-radius:10px;padding:2px 6px;font-size:9px;font-weight:800}.card .state{position:absolute;left:4px;top:4px;display:flex;gap:3px;font-size:9px;z-index:6;pointer-events:none}.state span{background:#171a20ee;border:1px solid #596271;border-radius:4px;padding:3px 5px;font-weight:800;box-shadow:0 2px 5px #0008}.state .frozen{color:#8fd3ff}.state .shield{color:#b9c8ff}.state .curse{color:#d9a8ff}.card.tapped{transform:rotate(90deg);margin:0 15px}.card.selected{outline:3px solid #8ab4ff;outline-offset:2px}.card.back{background:linear-gradient(135deg,#29313c,#11151b);color:#b9c0ca}.zoom{position:fixed;display:none;z-index:100;width:min(340px,88vw);height:auto;aspect-ratio:190/260;pointer-events:none;transform:none;border:1px solid #68717e;border-radius:12px;background:#111;color:#17191d;box-shadow:0 20px 50px #000d;overflow:hidden}.zoom img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:11px}.zoom .zfallback{padding:14px;color:#eee}.zoom .zname{font-size:18px;font-weight:900;margin-bottom:8px}.zoom .ztype{color:#aab3c0}.zoom .zcost{margin-top:15px;font-size:14px}.menu{position:fixed;display:none;z-index:200;background:#171a20;border:1px solid #505967;border-radius:8px;padding:4px;min-width:170px;box-shadow:0 15px 45px #000c}.menu button{display:block;width:100%;text-align:left;border:0;background:transparent}.menu button:hover{background:#2b313b}.modal{display:none;position:fixed;z-index:150;left:50%;top:50%;transform:translate(-50%,-50%);width:min(720px,92vw);background:#171a20;border:1px solid #565f6d;border-radius:12px;padding:16px;box-shadow:0 20px 80px #000e}.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mbox{border:1px solid #353c47;border-radius:8px;padding:8px}.mcards{display:flex;gap:6px;flex-wrap:wrap;min-height:110px}.modal p{color:#9aa3b0}.toast{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:#282f39;border:1px solid #515b69;border-radius:8px;padding:8px 13px;opacity:0;transition:.2s;z-index:300}.toast.show{opacity:1}
 .deckModal{display:none;position:fixed;inset:0;z-index:500;background:#000b;align-items:center;justify-content:center}.deckBox{width:min(940px,94vw);height:min(700px,90vh);background:#171a20;border:1px solid #596270;border-radius:13px;box-shadow:0 25px 90px #000e;display:flex;flex-direction:column;padding:14px}.deckHead{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.deckControls{display:flex;gap:7px;flex-wrap:wrap;align-items:center;border-bottom:1px solid #353c47;padding-bottom:10px}.deckControls input{background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:8px 10px;min-width:240px}.deckCards{display:grid;grid-template-columns:repeat(auto-fill,minmax(95px,1fr));gap:12px;overflow:auto;padding:14px 4px}.viewerCard{display:flex;flex-direction:column;align-items:center;gap:5px}.viewerCard .card{width:78px;height:108px}.viewerCard small{color:#929baa;font-size:9px;text-align:center}.public{color:#83d19a;font-size:11px}.topInfo{color:#929baa;font-size:11px}
 .lobby{position:fixed;inset:0;background:#0d1015;z-index:950;display:flex;flex-direction:column}.lobby.database{position:fixed;inset:0;background:#0d1015;z-index:920;display:flex;flex-direction:column}.databaseBar{height:58px;background:#15191f;border-bottom:1px solid #353c47;display:flex;align-items:center;gap:8px;padding:8px 12px}.databaseBar h2{margin:0 12px 0 0}.databaseBody{padding:12px;min-height:0;flex:1;overflow:auto}.dbControls{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap}.dbGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}.dbCard{background:#15191f;border:1px solid #3a4350;border-radius:9px;padding:12px}.dbCard h3{margin:0 0 6px;font-size:14px}.dbMeta{font-size:11px;color:#929baa;margin-bottom:7px}.dbDomain{display:inline-block;padding:3px 6px;border-radius:5px;background:#222a34;font-size:10px}.dbNote{color:#7f8795;font-size:11px}.domainBar{padding:9px;background:#11151b;border:1px solid #353c47;border-radius:8px;margin-bottom:10px}.domainBar b{display:block;margin-bottom:5px}.domainPills{display:flex;gap:6px;flex-wrap:wrap}.domainPill{border:1px solid #48515e;background:#171c24;color:#aaa;padding:4px 8px;border-radius:999px;font-size:10px}.domainPill.active{border-color:#8ab4ff;color:#eee;background:#202a38}.builderDomainInfo{font-size:11px;color:#929baa;margin-top:7px}.builderDomainInfo strong{color:#83d19a}.builderDomainInfo.warn strong{color:#ffb36b}.homeActions{display:grid;grid-template-columns:repeat(3,minmax(190px,230px));justify-content:center;gap:18px;margin:0 auto;width:max-content;max-width:100%}.screenHidden{display:none!important}.lobbyBar{height:58px;background:#15191f;border-bottom:1px solid #353c47;display:flex;align-items:center;gap:9px;padding:8px 12px}.lobbyBar h2{margin:0 10px 0 0}.lobbyBody{width:min(1050px,94vw);margin:0 auto;padding:22px 0;overflow:auto}.modeGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}.modeCard{background:#15191f;border:1px solid #3c4552;border-radius:10px;padding:16px;text-align:left;cursor:pointer}.modeCard.active{border-color:#8ab4ff;box-shadow:0 0 0 1px #8ab4ff55 inset}.modeCard h3{margin:0 0 6px}.modeCard p{margin:0;color:#929baa;font-size:12px}.lobbyGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.seat{background:#15191f;border:1px solid #353c47;border-radius:10px;padding:16px;min-height:240px}.seat.joined{border-color:#83d19a}.seat h3{margin:0 0 10px}.seatStatus{font-size:12px;color:#929baa;margin:7px 0 12px}.seatStatus.ready{color:#83d19a}.lobbySelect{width:100%;background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:10px}.lobbyFooter{display:flex;align-items:center;gap:10px;margin-top:14px;background:#15191f;border:1px solid #353c47;border-radius:10px;padding:12px}.lobbyFooter .spacer{flex:1}.inviteBox{display:none;background:#11151b;border:1px dashed #596271;border-radius:8px;padding:10px;margin-top:10px;color:#aab3c0;font-size:12px}.inviteBox.show{display:block}.confirmBtn{width:100%;margin-top:12px}.startLobby{font-size:16px;font-weight:900;padding:10px 18px}..home{position:fixed;inset:0;background:#0d1015;display:flex;align-items:center;justify-content:center;z-index:1000}.homeBox{width:min(1000px,92vw);text-align:center;margin:0 auto}.homeBox h1{font-size:38px;margin:0 0 10px}.homeBox p{color:#929baa;margin:0 0 30px}.homeActions{display:grid;grid-template-columns:1fr 1fr;gap:18px}.homeBtn{height:170px;font-size:28px;font-weight:900;border:1px solid #4d5867;background:#171c24}.homeBtn:hover{background:#242b35;transform:translateY(-2px)}.screenHidden{display:none!important}.builder{position:fixed;inset:0;background:#0d1015;z-index:900;display:flex;flex-direction:column}.builderBar{height:58px;background:#15191f;border-bottom:1px solid #353c47;display:flex;align-items:center;gap:8px;padding:8px 12px}.builderBar h2{margin:0 12px 0 0}.builderBody{display:grid;grid-template-columns:250px 1fr 320px;gap:10px;padding:10px;min-height:0;flex:1}.builderPanel{background:#15191f;border:1px solid #353c47;border-radius:9px;padding:12px;min-height:0;overflow:auto}.deckList{display:flex;flex-direction:column;gap:6px}.deckList button{text-align:left}.deckList button.active{border-color:#8ab4ff;background:#202a38}.builderCards{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:7px}.bcard{border:1px solid #3f4855;border-radius:7px;padding:8px;background:#11151b;display:flex;justify-content:space-between;gap:5px;align-items:center}.bcard small{color:#929baa}.bcard .qty{font-weight:900;min-width:25px;text-align:center}.bcard button{padding:3px 7px}.builderSection{margin-bottom:16px}.builderSection h3{margin:0 0 8px;font-size:13px;color:#aab3c0}.builderStat{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #252b33}.complete{color:#83d19a}.incomplete{color:#ffb36b}.builderSelect{width:100%;background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:8px}.builderSearch{width:100%;background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:9px;margin-bottom:8px}.builderNote{color:#7f8795;font-size:11px;line-height:1.4}. .modal.show{display:block}.homeActions{grid-template-columns:1fr;width:min(100%,420px)}
@@ -2225,7 +2225,7 @@ body.aiMatchV1352 #game .player.p2 .zone.play .card.targetCandidate{
 </head><body><div id="lobbyArrivalV186" class="lobbyArrivalV186" aria-live="polite"><div class="lobbyArrivalContentV186"><strong>✦ Duelist Joined! ✦</strong><small id="lobbyArrivalNameV186">Your challenger has entered the chamber.</small></div></div><div id="mobileHandMenu"><button onclick="mobileHandAction('play')">Play</button><button onclick="mobileHandAction('reveal')">Reveal</button><button onclick="mobileHandAction('shuffle')">Shuffle into Deck</button><button onclick="mobileHandAction('discard')">Discard</button></div><button id="mobilePileToggleV1295" type="button" onclick="toggleMobileUtilityMenuV1298(event)">Menu</button><div id="mobilePileDockV1295" aria-hidden="true"><div class="mobilePileDockHeadV1295"><strong>Card Piles</strong><button type="button" onclick="closeMobilePileDockV1295(event)">Close</button></div><div class="mobilePileDockGridV1295"><button class="mobilePileDockItemV1295" id="mobilePileLessonV1295" type="button" onclick="openMobilePileKindV1295('lesson',event)"></button><button class="mobilePileDockItemV1295" id="mobilePileDiscardV1295" type="button" onclick="openMobilePileKindV1295('discard',event)"></button><button class="mobilePileDockItemV1295" id="mobilePileLessonDiscardV1295" type="button" onclick="openMobilePileKindV1295('ldiscard',event)"></button></div></div><div id="mobileUtilityMenuV1298" aria-hidden="true"><button type="button" data-mobile-util="shuffle" onclick="runMobileUtilityActionV1298('shuffle',event)">Shuffle Hand Into Deck</button><button type="button" id="mobileUtilityRevealV1298" data-mobile-util="reveal" onclick="runMobileUtilityActionV1298('reveal',event)">Reveal Hand</button><button type="button" data-mobile-util="chat" onclick="runMobileUtilityActionV1298('chat',event)">Chat / Log</button><button type="button" data-mobile-util="close" onclick="runMobileUtilityActionV1298('close',event)">Close</button></div><div id="startingAllyMobileOverlay" role="dialog" aria-modal="true" aria-label="Starting Ally card" onclick="closeStartingAllyMobile(event)"><div class="allyPopup"><img id="startingAllyMobileImage" alt="Starting Ally full card"><button type="button" onclick="closeStartingAllyMobile(event)">Close</button></div></div><div id="sideboardModal" style="display:none;position:fixed;inset:0;z-index:30000;background:rgba(5,10,24,.94);overflow:auto;padding:24px;color:#f2e6cb"><div style="max-width:960px;margin:auto;background:#14243a;border:2px solid #a98a54;border-radius:14px;padding:22px"><h2 id="sideboardTitle">Sideboard</h2><p id="sideboardHelp">Swap up to five cards. Choose a card from each column to exchange.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px"><section><h3>Main Deck <span id="sideMainCount"></span></h3><div id="sideMainCards" style="max-height:55vh;overflow:auto"></div></section><section><h3>Sideboard <span id="sideReserveCount"></span></h3><div id="sideReserveCards" style="max-height:55vh;overflow:auto"></div></section></div><p id="sideboardStatus"></p><button id="sideboardConfirm" onclick="confirmSideboard()" style="padding:12px 24px;background:#ac8d54;color:#101827;font-weight:bold">Confirm Sideboard</button></div></div><audio id="gameplayBackgroundMusic" src="backgrounds/back_music.mp3" preload="none" loop playsinline></audio><div id="home" class="home"><div class="landingCardStream" aria-hidden="true"><img class="landingFlyingCard" src="cards/creatures/creature_snowman.png" alt="" loading="lazy" draggable="false" style="--flight:16s;--delay:-1s;--start-x:110vw;--start-y:-30vh;--end-x:-28vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/charms/charm_stupefy.png" alt="" loading="lazy" draggable="false" style="--flight:19.2s;--delay:-8s;--start-x:58vw;--start-y:-22vh;--end-x:-52vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/quidditch/quidd_firebolt.png" alt="" loading="lazy" draggable="false" style="--flight:15.2s;--delay:-13s;--start-x:110vw;--start-y:27vh;--end-x:-18vw;--end-y:130vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/transfiguration/transf_glacius.png" alt="" loading="lazy" draggable="false" style="--flight:21.6s;--delay:-19s;--start-x:80vw;--start-y:-22vh;--end-x:-40vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/potions/potinos_crystalball.png" alt="" loading="lazy" draggable="false" style="--flight:18.4s;--delay:-4s;--start-x:110vw;--start-y:43vh;--end-x:-14vw;--end-y:140vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/dark/dark_crucio.png" alt="" loading="lazy" draggable="false" style="--flight:20s;--delay:-16s;--start-x:40vw;--start-y:-22vh;--end-x:-65vw;--end-y:115vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/creatures/creature_bowtruckle.png" alt="" loading="lazy" draggable="false" style="--flight:16.8s;--delay:-11s;--start-x:110vw;--start-y:5vh;--end-x:-28vw;--end-y:120vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/charms/charm_stupefy.png" alt="" loading="lazy" draggable="false" style="--flight:17s;--delay:-5s;--start-x:94vw;--start-y:-25vh;--end-x:-34vw;--end-y:118vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/creatures/creature_snowman.png" alt="" loading="lazy" draggable="false" style="--flight:19s;--delay:-14s;--start-x:53vw;--start-y:-30vh;--end-x:-55vw;--end-y:118vh" onerror="this.style.display='none'"><img class="landingFlyingCard" src="cards/dark/dark_crucio.png" alt="" loading="lazy" draggable="false" style="--flight:18s;--delay:-9s;--start-x:112vw;--start-y:32vh;--end-x:-20vw;--end-y:135vh" onerror="this.style.display='none'"></div><img class="landingSnitch" src="backgrounds/snitch.gif" alt="" aria-hidden="true" onerror="this.style.display='none'"><div class="homeBox"><h1 class="homeTitle"><img src="backgrounds/hpmini_title.png" alt="Pocket TCG Simulator" onerror="this.style.display='none';this.parentNode.appendChild(document.createTextNode('Pocket TCG Simulator'))"></h1><div class="homeActions"><button class="homeBtn homeOfflineV1353" onclick="openDedicatedLobbyV1353('offline')">⌂ Play Offline</button><button class="homeBtn homeOnlineV1353" onclick="openDedicatedLobbyV1353('online')">✦ Play Online</button><button class="homeBtn" onclick="openModeUtilityV1354('builder')">▦ Deck Builder</button><button class="homeBtn" onclick="openModeUtilityV1354('database')">▤ Database</button><button class="homeBtn" onclick="openModeUtilityV1354('rules')">📖 Rules</button></div></div><aside class="fanNoticeV1362" role="note" aria-label="Unofficial fan project disclaimer">
 <strong>UNOFFICIAL FAN PROJECT</strong>
 <p>Pocket Magic Awakened is a free, independent, non-commercial fan-made game. It is not affiliated with, sponsored by, or endorsed by Warner Bros., Portkey Games, NetEase Games, or any official Harry Potter rights holders. Harry Potter and related names, characters, trademarks and artwork are the property of their respective owners. No third-party intellectual property ownership is claimed.</p>
-</aside><div class="landingVersion">Pocket Magic Awakened · v1.363</div></div><div id="rules" class="rulesScreen screenHidden" aria-label="Game rules">
+</aside><div class="landingVersion">Pocket Magic Awakened · v1.364</div></div><div id="rules" class="rulesScreen screenHidden" aria-label="Game rules">
 <div class="rulesBar"><h2>📖 Official Game Guide</h2><span style="flex:1"></span><button onclick="showHome()">← Back to Menu</button></div>
 <div class="rulesLayout"><nav class="rulesNav" aria-label="Rulebook sections">
 <a href="#rules-overview">Overview</a><a href="#rules-decks">Deck Building</a><a href="#rules-setup">Setup & Mulligan</a><a href="#rules-turn">Turn Structure</a><a href="#rules-actions">Actions & Lessons</a><a href="#rules-cards">Card Types</a><a href="#rules-spells">Spell Chains</a><a href="#rules-creatures">Creatures & Damage</a><a href="#rules-keywords">Keywords</a><a href="#rules-tokens">Tokens</a><a href="#rules-online">Online & Local Play</a><a href="#rules-reference">Quick Reference</a>
@@ -2252,11 +2252,11 @@ body.aiMatchV1352 #game .player.p2 .zone.play .card.targetCandidate{
 <p><strong>Avis</strong> creates 2 Magical Birds when its Spell resolves. <strong>Piertotum Locomotor</strong> creates 2 Stone Guardians when its Spell resolves. Luna Lovegood can generate Luna's Thestral according to her ability. Homorphus replaces a Creature or Ally with a Wild Boar Token.</p></section>
 <section class="rulesSection" id="rules-online"><h2>10. Playing in the Simulator (Optional)</h2><h3>Local Play</h3><p>Two players share one device and use <strong>Switch Side</strong> to alternate between seats. Spell Chains can be answered by switching players inside the chain window.</p><h3>Online Private Rooms</h3><p>Enter a player name, create or join a six-character private room, select a deck, and confirm. The host starts when both players are ready. The game randomly selects the first player, then both players complete their mulligans.</p><p>Players see the same battlefield state in real time. The opponent's hand is hidden visually. Use <strong>Chat</strong> to communicate and <strong>Action Log</strong> to review recorded actions.</p><p><strong>Undo</strong> requires the opponent's approval online. Clicking an opponent's card briefly highlights it for approximately 2 seconds; clicking it again clears the highlight.</p><div class="rulesNote">Online hands are hidden in the interface, but the current synchronization sends full game-state data between browsers. Use private rooms with trusted opponents. Reconnecting after a refresh is not yet guaranteed.</div></section>
 <section class="rulesSection" id="rules-reference"><h2>11. Quick Reference</h2><table class="rulesTable"><tr><th>Rule</th><th>Value</th></tr><tr><td>Starting Health</td><td>20 per player</td></tr><tr><td>Main Deck</td><td>30 cards</td></tr><tr><td>Lesson Deck</td><td>10 Lessons</td></tr><tr><td>Starting Hand</td><td>4 cards</td></tr><tr><td>Mulligan</td><td>Replace up to 2 cards, once</td></tr><tr><td>Starting Lessons</td><td>First player: 1; second player: 2</td></tr><tr><td>First Player</td><td>Randomly selected; draws 1 at turn start</td></tr><tr><td>Actions per Turn</td><td>2</td></tr><tr><td>Lessons Played per Turn</td><td>Maximum 2; each costs 1 action</td></tr><tr><td>Deck Domains</td><td>Maximum 2 (Neutral excluded)</td></tr><tr><td>Victory</td><td>Reduce the opposing Player to 0 Health, unless a card prevents that victory (e.g., Horrocrux).</td></tr><tr><td>Dark Arts from Discard</td><td>Any Dark Arts card; +1 Lesson; once per copy; then Exile.</td></tr></table><div class="rulesNote">For physical play, use tokens or counters for Health, Actions, damage, Shield, Frozen, and Countdown. Card text takes precedence over this summary.</div></section>
-</div></main></div></div><div id="builder" class="builder screenHidden"><div class="builderBar"><h2>Deck Builder</h2><button onclick="newDeck()">New Deck</button><button onclick="saveBuilderDeck()">Save Deck</button><button onclick="exportDeckCode()">Export Deck Code</button><button onclick="openImportDeckCode()">Import Deck Code</button><button onclick="showHome()">Back</button><span id="builderStatus" style="margin-left:auto;color:#929baa"></span></div><div class="builderMobileTabs" role="tablist" aria-label="Deck Builder sections"><button type="button" class="active" data-builder-tab="decks" onclick="setMobileBuilderTab('decks')">▣ Decks</button><button type="button" data-builder-tab="database" onclick="setMobileBuilderTab('database')">▤ Database</button><button type="button" data-builder-tab="details" onclick="setMobileBuilderTab('details')">☷ Deck Info</button></div><div class="builderBody" data-active-tab="decks"><div class="builderPanel" data-builder-panel="decks"><div class="builderSection"><div id="deckList" class="deckList"></div></div><div class="builderSection"><button onclick="newDeck()" style="width:100%">+ Create New Deck</button></div></div><div class="builderPanel" data-builder-panel="database"><div class="builderSection"><input id="builderSearch" class="builderSearch" placeholder="Search cards..." oninput="renderBuilderCards()"><div id="builderDomainInfo" class="domainBar"></div><div id="builderCards" class="builderCards"></div></div></div><div class="builderPanel" data-builder-panel="details"><div class="builderSection"><input id="builderName" class="builderSearch" placeholder="Deck name" oninput="builderDeck.name=this.value"><label style="display:block;color:#929baa;font-size:11px;margin-bottom:5px">Starting Ally</label><select id="builderAlly" class="builderSelect" onchange="builderDeck.startingCharacter=this.value;renderBuilder()"></select></div><div class="builderSection"><h3>Deck Size</h3><div class="builderStat"><span>Main Deck</span><b id="builderMainCount">0 / 30</b></div><div class="builderStat"><span>Lessons</span><b id="builderLessonCount">0 / 10</b></div><div class="builderStat"><span>Status</span><b id="builderComplete" class="incomplete">Incomplete</b></div></div><div class="builderSection"><h3>Main Deck</h3><div id="builderMainList"></div></div><div class="builderSection"><h3>Sideboard <span id="builderSideCount">0 / 5</span></h3><p class="builderNote">Up to 5 Main Deck cards. Shared 3-copy limit; same two domains.</p><div id="builderSideList"></div></div><div class="builderSection"><h3>Lessons</h3><div id="builderLessonList"></div></div><p class="builderNote">A deck can only be saved when it has 1 Starting Ally, exactly 30 Main Deck cards, and exactly 10 Lessons.</p></div></div></div><div id="database" class="database screenHidden"><div class="databaseBar"><h2>Card Database</h2><button onclick="showHome()">Back</button><span id="databaseCount" style="margin-left:auto;color:#929baa"></span></div><div class="databaseBody"><div class="dbControls"><input id="dbSearch" class="builderSearch" style="margin:0;max-width:360px" placeholder="Search cards..." oninput="renderDatabase()"><select id="dbDomain" class="builderSelect" style="max-width:230px" onchange="renderDatabase()"><option value="">All Domains</option><option>Charms</option><option>Transfiguration</option><option>Quidditch</option><option>Potions</option><option>Dark Arts</option><option>Neutral</option></select><select id="dbType" class="builderSelect" style="max-width:180px" onchange="renderDatabase()"><option value="">All Types</option></select></div><div id="databaseGrid" class="dbGrid"></div></div></div><div id="lobby" class="lobby screenHidden"><div class="lobbyBar"><h2>✦ Duel Lobby</h2><span id="lobbyStatus" style="color:#929baa">Choose a game mode.</span><span style="margin-left:auto"></span><button onclick="showHome()">Back</button></div><div class="lobbyBody"><div class="magicLobbyHero"><div class="magicEyebrow">✦ THE DUELLING CHAMBER ✦</div><h1>Prepare your next duel</h1><p>Choose your deck, summon a friend, and let the magic begin.</p></div><div class="duelTopLeftV205"><div class="magicLobbyTools"><button type="button" onclick="magicCreateDeckV185()">✧ Create Deck</button><button type="button" onclick="magicLobbyBuild('import')">⇪ Import Deck</button></div><div class="magicLobbyDeckPreview"><div class="magicPreviewArt" id="magicDeckArt"><span>✦</span></div><div class="magicPreviewContent"><div class="magicPreviewLabel">YOUR SELECTED DECK</div><h2 id="magicDeckName">Select a deck to begin</h2><div class="magicDeckStats" id="magicDeckStats">Your deck will appear here when selected.</div><div class="magicDeckCollection" id="magicDeckCollection"></div><div id="magicMobileDeckPagesV187" class="magicMobileDeckPagesV187"><button type="button" onclick="magicDeckPageV187(1)">‹ Previous 15</button><span id="magicDeckPageLabelV187">1 / 2</span><button type="button" onclick="magicDeckPageV187(2)">Next 15 ›</button></div></div></div></div><div class="duelTopRightV205"><div class="magicMatchFormat"><div><strong>Match format</strong><small>Choose the length of your duel series</small></div><div class="magicFormatButtons"><button type="button" class="selected" id="magicBO1" onclick="magicSetFormat(1)">BO1 <small>One duel</small></button><button type="button" id="magicBO3" onclick="magicSetFormat(3)">BO3 <small>Best of three</small></button></div><span id="magicFormatNote">One duel · standard game</span></div><h2 class="magicSectionTitle">Choose Game Mode</h2><p class="magicSectionSubtitle">Online private rooms or local practice.</p><div class="modeGrid"><div id="localMode" class="modeCard active" onclick="setLobbyMode('local')"><h3>♜ Local — Two Seats</h3><p>Choose both decks yourself, confirm both seats, then start the game.</p></div><div id="aiModeV1352" class="modeCard" onclick="setLobbyMode('ai')"><h3>⚔ Offline — vs AI (Beta)</h3><p>Choose your rival's deck. The AI plays the second seat.</p></div><div id="inviteMode" class="modeCard" onclick="setLobbyMode('invite')"><h3>✦ Online — Private Duel</h3><p>Create a room code or join a friend from another device.</p></div></div><div id="aiSettingsV1352" style="display:none;margin-bottom:12px;padding:12px;background:#151c28;border:1px solid #9e8759;border-radius:10px;">
- <strong>AI opponent (experimental)</strong><p style="color:#aab7cd;font-size:12px;margin:5px 0 10px">Choose any deck you have saved or imported for Seat 2. The AI currently supports a subset of automated plays; complex cards may not be used.</p>
+</div></main></div></div><div id="builder" class="builder screenHidden"><div class="builderBar"><h2>Deck Builder</h2><button onclick="newDeck()">New Deck</button><button onclick="saveBuilderDeck()">Save Deck</button><button onclick="exportDeckCode()">Export Deck Code</button><button onclick="openImportDeckCode()">Import Deck Code</button><button onclick="showHome()">Back</button><span id="builderStatus" style="margin-left:auto;color:#929baa"></span></div><div class="builderMobileTabs" role="tablist" aria-label="Deck Builder sections"><button type="button" class="active" data-builder-tab="decks" onclick="setMobileBuilderTab('decks')">▣ Decks</button><button type="button" data-builder-tab="database" onclick="setMobileBuilderTab('database')">▤ Database</button><button type="button" data-builder-tab="details" onclick="setMobileBuilderTab('details')">☷ Deck Info</button></div><div class="builderBody" data-active-tab="decks"><div class="builderPanel" data-builder-panel="decks"><div class="builderSection"><div id="deckList" class="deckList"></div></div><div class="builderSection"><button onclick="newDeck()" style="width:100%">+ Create New Deck</button></div></div><div class="builderPanel" data-builder-panel="database"><div class="builderSection"><input id="builderSearch" class="builderSearch" placeholder="Search cards..." oninput="renderBuilderCards()"><div id="builderDomainInfo" class="domainBar"></div><div id="builderCards" class="builderCards"></div></div></div><div class="builderPanel" data-builder-panel="details"><div class="builderSection"><input id="builderName" class="builderSearch" placeholder="Deck name" oninput="builderDeck.name=this.value"><label style="display:block;color:#929baa;font-size:11px;margin-bottom:5px">Starting Ally</label><select id="builderAlly" class="builderSelect" onchange="builderDeck.startingCharacter=this.value;renderBuilder()"></select></div><div class="builderSection"><h3>Deck Size</h3><div class="builderStat"><span>Main Deck</span><b id="builderMainCount">0 / 30</b></div><div class="builderStat"><span>Lessons</span><b id="builderLessonCount">0 / 10</b></div><div class="builderStat"><span>Status</span><b id="builderComplete" class="incomplete">Incomplete</b></div></div><div class="builderSection"><h3>Main Deck</h3><div id="builderMainList"></div></div><div class="builderSection"><h3>Sideboard <span id="builderSideCount">0 / 5</span></h3><p class="builderNote">Up to 5 Main Deck cards. Shared 3-copy limit; same two domains.</p><div id="builderSideList"></div></div><div class="builderSection"><h3>Lessons</h3><div id="builderLessonList"></div></div><p class="builderNote">A deck can only be saved when it has 1 Starting Ally, exactly 30 Main Deck cards, and exactly 10 Lessons.</p></div></div></div><div id="database" class="database screenHidden"><div class="databaseBar"><h2>Card Database</h2><button onclick="showHome()">Back</button><span id="databaseCount" style="margin-left:auto;color:#929baa"></span></div><div class="databaseBody"><div class="dbControls"><input id="dbSearch" class="builderSearch" style="margin:0;max-width:360px" placeholder="Search cards..." oninput="renderDatabase()"><select id="dbDomain" class="builderSelect" style="max-width:230px" onchange="renderDatabase()"><option value="">All Domains</option><option>Charms</option><option>Transfiguration</option><option>Quidditch</option><option>Potions</option><option>Dark Arts</option><option>Neutral</option></select><select id="dbType" class="builderSelect" style="max-width:180px" onchange="renderDatabase()"><option value="">All Types</option></select></div><div id="databaseGrid" class="dbGrid"></div></div></div><div id="lobby" class="lobby screenHidden"><div class="lobbyBar"><h2>✦ Duel Lobby</h2><span id="lobbyStatus" style="color:#929baa">Choose a game mode.</span><span style="margin-left:auto"></span><button onclick="showHome()">Back</button></div><div class="lobbyBody"><div class="magicLobbyHero"><div class="magicEyebrow">✦ THE DUELLING CHAMBER ✦</div><h1>Prepare your next duel</h1><p>Choose your deck, summon a friend, and let the magic begin.</p></div><div class="duelTopLeftV205"><div class="magicLobbyTools"><button type="button" onclick="magicCreateDeckV185()">✧ Create Deck</button><button type="button" onclick="magicLobbyBuild('import')">⇪ Import Deck</button></div><div class="magicLobbyDeckPreview"><div class="magicPreviewArt" id="magicDeckArt"><span>✦</span></div><div class="magicPreviewContent"><div class="magicPreviewLabel">YOUR SELECTED DECK</div><h2 id="magicDeckName">Select a deck to begin</h2><div class="magicDeckStats" id="magicDeckStats">Your deck will appear here when selected.</div><div class="magicDeckCollection" id="magicDeckCollection"></div><div id="magicMobileDeckPagesV187" class="magicMobileDeckPagesV187"><button type="button" onclick="magicDeckPageV187(1)">‹ Previous 15</button><span id="magicDeckPageLabelV187">1 / 2</span><button type="button" onclick="magicDeckPageV187(2)">Next 15 ›</button></div></div></div></div><div class="duelTopRightV205"><div class="magicMatchFormat"><div><strong>Match format</strong><small>Choose the length of your duel series</small></div><div class="magicFormatButtons"><button type="button" class="selected" id="magicBO1" onclick="magicSetFormat(1)">BO1 <small>One duel</small></button><button type="button" id="magicBO3" onclick="magicSetFormat(3)">BO3 <small>Best of three</small></button></div><span id="magicFormatNote">One duel · standard game</span></div><h2 class="magicSectionTitle">Choose Game Mode</h2><p class="magicSectionSubtitle">Online private rooms or local practice.</p><div class="modeGrid"><div id="localMode" class="modeCard active" onclick="setLobbyMode('local')"><h3>♜ Local — Two Seats</h3><p>Choose both decks yourself, confirm both seats, then start the game.</p></div><div id="aiModeV1352" class="modeCard" onclick="setLobbyMode('ai')"><h3>⚔ Offline — vs Trainer</h3><p>Practice against Trainer, a combo-aware opponent. Choose its deck.</p></div><div id="inviteMode" class="modeCard" onclick="setLobbyMode('invite')"><h3>✦ Online — Private Duel</h3><p>Create a room code or join a friend from another device.</p></div></div><div id="aiSettingsV1352" style="display:none;margin-bottom:12px;padding:12px;background:#151c28;border:1px solid #9e8759;border-radius:10px;">
+ <strong>Trainer — tactical practice AI</strong><p style="color:#aab7cd;font-size:12px;margin:5px 0 10px">Choose any saved deck or one of 15 Trainer archetypes for Seat 2. Trainer plans combos and responses, but difficult card effects may still need manual handling.</p>
  <label for="aiDifficultyV1352" style="font-size:12px">AI difficulty</label>
- <select id="aiDifficultyV1352" style="margin:0 0 0 9px;padding:7px;border-radius:6px;background:#1b2737;color:white"><option value="easy">Easy</option><option value="normal" selected>Normal</option><option value="hard">Hard — Deck-aware</option></select>
- </div><div id="onlineRoomPanel" class="onlineRoomPanel" style="display:none;margin-bottom:14px;background:#15191f;border:1px solid #3c4552;border-radius:10px;padding:14px"><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><label for="onlinePlayerName" style="font-size:12px;color:#b9c8dd">Your name</label><input id="onlinePlayerName" maxlength="24" placeholder="Player name" style="background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:9px;width:145px" oninput="onlineNameChanged()"><button onclick="createOnlineRoom()">Create Room</button><input id="onlineRoomCode" maxlength="8" placeholder="ROOM CODE" style="background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:9px;text-transform:uppercase;letter-spacing:2px;width:145px" oninput="this.value=this.value.toUpperCase().replace(/[^A-Z2-9]/g,'')"><button onclick="joinOnlineRoom()">Join Room</button><button onclick="copyOnlineRoomCode()">Copy Code</button><button onclick="leaveOnlineRoom()">Leave Room</button></div><div id="onlineRoomStatus" style="margin-top:9px;color:#aab3c0;font-size:12px">Create a room or enter your friend's code.</div><div style="margin-top:5px;color:#929baa;font-size:11px">Online game: each player controls their own seat. Manual card effects; both players must stay connected.</div></div></div><div class="lobbyGrid"><div id="seat1" class="seat"><h3>Seat 1 — Player 1</h3><div class="seatStatus" id="seat1Status">Waiting for deck.</div><select id="lobbyDeck1" class="lobbySelect" onchange="lobbyDeckChanged(1,this.value)"></select><button id="seat1Confirm" class="confirmBtn" onclick="confirmSeat(1)">Confirm</button></div><div id="seat2" class="seat"><h3>Seat 2 — Player 2</h3><div class="seatStatus" id="seat2Status">Waiting for deck.</div><select id="lobbyDeck2" class="lobbySelect" onchange="lobbyDeckChanged(2,this.value)"></select><button id="seat2Join" class="confirmBtn" onclick="joinSeat2()">Join as Player 2</button><button id="seat2Confirm" class="confirmBtn" onclick="confirmSeat(2)" style="display:none">Confirm</button><div id="inviteBox" class="inviteBox">Connected to the private room.</div></div></div><div class="lobbyFooter"><span id="lobbyReadyText" style="color:#929baa">Both seats must confirm.</span><span class="spacer"></span><button id="lobbyStart" class="startLobby" onclick="startGameFromLobby()" disabled>Start Game</button></div></div></div><div id="game" class="screenHidden"><div id="bar"><b>Pocket TCG Simulator <span style="color:#7f8795">V1.362 • Match Lobby</span></b><button id="undoBtn" onclick="undoMove()">↶ Undo</button><button onclick="endTurn()">End Turn</button><button id="switchSideBtn" onclick="switchSide()" style="display:none">Switch Side</button><button id="nextGameBtnV252" onclick="nextGame()">Next Game</button><button id="gameplayMuteBtn" type="button" onclick="toggleGameplayMusic()" aria-label="Mute background music" aria-pressed="false" title="Mute background music">🔊 Music</button><button onclick="leaveGame()">Leave Game</button><button id="mobileGameMenuToggle" type="button" aria-expanded="false" onclick="toggleMobileGameMenu()">☰ Menu</button><div id="mobileGameMenu" aria-label="Game actions"></div><span id="status">Player 1 Turn</span></div><div class="table" id="table"></div><button id="commToggle" class="commToggle" onclick="toggleCommDock()" style="display:none">💬 Chat / Log <span id="commUnread" class="commUnread" style="display:none">0</span></button><div id="commDock" class="commDock" aria-label="Chat and action history"><div class="commHead"><b>Match communication</b><button onclick="toggleCommDock(false)" aria-label="Close">✕</button></div><div class="commTabs"><button id="commChatTab" class="active" onclick="setCommTab('chat')">💬 Chat</button><button id="commLogTab" onclick="setCommTab('log')">📜 Action Log</button></div><div id="commChatFeed" class="commFeed" role="log" aria-live="polite"></div><div id="commLogFeed" class="commFeed" role="log" aria-live="polite" style="display:none"></div><form id="commForm" class="commComposer" onsubmit="sendCommMessage(event)"><input id="commInput" maxlength="350" placeholder="Message to your opponent..." autocomplete="off" aria-label="Chat message"><button type="submit">Send</button></form></div></div><div class="modal" id="loadDeckModal"><h2>Load Deck</h2><p>Select the saved deck for each player.</p><div class="mgrid"><div class="mbox"><b>Player 1</b><select id="playDeck1" class="builderSelect" onchange="selectSavedDeck(1,this.value)"></select><p id="playDeck1Info" class="topInfo"></p></div><div class="mbox"><b>Player 2</b><select id="playDeck2" class="builderSelect" onchange="selectSavedDeck(2,this.value)"></select><p id="playDeck2Info" class="topInfo"></p></div></div><div style="text-align:right;margin-top:12px"><button onclick="closeLoadDecks()">Cancel</button><button onclick="confirmLoadDecks()">Confirm</button></div></div><div class="modal" id="dbDetailModal"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><h2 id="dbDetailName" style="margin:0">Card</h2><button onclick="closeCardDetail()">Close</button></div><div id="dbDetailBody" style="margin-top:14px"></div></div><div id="undoApproval" class="undoApproval" role="dialog" aria-modal="true" aria-labelledby="undoApprovalTitle"><div class="undoApprovalBox"><h2 id="undoApprovalTitle">Undo request</h2><p id="undoApprovalMessage">Your opponent wants to undo their last action. Approve?</p><div class="undoApprovalButtons"><button class="approve" onclick="answerOnlineUndo(true)">✓ Approve</button><button class="deny" onclick="answerOnlineUndo(false)">✕ Deny</button></div></div></div><div id="spellOverlay" class="spellOverlay" role="dialog" aria-modal="true" aria-labelledby="spellTitle"><div class="spellPanel"><h2 id="spellTitle">Spell Chain</h2><p id="spellHint"></p><div class="spellStack" id="spellStack"></div><div class="spellQuickList" id="spellQuickList"></div><div class="spellActions" id="spellActions"></div></div></div><div id="turnBanner" class="turnBanner" aria-live="polite"><div class="turnBannerContent"><strong>Turn Start</strong><small id="turnBannerSub"></small></div></div><div id="mobileZoomDismissV1330" role="button" tabindex="0" aria-label="Close enlarged card"></div><div class="zoom" id="zoom"><img class="zimage" alt=""><div class="zfallback"><div class="zname"></div><div class="ztype"></div><div class="zcost"></div></div></div><div class="menu" id="menu"><button id="shuffleSingleCard" style="display:none" onclick="menuAct('shuffleCard')">Shuffle Card Into Deck</button><button id="tokenSourceAction" style="display:none" onclick="menuAct('tokenCreate')">Create Tokens</button><button onclick="menuAct('view')">View Card</button><button onclick="menuAct('hand')">Move to Hand</button><button onclick="menuAct('play')">Move to Play Area</button><button onclick="menuAct('lessons')">Move to Lessons</button><button onclick="menuAct('discard')">Move to Discard</button><button onclick="menuAct('counter+')">+1 Counter</button><button onclick="menuAct('counter-')">-1 Counter</button><button onclick="menuAct('lifeSet')">Set Creature Life</button><button onclick="menuAct('frozen')">Toggle Frozen</button><button onclick="menuAct('shield')">Toggle Shield</button><button onclick="menuAct('curse')">Toggle Curse</button><button id="switchWildBoarAction" style="display:none" onclick="menuAct('wildBoar')">Switch to Wild Boar</button></div><div class="menu" id="startingAllyMenu"><button id="dracoAbilityV242" onclick="activateDracoV242(startingAllyMenuPlayer)" style="display:none">✦ Draco — Activate (1 Action)</button><button id="dobbyBoardAbilityV1342" onclick="useDobbyAbility(true);document.getElementById('startingAllyMenu').style.display='none'" style="display:none">✦ Dobby — Destroy active Spell (Discard 1 Lesson)</button><button onclick="startingAllyStatus('frozen')">Toggle Frozen</button><button onclick="startingAllyStatus('shield')">Toggle Shield</button><button onclick="startingAllyStatus('curse')">Toggle Curse</button></div><div class="menu" id="deckMenu"><button id="deckDraw" onclick="deckMenuAct('draw')">Draw</button><button id="deckPlayLesson" onclick="deckMenuAct('playLesson')" style="display:none">Play Lesson — 1 Action</button><button id="deckLook" onclick="deckMenuAct('look')">Look ▸</button><button id="deckSearch" onclick="deckMenuAct('search')">Search</button></div><div class="menu" id="deckLookSubmenu"><button onclick="deckMenuAct('look1')">Look 1</button><button onclick="deckMenuAct('look3')">Look 3</button><button onclick="deckMenuAct('look5')">Look 5</button></div><div class="modal" id="turnOrderModal"><div style="text-align:center;padding:18px"><div style="font-size:14px;opacity:.75;text-transform:uppercase;letter-spacing:2px">Match Setup</div><h1 id="turnOrderTitle" style="margin:10px 0 6px">Randomizing Turn Order...</h1><p id="turnOrderText" style="font-size:18px;margin:0 0 18px"></p><button id="turnOrderContinue" onclick="continueToMulligan()" disabled>Continue to Mulligan</button></div></div><div class="modal" id="onlineMullModal" style="z-index:1200;width:min(780px,95vw)"><h2 id="onlineMullTitle">Online Mulligan</h2><p id="onlineMullInfo">Select up to 2 cards to replace. Your opponent cannot see your hand.</p><div class="mcards" id="onlineMullCards" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:16px 0"></div><div style="display:flex;justify-content:space-between;gap:10px;align-items:center"><span id="onlineMullReady" style="color:#aab3c0;font-size:12px"></span><button id="onlineMullConfirm" onclick="confirmOnlineMulligan()">Confirm Mulligan</button></div></div><div class="modal" id="modal"><h2>Mulligan — up to 2 cards</h2><p>Select 0–2 cards to replace. Replaced cards return to their Main Deck and are shuffled.</p><div class="mgrid"><div class="mbox"><b>Player 1</b><div class="mcards" id="m1"></div></div><div class="mbox"><b>Player 2</b><div class="mcards" id="m2"></div></div></div><div style="text-align:right;margin-top:12px"><button onclick="confirmMulligan()">Confirm Mulligan</button></div></div><div class="toast" id="toast"></div>
+ <select id="aiDifficultyV1352" onchange="fillLobbyDecks();renderLobby()" style="margin:0 0 0 9px;padding:7px;border-radius:6px;background:#1b2737;color:white"><option value="easy">Easy</option><option value="normal">Normal</option><option value="hard">Hard — Deck-aware</option><option value="trainer" selected>Trainer — Tactical AI</option></select>
+ </div><div id="onlineRoomPanel" class="onlineRoomPanel" style="display:none;margin-bottom:14px;background:#15191f;border:1px solid #3c4552;border-radius:10px;padding:14px"><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><label for="onlinePlayerName" style="font-size:12px;color:#b9c8dd">Your name</label><input id="onlinePlayerName" maxlength="24" placeholder="Player name" style="background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:9px;width:145px" oninput="onlineNameChanged()"><button onclick="createOnlineRoom()">Create Room</button><input id="onlineRoomCode" maxlength="8" placeholder="ROOM CODE" style="background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:9px;text-transform:uppercase;letter-spacing:2px;width:145px" oninput="this.value=this.value.toUpperCase().replace(/[^A-Z2-9]/g,'')"><button onclick="joinOnlineRoom()">Join Room</button><button onclick="copyOnlineRoomCode()">Copy Code</button><button onclick="leaveOnlineRoom()">Leave Room</button></div><div id="onlineRoomStatus" style="margin-top:9px;color:#aab3c0;font-size:12px">Create a room or enter your friend's code.</div><div style="margin-top:5px;color:#929baa;font-size:11px">Online game: each player controls their own seat. Manual card effects; both players must stay connected.</div></div></div><div class="lobbyGrid"><div id="seat1" class="seat"><h3>Seat 1 — Player 1</h3><div class="seatStatus" id="seat1Status">Waiting for deck.</div><select id="lobbyDeck1" class="lobbySelect" onchange="lobbyDeckChanged(1,this.value)"></select><button id="seat1Confirm" class="confirmBtn" onclick="confirmSeat(1)">Confirm</button></div><div id="seat2" class="seat"><h3>Seat 2 — Player 2</h3><div class="seatStatus" id="seat2Status">Waiting for deck.</div><select id="lobbyDeck2" class="lobbySelect" onchange="lobbyDeckChanged(2,this.value)"></select><button id="seat2Join" class="confirmBtn" onclick="joinSeat2()">Join as Player 2</button><button id="seat2Confirm" class="confirmBtn" onclick="confirmSeat(2)" style="display:none">Confirm</button><div id="inviteBox" class="inviteBox">Connected to the private room.</div></div></div><div class="lobbyFooter"><span id="lobbyReadyText" style="color:#929baa">Both seats must confirm.</span><span class="spacer"></span><button id="lobbyStart" class="startLobby" onclick="startGameFromLobby()" disabled>Start Game</button></div></div></div><div id="game" class="screenHidden"><div id="bar"><b>Pocket TCG Simulator <span style="color:#7f8795">V1.374 • Trainer Demo</span></b><button id="undoBtn" onclick="undoMove()">↶ Undo</button><button onclick="endTurn()">End Turn</button><button id="switchSideBtn" onclick="switchSide()" style="display:none">Switch Side</button><button id="nextGameBtnV252" onclick="nextGame()">Next Game</button><button id="gameplayMuteBtn" type="button" onclick="toggleGameplayMusic()" aria-label="Mute background music" aria-pressed="false" title="Mute background music">🔊 Music</button><button onclick="leaveGame()">Leave Game</button><button id="mobileGameMenuToggle" type="button" aria-expanded="false" onclick="toggleMobileGameMenu()">☰ Menu</button><div id="mobileGameMenu" aria-label="Game actions"></div><span id="status">Player 1 Turn</span></div><div class="table" id="table"></div><button id="commToggle" class="commToggle" onclick="toggleCommDock()" style="display:none">💬 Chat / Log <span id="commUnread" class="commUnread" style="display:none">0</span></button><div id="commDock" class="commDock" aria-label="Chat and action history"><div class="commHead"><b>Match communication</b><button onclick="toggleCommDock(false)" aria-label="Close">✕</button></div><div class="commTabs"><button id="commChatTab" class="active" onclick="setCommTab('chat')">💬 Chat</button><button id="commLogTab" onclick="setCommTab('log')">📜 Action Log</button></div><div id="commChatFeed" class="commFeed" role="log" aria-live="polite"></div><div id="commLogFeed" class="commFeed" role="log" aria-live="polite" style="display:none"></div><form id="commForm" class="commComposer" onsubmit="sendCommMessage(event)"><input id="commInput" maxlength="350" placeholder="Message to your opponent..." autocomplete="off" aria-label="Chat message"><button type="submit">Send</button></form></div></div><div class="modal" id="loadDeckModal"><h2>Load Deck</h2><p>Select the saved deck for each player.</p><div class="mgrid"><div class="mbox"><b>Player 1</b><select id="playDeck1" class="builderSelect" onchange="selectSavedDeck(1,this.value)"></select><p id="playDeck1Info" class="topInfo"></p></div><div class="mbox"><b>Player 2</b><select id="playDeck2" class="builderSelect" onchange="selectSavedDeck(2,this.value)"></select><p id="playDeck2Info" class="topInfo"></p></div></div><div style="text-align:right;margin-top:12px"><button onclick="closeLoadDecks()">Cancel</button><button onclick="confirmLoadDecks()">Confirm</button></div></div><div class="modal" id="dbDetailModal"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><h2 id="dbDetailName" style="margin:0">Card</h2><button onclick="closeCardDetail()">Close</button></div><div id="dbDetailBody" style="margin-top:14px"></div></div><div id="undoApproval" class="undoApproval" role="dialog" aria-modal="true" aria-labelledby="undoApprovalTitle"><div class="undoApprovalBox"><h2 id="undoApprovalTitle">Undo request</h2><p id="undoApprovalMessage">Your opponent wants to undo their last action. Approve?</p><div class="undoApprovalButtons"><button class="approve" onclick="answerOnlineUndo(true)">✓ Approve</button><button class="deny" onclick="answerOnlineUndo(false)">✕ Deny</button></div></div></div><div id="spellOverlay" class="spellOverlay" role="dialog" aria-modal="true" aria-labelledby="spellTitle"><div class="spellPanel"><h2 id="spellTitle">Spell Chain</h2><p id="spellHint"></p><div class="spellStack" id="spellStack"></div><div class="spellQuickList" id="spellQuickList"></div><div class="spellActions" id="spellActions"></div></div></div><div id="turnBanner" class="turnBanner" aria-live="polite"><div class="turnBannerContent"><strong>Turn Start</strong><small id="turnBannerSub"></small></div></div><div id="mobileZoomDismissV1330" role="button" tabindex="0" aria-label="Close enlarged card"></div><div class="zoom" id="zoom"><img class="zimage" alt=""><div class="zfallback"><div class="zname"></div><div class="ztype"></div><div class="zcost"></div></div></div><div class="menu" id="menu"><button id="shuffleSingleCard" style="display:none" onclick="menuAct('shuffleCard')">Shuffle Card Into Deck</button><button id="tokenSourceAction" style="display:none" onclick="menuAct('tokenCreate')">Create Tokens</button><button onclick="menuAct('view')">View Card</button><button onclick="menuAct('hand')">Move to Hand</button><button onclick="menuAct('play')">Move to Play Area</button><button onclick="menuAct('lessons')">Move to Lessons</button><button onclick="menuAct('discard')">Move to Discard</button><button onclick="menuAct('counter+')">+1 Counter</button><button onclick="menuAct('counter-')">-1 Counter</button><button onclick="menuAct('lifeSet')">Set Creature Life</button><button onclick="menuAct('frozen')">Toggle Frozen</button><button onclick="menuAct('shield')">Toggle Shield</button><button onclick="menuAct('curse')">Toggle Curse</button><button id="switchWildBoarAction" style="display:none" onclick="menuAct('wildBoar')">Switch to Wild Boar</button></div><div class="menu" id="startingAllyMenu"><button id="dracoAbilityV242" onclick="activateDracoV242(startingAllyMenuPlayer)" style="display:none">✦ Draco — Activate (1 Action)</button><button id="dobbyBoardAbilityV1342" onclick="useDobbyAbility(true);document.getElementById('startingAllyMenu').style.display='none'" style="display:none">✦ Dobby — Destroy active Spell (Discard 1 Lesson)</button><button onclick="startingAllyStatus('frozen')">Toggle Frozen</button><button onclick="startingAllyStatus('shield')">Toggle Shield</button><button onclick="startingAllyStatus('curse')">Toggle Curse</button></div><div class="menu" id="deckMenu"><button id="deckDraw" onclick="deckMenuAct('draw')">Draw</button><button id="deckPlayLesson" onclick="deckMenuAct('playLesson')" style="display:none">Play Lesson — 1 Action</button><button id="deckLook" onclick="deckMenuAct('look')">Look ▸</button><button id="deckSearch" onclick="deckMenuAct('search')">Search</button></div><div class="menu" id="deckLookSubmenu"><button onclick="deckMenuAct('look1')">Look 1</button><button onclick="deckMenuAct('look3')">Look 3</button><button onclick="deckMenuAct('look5')">Look 5</button></div><div class="modal" id="turnOrderModal"><div style="text-align:center;padding:18px"><div style="font-size:14px;opacity:.75;text-transform:uppercase;letter-spacing:2px">Match Setup</div><h1 id="turnOrderTitle" style="margin:10px 0 6px">Randomizing Turn Order...</h1><p id="turnOrderText" style="font-size:18px;margin:0 0 18px"></p><button id="turnOrderContinue" onclick="continueToMulligan()" disabled>Continue to Mulligan</button></div></div><div class="modal" id="onlineMullModal" style="z-index:1200;width:min(780px,95vw)"><h2 id="onlineMullTitle">Online Mulligan</h2><p id="onlineMullInfo">Select up to 2 cards to replace. Your opponent cannot see your hand.</p><div class="mcards" id="onlineMullCards" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:16px 0"></div><div style="display:flex;justify-content:space-between;gap:10px;align-items:center"><span id="onlineMullReady" style="color:#aab3c0;font-size:12px"></span><button id="onlineMullConfirm" onclick="confirmOnlineMulligan()">Confirm Mulligan</button></div></div><div class="modal" id="modal"><h2>Mulligan — up to 2 cards</h2><p>Select 0–2 cards to replace. Replaced cards return to their Main Deck and are shuffled.</p><div class="mgrid"><div class="mbox"><b>Player 1</b><div class="mcards" id="m1"></div></div><div class="mbox"><b>Player 2</b><div class="mcards" id="m2"></div></div></div><div style="text-align:right;margin-top:12px"><button onclick="confirmMulligan()">Confirm Mulligan</button></div></div><div class="toast" id="toast"></div>
 <div class="modal" id="deckCodeModal" style="z-index:1100;width:min(620px,94vw)"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h2 id="deckCodeTitle" style="margin:0">Deck Code</h2><button onclick="closeDeckCodeModal()">Close</button></div><p id="deckCodeHelp"></p><textarea id="deckCodeInput" spellcheck="false" style="width:100%;height:135px;resize:vertical;background:#0e1116;color:#eee;border:1px solid #48515e;border-radius:7px;padding:10px;font:12px monospace;margin:8px 0"></textarea><div style="display:flex;justify-content:flex-end;gap:8px"><button id="deckCodeCopy" onclick="copyDeckCode()">Copy Code</button><button id="deckCodeImport" onclick="importDeckCode()">Import Deck</button></div></div><div id="lookRevealOverlay" class="lookRevealOverlay" style="display:none"><div class="lookRevealPanel"><div class="lookRevealHeader"><b id="lookRevealTitle">Opponent reveals cards</b><button onclick="closeLookReveal()">Close</button></div><div id="lookRevealCards" class="lookRevealCards"></div></div></div><div class="deckModal" id="deckModal"><div class="deckBox"><div class="deckHead"><b id="deckTitle">Deck</b><button onclick="closeDeckViewer()">Close</button></div><div class="deckControls" id="deckControls"></div><div class="deckCards" id="deckCards"></div></div></div><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script>
 /* V1.156 — Preserve mobile section when builder rerenders; desktop keeps three columns. */
@@ -2324,16 +2324,19 @@ function matchReturnToLobbyV252(){
 
 // V1.353 — No built-in starter or AI testing decks. Players use only their own saved or imported decks.
 let aiModeV1352=false;
+const TRAINER_PRESETS_V1374={"trainer-harry-potter":{"name":"Trainer - Harry - Block Kelpie","startingCharacter":"Harry Potter","mainDeck":["Kelpie","Kelpie","Kelpie","Mategot","Mategot","Mategot","Pixies","Pixies","Pixies","Firecrab","Firecrab","Oppugno","Oppugno","Oppugno","Piertotum Locomotor","Piertotum Locomotor","Avis","Avis","Avis","Niffler","Bat Bogey Hex","Monster Book","Protego","Monster Book","Monster Book","Protego","Hot Air Charm","Mooncalf","Bowtruckle","Evanesco"],"lessonDeck":["Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson"],"sideboard":[]},"trainer-ron-weasley":{"name":"Trainer - Ron - Quidditch Ally Engine","startingCharacter":"Ron Weasley","mainDeck":["Beater","Beater","Beater","Seeker","Seeker","Seeker","Guardian","Guardian","Guardian","Golden Snitch","Golden Snitch","Golden Snitch","Bludger","Bludger","Bludger","Duel of the Seekers","Duel of the Seekers","Winged Catapult","Golden Snidget","Bowtruckle","Protego","Protego","Quidditch Kit","Bowtruckle","Side Along Apparition","Side Along Apparition","Pawn","Pawn","Firecrab","Hot Air Charm"],"lessonDeck":["Quidditch Lesson","Quidditch Lesson","Quidditch Lesson","Quidditch Lesson","Quidditch Lesson","Quidditch Lesson","Quidditch Lesson","Quidditch Lesson","Quidditch Lesson","Quidditch Lesson"],"sideboard":[]},"trainer-hermione-granger":{"name":"Trainer - Hermione - Freeze Diffindo","startingCharacter":"Hermione Granger","mainDeck":["Glacius","Glacius","Glacius","Glacius Maxima","Glacius Maxima","Glacius Maxima","Diffindo","Diffindo","Diffindo","Inflatus","Inflatus","Aquamenti","Aquamenti","Aquamenti","Stupefy","Stupefy","Bat Bogey Hex","Impedimenta","Bat Bogey Hex","Snowman","Pixies","Pixies","Protego","Snowman","Niffler","Avis","Expulso","Pixies","Evanesco","Petrificus Totalus"],"lessonDeck":["Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Charm Lesson","Charm Lesson","Charm Lesson"],"sideboard":[]},"trainer-luna-lovegood":{"name":"Trainer - Luna - Thestral Lesson Value","startingCharacter":"Luna Lovegood","mainDeck":["Niffler","Niffler","Niffler","Manticore","Manticore","Manticore","Pixies","Pixies","Pixies","Avis","Avis","Avis","Piertotum Locomotor","Oppugno","Oppugno","Monster Book","Firecrab","Mategot","Monster Book","Kelpie","Firecrab","Mategot","Carpe Retractum","Monster Book","Piertotum Locomotor","Carpe Retractum","Hot Air Charm","Fianto Duri","Bowtruckle","Pawn"],"lessonDeck":["Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson"],"sideboard":[]},"trainer-neville-longbottom":{"name":"Trainer - Neville - Creature Wall","startingCharacter":"Neville Longbottom","mainDeck":["Mategot","Mategot","Mategot","Firecrab","Firecrab","Firecrab","Pixies","Pixies","Pixies","Piertotum Locomotor","Piertotum Locomotor","Piertotum Locomotor","Avis","Avis","Avis","Oppugno","Kelpie","Niffler","Thunderbird","Thunderbird","Thunderbird","Tree-Headed Puppy","Evanesco","Pawn","Murtlap","Apparate","Hot Air Charm","Arresto Momentum","Hot Air Charm","Ashwinder"],"lessonDeck":["Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson"],"sideboard":[]},"trainer-dobby":{"name":"Trainer - Dobby - Quidditch Spell Defense","startingCharacter":"Dobby","mainDeck":["Beater","Beater","Beater","Bludger","Bludger","Bludger","Golden Snitch","Golden Snitch","Golden Snitch","Manticore","Manticore","Manticore","Bowtruckle","Bowtruckle","Bowtruckle","Carpe Retractum","Firecrab","Duel of the Seekers","Firecrab","Protego","Protego","Guardian","Winged Catapult","Protego","Winged Catapult","Bat Bogey Hex","Arrow Shooting Spell","Evanesco","Ashwinder","Flying Broom"],"lessonDeck":["Quidditch Lesson","Quidditch Lesson","Quidditch Lesson","Quidditch Lesson","Quidditch Lesson","Quidditch Lesson","Quidditch Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson"],"sideboard":[]},"trainer-draco-malfoy":{"name":"Trainer - Draco - Discard Item Engine","startingCharacter":"Draco Malfoy","mainDeck":["Crystal Ball","Crystal Ball","Crystal Ball","Vanishing Cabinet","Vanishing Cabinet","Vanishing Cabinet","Memory Vial","Memory Vial","Memory Vial","Hinkypunk","Hinkypunk","Hinkypunk","Inferis","Inferis","Inferis","Sectumsempra","Sectumsempra","Sectumsempra","Howler","Fanged Flyer","Bowtruckle","Bowtruckle","Bowtruckle","Protego Diabolica","Conjunctivitis Curse","Protego Diabolica","Firecrab","Portkey","Langlock","Mooncalf"],"lessonDeck":["Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Dark Arts Lesson","Dark Arts Lesson","Dark Arts Lesson","Dark Arts Lesson","Dark Arts Lesson","Dark Arts Lesson"],"sideboard":[]},"trainer-newt-scamander":{"name":"Trainer - Newt - Token Swarm","startingCharacter":"Newt Scamander","mainDeck":["Avis","Avis","Avis","Piertotum Locomotor","Piertotum Locomotor","Piertotum Locomotor","Pixies","Pixies","Pixies","Niffler","Niffler","Niffler","Firecrab","Firecrab","Firecrab","Oppugno","Kelpie","Mategot","Mategot","Mooncalf","Monster Book","Mooncalf","Monster Book","Monster Book","Hinkypunk","Murtlap","Evanesco","Apparate","Bat Bogey Hex","Snowman"],"lessonDeck":["Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson"],"sideboard":[]},"trainer-sirius-black":{"name":"Trainer - Sirius - Dragon Canuto","startingCharacter":"Sirius Black","mainDeck":["Chinese Fireball Dragon","Chinese Fireball Dragon","Chinese Fireball Dragon","Ukrainian Ironbelly","Ukrainian Ironbelly","Ukrainian Ironbelly","Norwegian Ridgeback","Norwegian Ridgeback","Norwegian Ridgeback","Antipodean Opaleye","Antipodean Opaleye","Antipodean Opaleye","Hungarian Horntail","Hungarian Horntail","Hungarian Horntail","Swelling Solution","Swelling Solution","Weasley Bomb Box","Essence of Dittany","Essence of Dittany","Essence of Dittany","Tree-Headed Puppy","Tree-Headed Puppy","Thunderbird","Thunderbird","Tree-Headed Puppy","Thunderbird","Firecrab","Kelpie","Swelling Solution"],"lessonDeck":["Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson"],"sideboard":[]},"trainer-remus-lupin":{"name":"Trainer - Remus - Werewolf Protection","startingCharacter":"Remus Lupin","mainDeck":["Firecrab","Firecrab","Firecrab","Mategot","Mategot","Mategot","Thunderbird","Thunderbird","Thunderbird","Weasley Bomb Box","Weasley Bomb Box","Weasley Bomb Box","Swelling Solution","Swelling Solution","Swelling Solution","Pixies","Pixies","Niffler","Bowtruckle","Essence of Dittany","Bowtruckle","Essence of Dittany","Kelpie","Kelpie","Kelpie","Pawn","Hinkypunk","Manticore","Crystal Ball","Portkey"],"lessonDeck":["Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson"],"sideboard":[]},"trainer-ginny-weasley":{"name":"Trainer - Ginny - Item Burn","startingCharacter":"Ginny Weasley","mainDeck":["Bludger","Bludger","Bludger","Fanged Flyer","Fanged Flyer","Fanged Flyer","Howler","Howler","Howler","Beater","Beater","Beater","Golden Snitch","Golden Snitch","Golden Snitch","Weasley Fireworks","Weasley Fireworks","Quaffle","Bowtruckle","Wingardium Leviosa","Bowtruckle","Crystal Ball","Winged Catapult","Arresto Momentum","Pawn","Weasley Fireworks","Enchanted Candy","Mategot","Chomping Cabbage","Prantastic Present"],"lessonDeck":["Quidditch Lesson","Quidditch Lesson","Quidditch Lesson","Quidditch Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson"],"sideboard":[]},"trainer-alastor-moody":{"name":"Trainer - Alastor - Redirect Freeze","startingCharacter":"Alastor Moody","mainDeck":["Erumpent","Erumpent","Erumpent","Glacius Maxima","Glacius Maxima","Glacius Maxima","Diffindo","Diffindo","Diffindo","Petrificus Totalus","Petrificus Totalus","Petrificus Totalus","Protego","Protego","Protego","Inflatus","Evanesco","Evanesco","Kelpie","Expecto Patronus","Kelpie","Expecto Patronus","Expecto Patronus","Glacius","Mooncalf","Evanesco","Pawn","Firecrab","Snowman","Pixies"],"lessonDeck":["Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson"],"sideboard":[]},"trainer-dolores-umbridge":{"name":"Trainer - Dolores - Decree Dark Tempo","startingCharacter":"Dolores Umbridge","mainDeck":["Langlock","Langlock","Langlock","Crucio","Crucio","Crucio","Conjunctivitis Curse","Conjunctivitis Curse","Conjunctivitis Curse","Niffler","Niffler","Niffler","Evanesco","Evanesco","Evanesco","Bat Bogey Hex","Flagrate","Inferis","Manticore","Desmaius","Inflatus","Inflatus","Inferis","Desmaius","Flagrate","Ashwinder","Inferis","Pawn","Bat Bogey Hex","Firecrab"],"lessonDeck":["Dark Arts Lesson","Dark Arts Lesson","Dark Arts Lesson","Dark Arts Lesson","Dark Arts Lesson","Dark Arts Lesson","Dark Arts Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson"],"sideboard":[]},"trainer-kingsley-shackelbolt":{"name":"Trainer - Kingsley - Neutral Spell Value","startingCharacter":"Kingsley Shackelbolt","mainDeck":["Desmaius","Desmaius","Desmaius","Renevate","Renevate","Renevate","Expecto Patronus","Expecto Patronus","Expecto Patronus","Protego","Protego","Protego","Glacius","Glacius","Glacius","Petrificus Totalus","Petrificus Totalus","Side Along Apparition","Niffler","Diffindo","Glacius Maxima","Diffindo","Diffindo","Glacius Maxima","Monster Book","Glacius Maxima","Ashwinder","Mooncalf","Apparate","Inflatus"],"lessonDeck":["Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson","Transfiguration Lesson"],"sideboard":[]},"trainer-bellatrix-lestrange":{"name":"Trainer - Bellatrix - Curse Recursion","startingCharacter":"Bellatrix Lestrange","mainDeck":["Inferis","Inferis","Inferis","Crucio","Crucio","Crucio","Death Eater","Death Eater","Death Eater","Vanishing Cabinet","Vanishing Cabinet","Vanishing Cabinet","Hinkypunk","Hinkypunk","Hinkypunk","Memory Vial","Crystal Ball","Protego Diabolica","Protego Diabolica","Conjunctivitis Curse","Howler","Sectumsempra","Langlock","Hot Air Charm","Prantastic Present","Portkey","Crystal Ball","Mooncalf","Arresto Momentum","Firecrab"],"lessonDeck":["Dark Arts Lesson","Dark Arts Lesson","Dark Arts Lesson","Dark Arts Lesson","Dark Arts Lesson","Dark Arts Lesson","Dark Arts Lesson","Potions & Items Lesson","Potions & Items Lesson","Potions & Items Lesson"],"sideboard":[]}};
 function deckFromChoice(choice){
- return Object.prototype.hasOwnProperty.call(savedDecks,choice)?JSON.parse(JSON.stringify(savedDecks[choice])):null;
+ return (aiModeV1352&&document.getElementById('aiDifficultyV1352')?.value==='trainer'&&Object.prototype.hasOwnProperty.call(TRAINER_PRESETS_V1374,choice))?JSON.parse(JSON.stringify(TRAINER_PRESETS_V1374[choice])):(Object.prototype.hasOwnProperty.call(savedDecks,choice)?JSON.parse(JSON.stringify(savedDecks[choice])):null);
 }
-function deckChoiceOptions(){
- let html='<option value="">Select a deck</option><optgroup label="My Decks">';
+function deckChoiceOptions(seat=null){
+ let html='<option value="">Select a deck</option>';
+ if(seat===2&&aiModeV1352&&document.getElementById('aiDifficultyV1352')?.value==='trainer'){html+='<optgroup label="Trainer archetypes (experimental)">';for(const [key,d] of Object.entries(TRAINER_PRESETS_V1374))html+='<option value="'+key+'">'+d.name+'</option>';html+='</optgroup>';}
+ html+='<optgroup label="My Decks">';
  Object.keys(savedDecks).forEach(n=>{const safe=n.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');html+='<option value="'+safe+'">'+safe+'</option>';});
  return html+'</optgroup>';
 }
 function choiceForLoadedDeck(deck){
- return deck&&Object.prototype.hasOwnProperty.call(savedDecks,deck.name)?deck.name:'';
+ if(!deck)return '';const preset=Object.entries(TRAINER_PRESETS_V1374).find(([key,d])=>d.name===deck.name);return preset?preset[0]:(Object.prototype.hasOwnProperty.call(savedDecks,deck.name)?deck.name:'');
 }
 
 let savedDecks=loadSavedDecks();
@@ -2378,7 +2381,7 @@ function onlineAcceptRevisionV224(state){
 const onlineIdentity=Array.from(crypto.getRandomValues(new Uint8Array(12)),b=>b.toString(16).padStart(2,'0')).join('');
 function onlineName(){return (document.getElementById('onlinePlayerName')?.value||'').trim().slice(0,24)||'Player '+onlineRole;}
 function onlineNameChanged(){if(onlineRole)onlinePlayerNames[onlineRole]=onlineName();if(onlineConnected)onlineTrack();renderLobby();}
-function playerLabel(p){return lobbyMode==='invite'?(onlinePlayerNames[p]||'Player '+p):'Player '+p;}
+function playerLabel(p){return lobbyMode==='invite'?(onlinePlayerNames[p]||'Player '+p):(p===2&&aiModeV1352&&document.getElementById('aiDifficultyV1352')?.value==='trainer'?'Trainer':'Player '+p);}
 function renderOnlineMull(){
  const modal=document.getElementById('onlineMullModal');if(!modal)return;
  const active=lobbyMode==='invite'&&onlineStarted&&phase==='onlineMull';modal.style.display=active?'block':'none';if(!active)return;
@@ -2459,12 +2462,12 @@ async function createOnlineRoom(){if(lobbyMode!=='invite')return;const alphabet=
 async function joinOnlineRoom(){if(lobbyMode!=='invite')return;let code=document.getElementById('onlineRoomCode').value.trim().toUpperCase();if(!/^[A-Z2-9]{6}$/.test(code)){onlineStatus('Enter a valid 6-character room code.');return}await connectOnlineRoom(code,2)}
 function copyOnlineRoomCode(){if(!onlineCode){toast('Create or join a room first.');return}if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(onlineCode).then(()=>toast('Room code copied.')).catch(()=>prompt('Copy this code:',onlineCode));else prompt('Copy this code:',onlineCode)}
 function openLobby(){aiModeV1352=false;document.getElementById('onlineMullModal').style.display='none';resetComm();if(onlineChannel)leaveOnlineRoom();lobbyMode='local';lobbyJoined={1:true,2:true};lobbyConfirmed={1:false,2:false};document.getElementById('lobby').classList.remove('screenHidden');document.getElementById('game').classList.add('screenHidden');fillLobbyDecks();renderLobby()}
-function fillLobbyDecks(){for(let p=1;p<3;p++){let el=document.getElementById('lobbyDeck'+p);el.innerHTML=deckChoiceOptions();el.value=choiceForLoadedDeck(loadedDecks[p]);}}
+function fillLobbyDecks(){for(let p=1;p<3;p++){let el=document.getElementById('lobbyDeck'+p);el.innerHTML=deckChoiceOptions(p);el.value=choiceForLoadedDeck(loadedDecks[p]);}}
 function setLobbyMode(mode){if(onlineChannel)leaveOnlineRoom();aiModeV1352=mode==='ai';lobbyMode=aiModeV1352?'local':mode;lobbyJoined[1]=true;lobbyJoined[2]=mode==='local'||mode==='ai';lobbyConfirmed[1]=false;lobbyConfirmed[2]=false;fillLobbyDecks();renderLobby()}
 function lobbyDeckChanged(p,name){if(lobbyMode==='invite'&&p!==onlineRole)return;loadedDecks[p]=name?deckFromChoice(name):null;lobbyConfirmed[p]=false;if(lobbyMode==='invite')onlineTrack();renderLobby()}
 function joinSeat2(){if(lobbyMode==='invite'){toast('Enter the room code on the other device.');return}lobbyJoined[2]=true;renderLobby()}
 function confirmSeat(p){if(lobbyMode==='invite'&&(!onlineConnected||onlineRole!==p)){toast('Join a room to confirm your own seat.');return}if(!lobbyJoined[p]){toast('Seat '+p+' has not joined yet.');return}let el=document.getElementById('lobbyDeck'+p);if(!el.value||!deckFromChoice(el.value)){toast('Select a deck for Player '+p+' first.');return}loadedDecks[p]=deckFromChoice(el.value);lobbyConfirmed[p]=true;if(lobbyMode==='invite'){onlineTrack();if(p===2)onlineSend('deck',{deck:loadedDecks[2]})}renderLobby();toast('Player '+p+' confirmed.')}
-function renderLobby(){let online=lobbyMode==='invite';document.getElementById('onlineRoomPanel').style.display=online?'block':'none';for(let p=1;p<3;p++){let seat=document.getElementById('seat'+p),status=document.getElementById('seat'+p+'Status'),select=document.getElementById('lobbyDeck'+p),confirm=document.getElementById('seat'+p+'Confirm');let own=!online||onlineRole===p;seat.classList.toggle('joined',!!lobbyJoined[p]&&!!lobbyConfirmed[p]);if(!lobbyJoined[p]){status.textContent=online?(p===1?'Waiting for host.':'Waiting for Player 2 to join by code.'):'Waiting for Player 2 to join.';status.classList.remove('ready')}else{status.textContent=lobbyConfirmed[p]?'✓ '+playerLabel(p)+' — Deck confirmed'+(!own&&onlineRemoteName?' — '+onlineRemoteName:''):(own?playerLabel(p)+': choose a deck and confirm.':playerLabel(p)+' connected — choosing deck.');status.classList.toggle('ready',lobbyConfirmed[p])}select.disabled=online&&(!own||!onlineConnected);select.style.display=own?'block':'none';confirm.style.display=(!online||own)?'block':'none';confirm.disabled=online&&!onlineConnected;if(p===2)document.getElementById('seat2Join').style.display='none'}let both=lobbyJoined[1]&&lobbyJoined[2]&&lobbyConfirmed[1]&&lobbyConfirmed[2];document.getElementById('lobbyStart').disabled=online?!(both&&onlineRole===1&&onlineGuestDeck):!both;document.getElementById('lobbyReadyText').textContent=online?(both?(onlineRole===1?'Both players ready. Host can start the match.':'Both players ready. Waiting for host to start.'):'Waiting for both players to join and confirm their decks.'):(both?'Both players confirmed — ready to start.':'Both seats must select and confirm a deck.');document.getElementById('lobbyStatus').textContent=online?'Online private room'+(onlineCode?' • '+onlineCode:''):(aiModeV1352?'Offline vs AI — the AI controls Seat 2.':'Local match — you control both seats.');document.getElementById('localMode').classList.toggle('active',!online&&!aiModeV1352);document.getElementById('aiModeV1352').classList.toggle('active',!!aiModeV1352);document.getElementById('aiSettingsV1352').style.display=aiModeV1352?'block':'none';document.getElementById('inviteMode').classList.toggle('active',online);document.getElementById('inviteBox').classList.toggle('show',online&&onlineConnected)}
+function renderLobby(){let online=lobbyMode==='invite';document.getElementById('onlineRoomPanel').style.display=online?'block':'none';for(let p=1;p<3;p++){let seat=document.getElementById('seat'+p),status=document.getElementById('seat'+p+'Status'),select=document.getElementById('lobbyDeck'+p),confirm=document.getElementById('seat'+p+'Confirm');let own=!online||onlineRole===p;seat.classList.toggle('joined',!!lobbyJoined[p]&&!!lobbyConfirmed[p]);if(!lobbyJoined[p]){status.textContent=online?(p===1?'Waiting for host.':'Waiting for Player 2 to join by code.'):'Waiting for Player 2 to join.';status.classList.remove('ready')}else{status.textContent=lobbyConfirmed[p]?'✓ '+playerLabel(p)+' — Deck confirmed'+(!own&&onlineRemoteName?' — '+onlineRemoteName:''):(own?playerLabel(p)+': choose a deck and confirm.':playerLabel(p)+' connected — choosing deck.');status.classList.toggle('ready',lobbyConfirmed[p])}select.disabled=online&&(!own||!onlineConnected);select.style.display=own?'block':'none';confirm.style.display=(!online||own)?'block':'none';confirm.disabled=online&&!onlineConnected;if(p===2)document.getElementById('seat2Join').style.display='none'}let both=lobbyJoined[1]&&lobbyJoined[2]&&lobbyConfirmed[1]&&lobbyConfirmed[2];document.getElementById('lobbyStart').disabled=online?!(both&&onlineRole===1&&onlineGuestDeck):!both;document.getElementById('lobbyReadyText').textContent=online?(both?(onlineRole===1?'Both players ready. Host can start the match.':'Both players ready. Waiting for host to start.'):'Waiting for both players to join and confirm their decks.'):(both?'Both players confirmed — ready to start.':'Both seats must select and confirm a deck.');document.getElementById('lobbyStatus').textContent=online?'Online private room'+(onlineCode?' • '+onlineCode:''):(aiModeV1352?'Offline vs Trainer — Trainer controls Seat 2.':'Local match — you control both seats.');document.getElementById('localMode').classList.toggle('active',!online&&!aiModeV1352);document.getElementById('aiModeV1352').classList.toggle('active',!!aiModeV1352);document.getElementById('aiSettingsV1352').style.display=aiModeV1352?'block':'none';document.getElementById('inviteMode').classList.toggle('active',online);document.getElementById('inviteBox').classList.toggle('show',online&&onlineConnected)}
 // V1.41 — transient room chat and action history (no database required)
 let commTab='chat',commChat=[],commLog=[],commUnread=0,commBaseline=null;
 function commNow(){return new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});}
@@ -5077,9 +5080,9 @@ function moodyRedirectChoicesV1332(entry,defender){
   seen.add(key);return true;
  });
 }
-async function useMoodyAbilityV1332(){
+async function useMoodyAbilityV1332(forceSeatV1374=null){
  if(spellChain.some(x=>x.declaringV1322)||!spellChainActive()||(lobbyMode==='invite'&&!onlineConnected))return;
- const defender=lobbyMode==='local'?viewPlayer:onlineRole,entry=spellChain[spellChain.length-1];
+ const defender=(forceSeatV1374===2&&window.PocketTrainerAI?.isTrainer())?2:(lobbyMode==='local'?viewPlayer:onlineRole),entry=spellChain[spellChain.length-1];
  if(!moodyCanRedirectV1332(entry,defender))return;
  const choices=moodyRedirectChoicesV1332(entry,defender);
  if(!choices.length){toast('Moody: no other legal target for this Spell.');return;}
@@ -5102,10 +5105,10 @@ async function useMoodyAbilityV1332(){
 // Dobby's Starting Ally ability is a response, not a spell: it uses no Actions.
 // V1.342: Dobby may counter explicit, implicit, and field-activated player effects.
 // Also permit destroying a continuing opponent Spell on the board from Dobby's menu.
-async function useDobbyAbility(fromBoardV1342=false){
+async function useDobbyAbility(fromBoardV1342=false,forceSeatV1374=null){
  if(spellChain.some(x=>x.declaringV1322))return;
  if(lobbyMode==='invite'&&!onlineConnected)return;
- const me=lobbyMode==='local'?viewPlayer:onlineRole,s=P[me];
+ const me=(forceSeatV1374===2&&window.PocketTrainerAI?.isTrainer())?2:(lobbyMode==='local'?viewPlayer:onlineRole),s=P[me];
  if(s.char?.name!=='Dobby'||s.char.frozen)return;
  if(s.dobbyUsed){toast('Dobby ability has already been used this turn.');return;}
  if(s.lessons.length<1){toast('Dobby ability requires 1 Lesson in play.');return;}
@@ -8009,6 +8012,7 @@ document.addEventListener('contextmenu',e=>{if(e.target.closest('#game .card,#ga
  }
  function decide(){
   if(duelTerminalV1363)return;
+  if(document.getElementById('aiDifficultyV1352')?.value==='trainer' && aiModeV1352){window.PocketTrainerAI?.tick();return;}
   document.body.classList.toggle('aiMatchV1352',!!aiModeV1352&&lobbyMode==='local'&&phase==='game');
   if(!aiModeV1352||lobbyMode!=='local')return;
   if(phase!=='game'||!P[2]?.char)return;
@@ -8108,6 +8112,450 @@ document.addEventListener('contextmenu',e=>{if(e.target.closest('#game .card,#ga
 })();
 </script>
 
+<script id="trainerAIScriptV1374">
+/* Pocket Magic Awakened — Trainer v1.374 (offline Seat 2 only)
+   This controller NEVER writes hidden opponent data, overrides damage, or applies cards
+   directly. All plays, targets, counters and combat go through the original game rules.
+   The controller delegates card effects to the game engine, which has not been
+   exhaustively validated for every card/interaction. This is heuristic, not trained self-play. */
+(function(){
+'use strict';
+const AI_VERSION='1.374';
+const PRIORITY={
+ 'Harry Potter':['Kelpie','Pixies','Niffler','Mategot','Avis','Piertotum Locomotor'],
+ 'Ron Weasley':['Beater','Seeker','Guardian','Golden Snitch','Bludger','Quidditch Kit'],
+ 'Hermione Granger':['Aquamenti','Stupefy','Diffindo','Glacius Maxima','Protego'],
+ 'Luna Lovegood':['Niffler','Flying Broom','Kelpie','Mooncalf'],
+ 'Neville Longbottom':['Protego','Episkey','Fianto Duri','Murtlap'],
+ 'Ginny Weasley':['Bludger','Weasley Fireworks','Fanged Flyer','Howler','Quaffle'],
+ 'Draco Malfoy':['Vanishing Cabinet','Memory Vial','Quidditch Kit'],
+ 'Dobby':['Arresto Momentum','Diffindo','Glacius Maxima','Protego'],
+ 'Dolores Umbridge':['Langlock','Impedimenta','Conjunctivitis Curse'],
+ 'Bellatrix Lestrange':['Crucio','FiendFyre','Inferis','Conjunctivitis Curse'],
+ 'Sirius Black':['Norwegian Ridgeback','Ukrainian Ironbelly','Hungarian Horntail','Murtlap'],
+ 'Alastor Moody':['Protego','Fianto Duri','Aquamenti','Diffindo'],
+ 'Newt Scamander':['Niffler','Pixies','Kelpie','Murtlap'],
+ 'Remus Lupin':['Episkey','Fianto Duri','Protego','Murtlap'],
+ 'Kingsley Shacklebolt':['Aquamenti','Stupefy','Protego','Incendio']
+};
+const COMBOS=[
+ ['Glacius Maxima','Diffindo',18],['Glacius','Diffindo',14],['Snowman','Diffindo',10],
+ ['Slug Vomiting Charm','Diffindo',15],['Orb of Water','Diffindo',11],
+ ['Kelpie','Pixies',12],['Kelpie','Mategot',8],['Kelpie','Firecrab',8],
+ ['Avis','Oppugno',13],['Piertotum Locomotor','Oppugno',12],['Beater','Bludger',11],
+ ['Seeker','Golden Snitch',9],['Quidditch Kit','Bludger',6],
+ ['Incarcerous','Incendio',16],['Incarcerous','Diffindo',10],
+ ['Glacius Maxima','Conjunctivitis Curse',3],['Memory Vial','Vanishing Cabinet',7]
+];
+const BAD_CHOICE_CARDS=new Set(['Howler']); // uses a separate sacrifice UI, not verified for autonomous play
+const PRIMARY_QS=['Bat Bogey Hex','Confundus','Apparate','Protego','Fianto Duri','Flipendo'];
+let lastTurn=null, steps=0, failures=0, skip=new Set(),lastSig='',same=0, lastAction='', logs=[];
+const has=(arr,name)=>arr.some(x=>x&&x.name===name);
+const num=x=>Number(x)||0;
+const own=()=>P[2],enemy=()=>P[1];
+const db=c=>CARD_DB[c?.name]||c||{};
+const actionCostSafe=c=>actionCost(c,2);
+const resources=()=>own().lessons.length+own().play.filter(c=>c.name==='Niffler'&&c.type==='Creature').length;
+const isTrainer=()=>!!aiModeV1352&&lobbyMode==='local'&&phase==='game'&&document.getElementById('aiDifficultyV1352')?.value==='trainer';
+const marker=()=>[turn,own()?.turnSerial,own()?.actionsLeft,own()?.lessonsPlayed,own()?.hand?.length,own()?.play?.length,spellChain.length,autoEngine.pending?.step,autoEngine.pending?.name].join('|');
+function record(msg){logs.push(msg);if(logs.length>60)logs.shift();}
+function cardValueForDiscard(c){
+ const x=db(c),cost=num(x.cost),r=resources();let v=cost>r+2?1.5:3.8;
+ if(PRIORITY[own().char?.name]?.includes(c.name))v+=5;
+ if(c.type==='Creature')v+=Math.min(3,num(x.damage))*.7;
+ if(isSpellCard(c)&&own().char?.name==='Hermione Granger')v+=1.5;
+ if(c.name==='Diffindo'&&own().hand.some(v=>['Glacius','Glacius Maxima'].includes(v.name)))v+=10;
+ return v;
+}
+function threat(c){
+ if(!c)return 0;
+ const x=db(c),d=num(c.damage||x.damage),h=num(c.life??x.health);
+ return 3+d*2.8+Math.min(6,h)*.32+(c.name==='Kelpie'?6:0)+(c.name==='Beater'?5:0)+(c.name==='Seeker'?4:0)+(c.name==='Erumpent'?1:0)+(c.name==='Mategot'?1.5:0)+(c.block?5:0)+(c.frozen?-6:0);
+}
+function targetScore(r,step={},name=''){
+ if(!r)return -1e6;const c=autoFind(r),s=own(),opp=enemy(),friendly=r.p===2;
+ const type=step.type||'';
+ const support=['heal','shield','grantBlockV1336','cleanseV1337'].includes(type);
+ if(support){
+  if(!friendly)return -900;
+  if(r.kind==='starting'){
+   let missing=Math.max(0,20-s.life);
+   if(type==='heal')return missing>0?13+Math.min(missing,4)*3:-50;
+   if(type==='cleanseV1337')return (s.char?.frozen?18:0)+(s.char?.curse?20:0)-15;
+   if(type==='shield')return 9+(s.life<=10?12:0)+(s.char?.shield?-10:0);
+   return -70;
+  }
+  if(!c)return -100;
+  const missing=Math.max(0,num(db(c).health)-num(c.life));
+  if(type==='heal')return missing>0?5+Math.min(4,missing)*3+threat(c)*.25:-30;
+  if(type==='grantBlockV1336')return c.type==='Creature'?5+num(c.life)*.5+(c.block?-20:0)+threat(c)*.15:-100;
+  if(type==='cleanseV1337')return (c.frozen?18:0)+(c.curse?16:0)-9;
+  if(type==='shield')return 6+threat(c)*.3+(c.shield?-10:0);
+ }
+ if(friendly)return -80;
+ if(r.kind==='starting'){
+  const block=activeBlockersV232(1).length>0;
+  const frozen=!!opp.char?.frozen,shield=!!opp.char?.shield;
+  if(type==='freeze')return (name==='Glacius Maxima'?24:13)+(own().hand.some(c=>c.name==='Diffindo')?25:0)+(frozen?-20:0);
+  if(type==='damage'||type==='incendio'||type==='sectum'||type==='reducto'||type==='oppugno'||type==='variable'||type==='duel'||type==='thestral'){
+   const estimated=num(step.amount)||3;
+   return 20+(opp.life<=estimated?100:0)+(opp.life<=6?20:0)+(frozen&&name==='Diffindo'?14:0)-(shield?12:0)-(block?10:0);
+  }
+  return 9+(opp.life<=8?10:0);
+ }
+ if(!c)return -25;
+ if(r.kind==='creature'){
+  const life=num(c.life),dmg=num(step.amount)||2;
+  const kill=life<=dmg;
+  return threat(c)+(kill?12:0)+(c.block?7:0)+(c.frozen&&name==='Diffindo'?2:0);
+ }
+ if(r.kind==='ally')return 6+(c.name==='Beater'?10:0)+(c.name==='Seeker'?8:0)+(c.name==='Kelpie'?8:0);
+ if(r.kind==='item')return 4+(c.name==='Bludger'?8:0)+(c.name==='Golden Snitch'?6:0);
+ return 2;
+}
+function choseTargets(refs,step={},name='',count=1){
+ const ordered=[...refs].sort((a,b)=>targetScore(b,step,name)-targetScore(a,step,name));
+ // Never select unrelated/illegal targets just to fill a multi-target effect.
+ return ordered.slice(0,Math.max(1,Math.min(count,ordered.length)));
+}
+function hasDomain(c){const need=lessonRequirementV226(2,c);if(need<=0)return true;const domain=db(c).domain||c.domain||'Neutral';return domain==='Neutral'||own().lessons.some(l=>db(l).domain===domain);}
+function legal(c,fromDiscard=false){
+ if(!c||c.isToken||db(c).token||c.type==='Lesson')return false;
+ if(BAD_CHOICE_CARDS.has(c.name)||c.name==='Horrocrux')return false;
+ const s=own();if(s.combatStep!=='actions'||actionCostSafe(c)>s.actionsLeft)return false;
+ if(isSpellCard(c)&&(spellLockInPlayV212(2)||s.langlockThisTurnV246))return false;
+ if(usesCastChainV231(c)&&spellChain.length)return false;
+ if(s.umbridgeDecreePendingV1333)return false;
+ if(c.type==='Event'&&typeof arrestoBlocksEventsV1329==='function'&&arrestoBlocksEventsV1329())return false;
+ if(c.type==='Creature'&&enemy().play.some(x=>x.name==='Fwoopers'&&!x.frozen)&&num(s.creaturesPlayedTurnV194)>=1)return false;
+ if(c.name==='Bombarda'&&typeof bombardaCanCastV1335==='function'&&!bombardaCanCastV1335(2))return false;
+ if(c.name==='Imperio'&&s.lessons.length<=1)return false;
+ if(c.name==='Bat Bogey Hex'&&typeof batBogeyEligibleV1349==='function'&&!batBogeyEligibleV1349(c.id)?.length)return false;
+ if(c.name==='Fianto Duri'&&!s.play.some(x=>x.type==='Creature'))return false;
+ if(c.name==='Episkey'&&s.life>=20&&!s.play.some(x=>x.type==='Creature'&&num(x.life)<num(db(x).health)))return false;
+ if(c.name==='Renevate'&&!s.char?.frozen&&!s.char?.curse&&!s.play.some(x=>x.frozen||x.curse))return false;
+ if(c.name==='Oppugno'&&s.play.filter(x=>x.type==='Creature').length===0)return false;
+ if(c.name==='Avada Kedavra'&&s.avadaCastsV208!==2&&!enemy().play.some(x=>x.type==='Ally'||x.type==='Creature'))return false;
+ if(c.name==='Obscurus'&&s.hand.length<=1)return false;
+ const req=lessonRequirementV226(2,c,fromDiscard);
+ return resources()>=req&&hasDomain(c);
+}
+function deckGoal(){
+ const s=own(),costs=[...s.hand,...s.main].filter(c=>c&&!c.isToken&&c.type!=='Lesson').map(c=>num(db(c).cost)).filter(Number.isFinite).sort((a,b)=>a-b);
+ return Math.max(2,Math.min(6,costs.length?costs[Math.floor(costs.length*.72)]:3));
+}
+function baseScore(c){
+ const s=own(),e=enemy(),x=db(c),r=resources(),name=c.name;
+ const attack=num(x.damage),health=num(x.health);const cost=num(x.cost);
+ const printed=String(x.effect||'');
+ let v=5.5+Math.min(6,attack)*.8+Math.min(8,health)*.28-cost*.35;
+ if(c.type==='Creature')v+=4+attack*.4+(s.play.some(x=>x.name==='Kelpie')?4:0);
+ else if(c.type==='Ally')v+=5+(s.char?.name==='Ron Weasley'?6:0);
+ else if(c.type==='Item'||c.type==='Potion')v+=4;
+ else if(isSpellCard(c))v+=5;
+ else if(c.type==='Event')v+=4;
+ if(/draw \d+ (?:card|lesson)/i.test(printed))v+=3.8;
+ if(/destroy an? opposing|destroy a creature/i.test(printed))v+=e.play.length?5:0;
+ if(/give shield|shield [1-9]/i.test(printed))v+=s.life<12?4:0;
+ if(/deal \d+ damage/i.test(printed))v+=Math.min(7,e.life<=6?8:3);
+ if(/freeze/i.test(printed))v+=s.hand.some(x=>x.name==='Diffindo')?6:1;
+ if(/countdown/i.test(printed))v+=2;
+ if(/once per turn/i.test(printed))v+=4;
+ if(PRIORITY[s.char?.name]?.includes(name))v+=3.5;
+ if(name==='Kelpie')v+=8+(s.hand.some(x=>['Pixies','Mategot','Firecrab'].includes(x.name))?5:0);
+ if(name==='Pixies')v+=s.play.filter(x=>x.type==='Creature').length*1.9+(s.char?.name==='Harry Potter'?2:0);
+ if(name==='Avis'||name==='Piertotum Locomotor')v+=s.hand.some(x=>x.name==='Oppugno')?5:0;
+ if(name==='Oppugno')v+=s.play.filter(x=>x.type==='Creature').length*2.8;
+ if(name==='Bludger')v+=has(s.play,'Beater')?7:0;
+ if(name==='Beater')v+=has(s.hand,'Bludger')||has(s.play,'Bludger')?7:0;
+ if(name==='Seeker')v+=has(s.play,'Golden Snitch')?5:0;
+ if(name==='Niffler')v+=r<deckGoal()?6:1;
+ if(name==='Episkey')v+=Math.min(4,Math.max(0,20-s.life))*2.5;
+ if(name==='Protego')v+=s.life<=9?9:1;
+ if(name==='Glacius Maxima')v+=e.play.filter(x=>x.type==='Creature'&&!x.frozen).length*1.8;
+ if(name==='Diffindo')v+=(e.char?.frozen?17:0)+e.play.filter(x=>x.frozen).length*7;
+ if(name==='Bombarda')v+=Math.max(-12,(e.play.length+s.play.length*.5)*1.8+(e.play.length>s.play.length?10:-5));
+ if(name==='Obscurus')v+=s.hand.length>=3?5:-12;
+ if(name==='Howler')v=-1e4;
+ if(name==='Crucio')v+=e.life<=10?4:0;
+ if(name==='Duel of the Seekers'&&s.play.some(c=>c.name==='Seeker'))v+=6;
+ if(name==='Arresto Momentum'&&s.hand.some(c=>c.type==='Event'))v-=6;
+ if(name==='Canuto'&&s.hand.some(isSpellCard))v-=11;
+ if(isQuickSpell(c)&&s.actionsLeft>0){ // retain defensive Quick spells unless needed to finish
+  if(['Confundus','Bat Bogey Hex','Apparate','Protego'].includes(name))v-=7;
+ }
+ if(s.char?.name==='Harry Potter'){
+  const played=s.playedCountTurnV227===s.turnSerial?num(s.playedCardsV227):0;
+  if(played===1&&actionCostSafe(c)===1)v+=6;
+ }
+ if(s.char?.name==='Hermione Granger'&&isSpellCard(c))v+=4;
+ if(s.char?.name==='Ginny Weasley'&&(c.type==='Item'||c.type==='Potion')&&/deal|damage/i.test(printed))v+=5;
+ if(s.char?.name==='Bellatrix Lestrange'&&db(c).domain==='Dark Arts')v+=5;
+ if(s.char?.name==='Luna Lovegood'&&!s.char.frozen&&s.lessons.length>=6&&quaffleAllyUsedV1306(2,'luna')<quaffleAllyLimitV1306(2,'starting')&&resources()-2>=Math.max(3,deckGoal()-1)&&!s.play.some(c=>c.name==="Luna's Thestral")){createLunaToken(2);return true;}
+ if(s.char?.name==='Draco Malfoy'&&!s.char.frozen&&s.actionsLeft>0&&s.hand.length>=2&&enemy().hand.length>=2&&quaffleAllyUsedV1306(2,'draco')<quaffleAllyLimitV1306(2,'starting')&&bestValue<17){activateDracoV242(2);return true;}
+ if(s.char?.name==='Luna Lovegood'&&!s.char.frozen&&s.lessons.length>=6&&quaffleAllyUsedV1306(2,'luna')<quaffleAllyLimitV1306(2,'starting')&&resources()-2>=Math.max(3,deckGoal()-1)&&!s.play.some(c=>c.name==="Luna's Thestral")){createLunaToken(2);return true;}
+ if(s.char?.name==='Draco Malfoy'&&!s.char.frozen&&s.actionsLeft>0&&s.hand.length>=2&&enemy().hand.length>=2&&quaffleAllyUsedV1306(2,'draco')<quaffleAllyLimitV1306(2,'starting')&&bestValue<17){activateDracoV242(2);return true;}
+ if(s.char?.name==='Luna Lovegood'&&!s.char.frozen&&s.lessons.length>=6&&quaffleAllyUsedV1306(2,'luna')<quaffleAllyLimitV1306(2,'starting')&&resources()-2>=Math.max(3,deckGoal()-1)&&!s.play.some(c=>c.name==="Luna's Thestral")){createLunaToken(2);return true;}
+ if(s.char?.name==='Draco Malfoy'&&!s.char.frozen&&s.actionsLeft>0&&s.hand.length>=2&&enemy().hand.length>=2&&quaffleAllyUsedV1306(2,'draco')<quaffleAllyLimitV1306(2,'starting')&&bestValue<17){activateDracoV242(2);return true;}
+ if(s.char?.name==='Sirius Black'&&isSpellCard(c)&&has(s.play,'Canuto'))v-=100;
+ if(s.char?.name==='Dobby'&&name==='Arresto Momentum'&&s.hand.some(x=>x.type==='Event'))v-=6;
+ // Prevent wasting a Spell if it has no useful targets or deals no useful damage.
+ if(name==='Glacius Maxima'&&e.char?.frozen&&e.play.every(x=>x.frozen))v-=15;
+ if(name==='Fianto Duri'&&s.play.filter(x=>x.type==='Creature').every(x=>x.block))v-=8;
+ if(name==='Riddikulus'&&e.char?.frozen)v-=8;
+ if(name==='Reducto'&&e.life<=1+num(e.damageTakenTotal))v+=60;
+ if(name==='Wildfire Whiz Bangs'&&e.life<=7&&!e.char?.shield&&!activeBlockersV232(1).length)v+=90;
+ if(name==='Desmaius'&&e.life<=4&&!e.char?.shield&&!activeBlockersV232(1).length)v+=90;
+ return v;
+}
+function combosScore(a,b){
+ let val=0;
+ for(const [start,end,weight] of COMBOS){if(a?.name===start&&b?.name===end)val+=weight;}
+ if(a?.name==='Diffindo'&&b?.name==='Glacius Maxima')val-=18;
+ return val;
+}
+function nextPlayScore(c,cards){
+ const s=own(),after=s.actionsLeft-actionCostSafe(c);if(after<=0)return 0;
+ const r=resources();let best=0;
+ for(const n of cards){if(n.id===c.id||actionCostSafe(n)>after)continue;
+  if(lessonRequirementV226(2,n)>r||!hasDomain(n))continue;
+  const synergy=combosScore(c,n);
+  best=Math.max(best,Math.max(0,baseScore(n)*.32)+synergy);
+ }
+ return best*.55;
+}
+function lessonScore(cards){
+ const s=own(),r=resources();if(!s.lessonDeck.length||s.lessonsPlayed>=2||s.actionsLeft<1)return -1e6;
+ if(enemy().play.some(c=>c.name==='Finite Incantatem'&&!c.frozen)&&!s.hand.length)return -1e6;
+ const goal=deckGoal();let v=r<=1?18:r<goal?12.5+(goal-r)*.85:r===goal?2.5:-8;
+ if(r>=goal&&cards.length)v-=5;
+ const top=s.lessonDeck[s.lessonDeck.length-1]; // Lesson domain is public within own deck, not opponent's hidden deck
+ const domain=db(top).domain;
+ const newlyPlayable=s.hand.filter(c=>!legal(c)&&!BAD_CHOICE_CARDS.has(c.name)).filter(c=>lessonRequirementV226(2,c)<=r+1&&actionCostSafe(c)<=s.actionsLeft-1&&(db(c).domain==='Neutral'||s.lessons.some(l=>db(l).domain===db(c).domain)||domain===db(c).domain));
+ if(newlyPlayable.length&&s.actionsLeft>=2)v=Math.max(v,Math.max(...newlyPlayable.map(c=>baseScore(c)))*.65+3);
+ if(s.actionsLeft===1&&cards.length)v-=8;
+ if(s.char?.name==='Luna Lovegood'&&r<6)v+=1;
+ return v;
+}
+function decideAction(){
+ const s=own();if(s.combatStep==='combat'){attack();return;}
+ if(s.actionsLeft<=0){endTurn();return;}
+ // Cast from Dark Arts discard when it is demonstrably better than current hand.
+ const cards=s.hand.filter(c=>legal(c)&&!skip.has('hand:'+c.id));
+ const score=c=>baseScore(c)+nextPlayScore(c,cards);
+ const ranked=cards.map(c=>({card:c,value:score(c)})).sort((a,b)=>b.value-a.value);
+ const best=ranked[0];const goal=lessonScore(cards);
+ const wolf=s.play.find(c=>c.name==="Lupin's Werewolf Form"),ally=s.play.filter(c=>c.type==='Ally'&&!c.frozen).length;
+ const castDmg=Math.max(0,(wolf?num(wolf.damage):ally)+s.play.filter(c=>c.name==='Swelling Solution'&&!c.frozen).length);
+ const canCast=s.basicCastTurnV253!==s.turnSerial&&castDmg>0;
+ const castScore=canCast?(enemy().life<=castDmg&&!enemy().char?.shield&&!activeBlockersV232(1).length?200:Math.max(5,castDmg*2.7+2+(enemy().life<=8?5:0))):-1e6;
+ // Free abilities before committing an Action, but never indefinitely trigger the same one.
+ if(activateAbility(ranked[0]?.value||0))return;
+ if(canCast&&castScore>Math.max(goal,best?.value??-1e6)){record('Basic Cast '+castDmg);basicCast(2);return;}
+ if(goal>Math.max(best?.value??-1e6,3)){
+  record('Develop Lesson');selDeck={p:2,z:'lesson'};deckMenuAct('playLesson');return;
+ }
+ if(best&&best.value>3){
+  const c=best.card;record('Play '+c.name+' score='+best.value.toFixed(1));
+  if(isSpellCard(c))spellChainCast(2,c.id,false);else {const success=move(2,c.id,'play');if(success)render();else skip.add('hand:'+c.id);}
+  return;
+ }
+ // Dark Arts reusable casting is considered only if it cannot corrupt the board.
+ const dark=s.discard.filter(c=>db(c).domain==='Dark Arts'&&!c.castFromDiscard&&legal(c,true)&&!skip.has('dark:'+c.id));
+ const fromDiscard=dark.map(c=>({card:c,value:baseScore(c)-5})).sort((a,b)=>b.value-a.value)[0];
+ if(fromDiscard&&fromDiscard.value>Math.max(goal,best?.value??-1e6,8)){
+  record('Dark Arts recast '+fromDiscard.card.name);castDarkFromDiscard(2,fromDiscard.card.id);return;
+ }
+ if(canCast&&castDmg>0){record('Basic Cast');basicCast(2);return;}
+ if(goal>0){record('Develop Lesson last action');selDeck={p:2,z:'lesson'};deckMenuAct('playLesson');return;}
+ record('End turn');endTurn();
+}
+function activateAbility(bestValue){
+ const s=own();
+ // Once-per-turn Starting Ally abilities implemented in the original engine.
+ if(s.char?.name==='Luna Lovegood'&&!s.char.frozen&&s.lessons.length>=6&&quaffleAllyUsedV1306(2,'luna')<quaffleAllyLimitV1306(2,'starting')&&resources()-2>=Math.max(3,deckGoal()-1)&&!s.play.some(c=>c.name==="Luna's Thestral")){createLunaToken(2);return true;}
+ if(s.char?.name==='Draco Malfoy'&&!s.char.frozen&&s.actionsLeft>0&&s.hand.length>=2&&enemy().hand.length>=2&&quaffleAllyUsedV1306(2,'draco')<quaffleAllyLimitV1306(2,'starting')&&bestValue<17){activateDracoV242(2);return true;}
+ if(s.char?.name==='Newt Scamander'&&!s.char.frozen&&s.play.filter(c=>c.type==='Creature').length>=3&&s.actionsLeft>0&&bestValue<17&&!(s.play.some(c=>c.name==="Newt's Sweeping Evil"))){createNewtTokenV196(2);return true;}
+ if(s.char?.name==='Sirius Black'&&!s.char.frozen&&s.play.some(c=>c.type==='Creature'&&num(c.life)>=5)&&!s.hand.some(isSpellCard)&&!s.play.some(c=>c.name==='Canuto')){createCanutoTokenV210(2);return true;}
+ for(const c of s.play){
+  if(c.frozen||c.abilityUsedTurn===s.turnSerial)continue;
+  if(c.name==='Seeker'&&((has(s.play,'Golden Snitch')?s.discard:s.main.slice(-3)).some(x=>x.type==='Item'))){activateSeekerV1314(2,c.id);return true;}
+  if(c.name==='Guardian'&&s.play.some(x=>x.type==='Item'&&db(x).domain==='Quidditch')){activateGuardianV1314(2,c.id);return true;}
+  if(c.name==='Beater'&&s.hand.length>1&&s.play.some(x=>x.type==='Item'&&db(x).domain==='Quidditch'&&['Bludger','Golden Snitch'].includes(x.name))&&quaffleAllyUsedV1306(2,'beater',c.id)<quaffleAllyLimitV1306(2,c.id)){activateBeater(2,c.id);return true;}
+  if(ongoingActiveV169(c)){
+   // Activations are free, but don't waste Freeze on already frozen targets.
+   if(['Glacius','Glacius Maxima','Crucio','Oppugno','FiendFyre','Arrow Shooting Spell'].includes(c.name)){
+    if(['Glacius','Glacius Maxima'].includes(c.name)&&enemy().char?.frozen&&enemy().play.every(x=>x.frozen))continue;
+    if(c.name==='Crucio'&&!enemy().play.some(x=>x.type==='Creature')&&enemy().char?.shield)continue;
+    activateOngoingV169(2,c.id);return true;
+   }
+  }
+ }
+ return false;
+}
+function attack(){
+ const s=own(),opp=enemy();
+ const attackers=s.play.filter(c=>c.type==='Creature'&&!c.frozen&&!c.attackedThisTurn&&!c.unableToAttack&&cardAttack(c,2)>0&&!(c.name==='Mountain Troll'&&s.play.some(x=>x!==c&&x.type==='Creature'))).sort((a,b)=>cardAttack(b,2)-cardAttack(a,2));
+ if(!attackers.length){finishCombat();return;}
+ const attacker=attackers[0],damage=cardAttack(attacker,2);
+ const faceLegal=blockTargetAllowedV232(2,{p:1,kind:'starting',id:null})&&!startingTargetBlockedV256(1,2,attacker.name);
+ const targets=opp.play.filter(c=>c.type==='Creature'&&blockTargetAllowedV232(2,{p:1,kind:'creature',id:c.id}));
+ const blocker=targets.filter(c=>hasBlockV232(c));
+ const best=[...(blocker.length?blocker:targets)].sort((a,b)=>(threat(b)+(num(b.life)<=damage?11:0))-(threat(a)+(num(a.life)<=damage?11:0)))[0];
+ let chosen=null;
+ if(!faceLegal||blocker.length)chosen=best?.id??null;
+ else if(opp.life>damage&&best&&(threat(best)>12||num(best.life)<=damage&&threat(best)>8))chosen=best.id;
+ if(!faceLegal&&chosen===null){finishCombat();return;}
+ record('Attack '+attacker.name+' to '+(chosen==null?'player':best?.name));targetStart(2,attacker.id,damage);
+ if(targetSelection)targetResolve(1,chosen);
+}
+function inspectResponse(entry){
+ if(!entry||entry.player!==1||entry.declaringV1322)return null;
+ const s=own(),original=entry.card,cost=num(db(original).cost);
+ const declaration=entry.card.declaredTargetV1322;
+ const affects=declaration?.p===2||!declaration&&['Glacius Maxima','Bombarda','Incendio','Diffindo','Reducto','Conjunctivitis Curse','Crucio','Expulso','Obscurus','Glacius'].includes(original.name)||entry.activationV1342;
+ const dangerous=affects||cost>=4||['Incarcerous','FiendFyre','Piertotum Locomotor','Oppugno','Sectumsempra','Avada Kedavra'].includes(original.name);
+ if(!dangerous)return null;
+ const candidates=s.hand.filter(c=>isQuickSpell(c)&&lessonRequirementV226(2,c)<=resources()&&hasDomain(c)&&quickResponseLessonOptionsV179(2,c).length&&(!s.langlockThisTurnV246)&&!spellLockInPlayV212(2));
+ const graded=[];
+ for(const card of candidates){
+  let v=-100;
+  if(card.name==='Bat Bogey Hex'&&cost<=4)v=25+cost*1.5;
+  if(card.name==='Confundus')v=19+cost*1.4;
+  if(card.name==='Apparate'&&affects)v=27+cost;
+  if(card.name==='Protego'&&affects&&!s.char?.shield)v=12+(s.life<=9?11:0);
+  if(card.name==='Fianto Duri'&&affects&&s.play.some(c=>c.type==='Creature'&&!c.block))v=10;
+  if(card.name==='Flipendo'&&enemy().play.some(c=>c.type==='Creature'||c.type==='Item'))v=11;
+  if(v>=20||v>=12&&s.life<=9)graded.push({card,value:v});
+ }
+ graded.sort((a,b)=>b.value-a.value);
+ return graded[0]?.card||null;
+}
+function respond(){
+ const entry=spellChain[spellChain.length-1];if(!entry)return false;
+ if(entry.declaringV1322&&entry.player===2){
+  const choices=declarationChoicesV1322(entry),buttons=[...document.querySelectorAll('#declareOverlayV1322 button')];
+  if(choices.length&&buttons.length){
+   const first=entry.card.name==='Episkey'||entry.card.name==='Protego'||entry.card.name==='Renevate'||entry.card.name==='Fianto Duri';
+   const step=AUTO_DAMAGE_SPELLS[entry.card.name]?.steps?.[0]||{};
+   const scored=choices.map((x,i)=>({i,score:x.mode==='ally'?3:targetScore(x.ref,first?{type:entry.card.name==='Episkey'?'heal':entry.card.name==='Protego'?'shield':entry.card.name==='Fianto Duri'?'grantBlockV1336':'cleanseV1337'}:step,entry.card.name)}));
+   scored.sort((a,b)=>b.score-a.score);
+   if(buttons[scored[0].i]){buttons[scored[0].i].click();return true;}
+  }
+  return false;
+ }
+ if(entry.player===1&&!entry.declaringV1322){
+  // Use a Starting Ally's built-in legal counter before spending a Quick Spell card.
+  if(own().char?.name==='Dobby'&&!own().char.frozen&&!own().dobbyUsed&&own().lessons.length>=2&&spellAffectsPlayerV1342(entry,2)&&num(db(entry.card).cost)>=3){record('Dobby counters '+entry.card.name);useDobbyAbility(false,2);return true;}
+  if(own().char?.name==='Alastor Moody'&&moodyCanRedirectV1332(entry,2)&&moodyRedirectChoicesV1332(entry,2).length){record('Moody redirects '+entry.card.name);useMoodyAbilityV1332(2);return true;}
+  // Use a Starting Ally's built-in legal counter before spending a Quick Spell card.
+  if(own().char?.name==='Dobby'&&!own().char.frozen&&!own().dobbyUsed&&own().lessons.length>=2&&spellAffectsPlayerV1342(entry,2)&&num(db(entry.card).cost)>=3){record('Dobby counters '+entry.card.name);useDobbyAbility(false,2);return true;}
+  if(own().char?.name==='Alastor Moody'&&moodyCanRedirectV1332(entry,2)&&moodyRedirectChoicesV1332(entry,2).length){record('Moody redirects '+entry.card.name);useMoodyAbilityV1332(2);return true;}
+  // Use a Starting Ally's built-in legal counter before spending a Quick Spell card.
+  if(own().char?.name==='Dobby'&&!own().char.frozen&&!own().dobbyUsed&&own().lessons.length>=2&&spellAffectsPlayerV1342(entry,2)&&num(db(entry.card).cost)>=3){record('Dobby counters '+entry.card.name);useDobbyAbility(false,2);return true;}
+  if(own().char?.name==='Alastor Moody'&&moodyCanRedirectV1332(entry,2)&&moodyRedirectChoicesV1332(entry,2).length){record('Moody redirects '+entry.card.name);useMoodyAbilityV1332(2);return true;}
+  // Use a Starting Ally's built-in legal counter before spending a Quick Spell card.
+  if(own().char?.name==='Dobby'&&!own().char.frozen&&!own().dobbyUsed&&own().lessons.length>=2&&spellAffectsPlayerV1342(entry,2)&&num(db(entry.card).cost)>=3){record('Dobby counters '+entry.card.name);useDobbyAbility(false,2);return true;}
+  if(own().char?.name==='Alastor Moody'&&moodyCanRedirectV1332(entry,2)&&moodyRedirectChoicesV1332(entry,2).length){record('Moody redirects '+entry.card.name);useMoodyAbilityV1332(2);return true;}
+  const response=inspectResponse(entry);
+  if(response){
+   const lessonOptions=quickResponseLessonOptionsV179(2,response),spend=[...lessonOptions].sort((a,b)=>{
+    const count=d=>own().lessons.filter(x=>db(x).domain===d).length;
+    const scarcity=a=>count(a.domain)<=1?4:0;
+    return scarcity(a)-scarcity(b);
+   })[0];
+   record('Quick response '+response.name+' to '+entry.card.name);
+   // Call the same checked core used by the real UI, with explicit legal Lesson cost.
+   spellChainCastCoreV178(2,response.id,true,{extra:false,lessonIndex:-1,quickLessonId:spend.lesson.id});return true;
+  }
+  record('Approve '+entry.card.name);spellChainApprove(2);return true;
+ }
+ return true; // Human must approve Trainer's own stack card.
+}
+function resolvePending(){
+ const spec=autoEngine.pending;
+ if(!spec||spec.player!==2)return false;
+ const step=spec.steps?.[spec.step];if(!step){autoFinish();return true;}
+ const candidates=autoEligible(spec,step);
+ const special=['manual','clearFreeze','totalum','gubridian','orbBurst','shieldAll','finiteDestroyV247','expDestroyV264','frozenBlast'].includes(step.type);
+ if(special){
+  const buttons=[...document.querySelectorAll('#autoResolutionOverlay button')].filter(x=>!x.disabled);
+  const btn=step.type==='expDestroyV264'?buttons.find(b=>b.classList.contains('autoTargetChoice')):buttons.find(b=>/Apply|Continue|Finished|No Valid Target/i.test(b.textContent));
+  if(btn){btn.click();return true;}
+  if(step.type==='expDestroyV264'){autoNextStep();return true;}
+ }
+ if(!candidates.length){
+  const btn=[...document.querySelectorAll('#autoResolutionOverlay button')].find(x=>!x.disabled&&/Continue|Apply|Finished/i.test(x.textContent));
+  if(btn){btn.click();return true;}
+  autoNextStep();return true;
+ }
+ if(spec.replicate){spec.selected=[...candidates];}
+ else if(spec.name==='Glacius Maxima'||step.max>1){spec.selected=choseTargets(candidates,step,spec.name,num(step.max)||3);}
+ else if(spec.selected?.length){spec.selected=spec.selected.filter(x=>candidates.some(y=>autoRefKey(x)===autoRefKey(y)));if(!spec.selected.length)spec.selected=choseTargets(candidates,step,spec.name,1);}
+ else spec.selected=choseTargets(candidates,step,spec.name,1);
+ record('Resolve '+spec.name+' '+step.type+' -> '+spec.selected.map(autoTargetText).join(', '));
+ try{autoApplyChosen();return true;}catch(e){console.warn('Trainer target resolution',e);autoRenderModal();return false;}
+}
+function handleChoiceDialog(){
+ // Trainer's own choice dialogs can be resolved by the existing owner-aware helper.
+ // This is reserved for original-engine dialogs with an identifiable AI owner.
+ return false;
+}
+function tick(){
+ if(!isTrainer()||duelTerminalV1363||!P[2]?.char)return;
+ try{
+  const now=marker();if(now===lastSig){same++;}else{same=0;lastSig=now;}
+  if(spellChain.length){respond();return;}
+  if(autoEngine.pending){if(autoEngine.pending.player===2)resolvePending();return;}
+  if(costDecisionBusyV178){const root=document.getElementById('costDecisionV178');const opts=[...(root?.querySelectorAll('#costDecisionChoicesV178 button')||[])];if(root?.classList.contains('open')&&opts.length){(opts.find(x=>/without additional|no additional|no cost/i.test(x.textContent))||opts[0]).click();}return;}
+  if(autoEngine.queue.length||pendingSpellEffect||targetSelection||document.getElementById('declareOverlayV1322'))return;
+  if(typeof tutorialSessionV1354!=='undefined'&&tutorialSessionV1354)return;
+  if(turn!==2)return;
+  const s=own();
+  if(s.turnSerial!==lastTurn){lastTurn=s.turnSerial;steps=0;failures=0;skip.clear();lastSig='';same=0;record('Turn '+lastTurn+' start');}
+  if(same>12){record('Stall safe end');skip.add(lastAction);if(same>18){if(s.combatStep==='combat')finishCombat();else endTurn();same=0;}return;}
+  if(steps++>35){record('Safety turn end');if(s.combatStep==='combat')finishCombat();else endTurn();return;}
+  decideAction();
+ }catch(err){failures++;console.error('Trainer AI v'+AI_VERSION,err);record('Error '+String(err).slice(0,100));if(failures>=3){try{if(turn===2&&!spellChain.length&&!autoEngine.pending){if(own().combatStep==='combat')finishCombat();else endTurn();}}catch(_){}}}
+}
+
+// Owner-specific decision adapter for legacy choice prompts. Human Seat 1 prompts
+// are never intercepted, including the rival's own Quick Spell choices.
+const originalChooseCardV1374=queueCardChoiceV222;
+queueCardChoiceV222=function(title,description,options,required=false){
+ const name=String(title||''),opts=(Array.isArray(options)?options:[]).filter(c=>c&&!c.disabled);
+ if(isTrainer()&&opts.length){
+  const aiCounter=(name.startsWith('Confundus —')&&own().play.some(c=>c.name==='Confundus'&&c.confundusResolvingV255))||
+    (name.startsWith('Bat Bogey Hex —')&&own().play.some(c=>c.name==='Bat Bogey Hex'&&c.batBogeyResolvingV231));
+  if(aiCounter){const sorted=[...opts].sort((a,b)=>{
+    const value=x=>Number(String(x.id).startsWith('stack:'))*15+(String(x.name).includes('Opponent')?5:0);
+    return value(b)-value(a);
+   });return Promise.resolve(sorted[0].id);}
+  if(turn===2&&own().char?.name==='Luna Lovegood'&&name.startsWith('Luna Lovegood —')){
+   const byDomain={};for(const l of own().lessons){byDomain[db(l).domain]=(byDomain[db(l).domain]||0)+1;}
+   const best=[...opts].sort((a,b)=>(byDomain[db(b).domain]||0)-(byDomain[db(a).domain]||0))[0];
+   return Promise.resolve(best?.id??null);
+  }
+  if(own().char?.name==='Dobby'&&name.startsWith('Dobby —')&&spellChain.at(-1)?.player===1)return Promise.resolve(opts[0].id);
+  if(turn===2&&own().char?.name==='Draco Malfoy'&&name.startsWith('Draco Malfoy —')){
+   const target=name.includes('Opponent Hand');
+   return Promise.resolve([...opts].sort((a,b)=>target?cardValueForDiscard(b)-cardValueForDiscard(a):cardValueForDiscard(a)-cardValueForDiscard(b))[0]?.id??null);
+  }
+  if(name.startsWith('Apparate —')&&own().play.some(c=>c.name==='Apparate'&&c.apparateResolvingV1342))return Promise.resolve((opts.find(x=>String(x.id).startsWith('spell:'))||opts[0]).id);
+  if(name.startsWith('Alastor Moody —')&&own().char?.name==='Alastor Moody'&&spellChain.at(-1)?.player===1){const ownCreature=opts.find(x=>/Defender.s .*|Defender.s/i.test(x.name)&&!x.name.includes('Player Health'));return Promise.resolve((ownCreature||opts[0]).id);}
+  if(name.startsWith('Dolores Umbridge —')&&own().char?.name==='Dolores Umbridge'&&own().umbridgeDecreePendingV1333){
+   const strong=enemy().hand.length>=3?'Umbridge Card Decree':enemy().lessons.length<=3?'Umbridge Lesson Decree':'Umbridge Spell Decree';
+   return Promise.resolve((opts.find(x=>x.id===strong)||opts[0]).id);
+  }
+ }
+ return originalChooseCardV1374(title,description,options,required);
+};
+
+window.PocketTrainerAI=Object.freeze({version:AI_VERSION,tick,isTrainer,inspect(){return {version:AI_VERSION,ally:own()?.char?.name,resources:resources(),legal:own()?.hand?.filter(legal).map(c=>({name:c.name,score:Math.round(baseScore(c))}))||[],recent:[...logs]};},diagnostics(){return {lastTurn,steps,failures,stuck:same,logs:[...logs]};}});
+})();
+
+</script>
+
 <script id="dedicatedLobbiesScriptV1353">
 // Dedicated Offline / Online lobbies share the existing live deck widgets, moving
 // each widget into the visible page. Its ID, listeners and selected deck remain intact.
@@ -8170,7 +8618,7 @@ const v1353OriginalRenderLobby=renderLobby;
 renderLobby=function(){
  v1353OriginalRenderLobby();
  const seat2Title=document.querySelector('#seat2 h3');
- if(seat2Title)seat2Title.textContent=aiModeV1352?'Seat 2 — AI Opponent':'Seat 2 — Player 2';
+ if(seat2Title)seat2Title.textContent=aiModeV1352?'Seat 2 — Trainer':'Seat 2 — Player 2';
 };
 function openDedicatedLobbyV1353(kind){
  dedicatedLobbyKindV1353=kind==='online'?'online':'offline';
@@ -10213,6 +10661,237 @@ function tutorialForceLevel2CreatureTargetV1359(){
   }catch(e){}
   return _targetResolve.apply(this,arguments);
  };
+})();
+</script>
+<script id="masterAIFoundationCoreV1364">
+/* Pocket Magic Awakened — Master AI Foundation V1.364
+ * Read-only action candidate generator. Never mutates game state or performs UI actions.
+ * Produces rule-gated candidate actions, NOT guaranteed successful full resolutions.
+ * Card-specific targets, choices and triggers will need a shared transition engine.
+ * Node: require('./master_ai_foundation_v1364.js'); Browser: PocketMasterCoreV1364.
+ */
+(function(root,factory){
+ const api=factory();
+ if(typeof module!=='undefined'&&module.exports)module.exports=api;
+ else root.PocketMasterCoreV1364=api;
+})(typeof window!=='undefined'?window:globalThis,function(){
+ 'use strict';
+ const VERSION='1.364';
+ const ACTIVE_ONGOINGS=new Set(['Glacius','Glacius Maxima','Oppugno','Orb of Water','Slug Vomiting Charm','Arrow Shooting Spell','Gubridian Fire','FiendFyre','Felix Felicis','Finite Incantatem','Crucio','Protego Diabolica']);
+ const FIELD_ACTIVATED=new Set(['Weasley Fireworks',"Luna's Thestral",'Death Eater','Time Turner','Memory Vial','Portkey','Guardian','Seeker','Beater']);
+ const OPTIONAL_LESSON=new Set(['Expelliarmus','Carpe Retractum','Wingardium Leviosa']);
+ const choiceKeywords=/\b(?:choose|targets?|discard|look at|search|random|reveal|may|return up to|sacrifice|draw|heal|freeze)\b/i;
+ const num=x=>Math.max(0,Number(x)||0);
+ const P=(s,p)=>s.players?.[p]||{};
+ const other=p=>p===1?2:1;
+ const def=(db,c)=>db?.[c?.name]||c||{};
+ const type=(db,c)=>def(db,c).type||c?.type||'';
+ const domain=(db,c)=>def(db,c).domain||c?.domain||'Neutral';
+ const spelling=(db,c)=>/spell/i.test(type(db,c));
+ const quick=(db,c)=>/quick\s*spell/i.test(type(db,c));
+ const blockers=(player,db)=>(player?.play||[]).filter(c=>type(db,c)==='Creature'&&c.life>0&&(c.block||/(?:^|\W)Block(?:\.|\W|$)/i.test(String(def(db,c).effect||''))));
+ const hasCard=(p,name)=>!!(p?.play||[]).some(c=>c.name===name);
+ const activeCard=(p,name)=>!!(p?.play||[]).some(c=>c.name===name&&!c.frozen);
+ const lessonDomain=(db,c)=>domain(db,c);
+ const actualLessons=(p)=>(p?.lessons||[]).length;
+ function resourceCount(p){return actualLessons(p)+(p?.play||[]).filter(c=>c.name==='Niffler'&&c.type==='Creature').length;}
+ function controlsRon(p){return p?.char?.name==='Ron Weasley'&&!p.char.frozen||(p?.play||[]).some(c=>c.name==='Ron Weasley'&&!c.frozen);}
+ function actionCost(p,db,c){const kind=type(db,c);return kind==='Ally'?(controlsRon(p)?1:2):kind==='Location'?2:1;}
+ function requiredLessons(p,db,c,fromDiscard=false){
+  const cost=num(def(db,c).cost);const discount=fromDiscard?0:num(c?.deathEaterDiscountV222);
+  const puppy=c?.name==='Tree-Headed Puppy'?actualLessons(p):0;
+  const tax=spelling(db,c)&&(p?.play||[]).some(x=>x.name==='Umbridge Spell Decree'&&x.isToken)?1:0;
+  return Math.max(0,cost-discount-puppy+(fromDiscard?1:0)+tax);
+ }
+ function playerLifeTargetable(state,db,actor,victim,attackerName=''){
+  const own=P(state,actor),enemy=P(state,victim);
+  if(victim!==actor){
+   if(blockers(enemy,db).length)return false;
+   if((hasCard(enemy,'Canuto')||hasCard(enemy,"Lupin's Werewolf Form"))&&!hasCard(own,"Moody's Magical Eye"))return false;
+   if(activeCard(enemy,'Invisibility Cloak')||activeCard(enemy,'Evanesco'))return false;
+   if(type(db,{name:attackerName})==='Creature'&&activeCard(enemy,'Nebulus'))return false;
+  }
+  return true;
+ }
+ function allowedAttackTargets(state,db,actor,attacker){
+  const enemy=P(state,other(actor));const own=P(state,actor);const blocked=blockers(enemy,db);
+  const eye=hasCard(own,"Moody's Magical Eye");
+  const creatures=(enemy.play||[]).filter(c=>type(db,c)==='Creature'&&Number(c.life)>0&&(!blocked.length||eye||blocked.some(b=>b.id===c.id)));
+  const refs=creatures.map(c=>({player:other(actor),kind:'creature',cardId:c.id,name:c.name}));
+  if(playerLifeTargetable(state,db,actor,other(actor),attacker?.name))refs.push({player:other(actor),kind:'starting',cardId:null,name:'Player '+other(actor)});
+  return refs;
+ }
+ function spellChainState(s){return s.chain||{length:0,topPlayer:null,declaring:false};}
+ function pending(s){return !!(s.pendingEffect||s.pendingChoice||s.gameOver);}
+ function inspectCard(s,db,actor,c,zone='hand',response=false){
+  const self=P(s,actor),enemy=P(s,other(actor)),chain=spellChainState(s),kind=type(db,c),fromDiscard=zone==='discard',errors=[];
+  const add=x=>{if(!errors.includes(x))errors.push(x)};
+  if(!c?.name||!def(db,c).type)add('unknown-card');
+  if(kind==='Lesson'||c?.isToken||def(db,c).token)add('not-main-deck-play');
+  if(s.phase!=='game'||s.gameOver)add('not-in-game');
+  if(pending(s))add('pending-resolution');
+  if(self.umbridgeDecreePendingV1333)add('umbridge-decree-choice');
+  if(fromDiscard){if(domain(db,c)!=='Dark Arts')add('not-dark-arts');if(c.castFromDiscard)add('already-cast-from-discard');}
+  if(!fromDiscard&&zone!=='hand')add('unsupported-zone');
+  const isSpell=spelling(db,c),isQuick=quick(db,c);
+  if(isSpell&&(hasCard(self,'Canuto')||hasCard(self,"Lupin's Werewolf Form")||self.langlockThisTurnV246))add('spell-locked');
+  if(chain.length>0){
+   if(chain.declaring)add('target-declaration-pending');
+   if(!response||!isQuick)add('only-quick-response');
+   if(chain.topPlayer===actor)add('cannot-respond-to-own-spell');
+  }else{
+   if(response)add('no-spell-to-respond-to');
+   if(s.turn!==actor)add('not-your-turn');
+   if(self.combatStep==='combat')add('combat-not-finished');
+  }
+  if(response&&chain.length>0){
+   // Responses use matching Lesson discard rather than an Action.
+   if(!(self.lessons||[]).some(l=>domain(db,c)==='Neutral'||lessonDomain(db,l)===domain(db,c)))add('no-matching-response-lesson');
+  }else if(num(self.actionsLeft)<actionCost(self,db,c))add('not-enough-actions');
+  const required=requiredLessons(self,db,c,fromDiscard);
+  if(resourceCount(self)<required)add('not-enough-lessons');
+  if(required>0&&domain(db,c)!=='Neutral'&&!(self.lessons||[]).some(l=>lessonDomain(db,l)===domain(db,c)))add('wrong-lesson-domain');
+  if(kind==='Event'&&[1,2].some(side=>hasCard(P(s,side),'Arresto Momentum')))add('events-blocked-by-arresto');
+  if(kind==='Creature'&&activeCard(enemy,'Fwoopers')&&num(self.creaturesPlayedTurnV194)>=1)add('fwoopers-creature-limit');
+  if(c.name==='Bat Bogey Hex'){
+   const eligible=(chain.entries||[]).some(e=>spelling(db,e.card)&&num(def(db,e.card).cost)<=4)
+     ||[1,2].some(side=>(P(s,side).play||[]).some(x=>spelling(db,x)&&num(def(db,x).cost)<=4));
+   if(!eligible)add('no-bat-bogey-target');
+  }
+  if(c.name==='Horrocrux'&&!(self.play||[]).some(x=>['Creature','Ally'].includes(type(db,x))))add('requires-sacrifice');
+  if(c.name==='Imperio'&&actualLessons(self)===0)add('requires-discard-lesson');
+  if(c.name==='Howler'&&!(self.play||[]).some(x=>['Item','Potion'].includes(type(db,x))))add('requires-item-or-potion');
+  // UI choices must be provided by the eventual planner, not silently auto-skipped.
+  const requiresChoice=OPTIONAL_LESSON.has(c.name)||choiceKeywords.test(String(def(db,c).effect||''))||c.name==='Howler'||response;
+  return {legal:errors.length===0,blockers:errors,requiredLessons:required,resources:resourceCount(self),actionCost:response?0:actionCost(self,db,c),requiresChoice,fromDiscard,response};
+ }
+ function inspectLesson(s,actor){
+  const self=P(s,actor),enemy=P(s,other(actor)),errors=[];
+  if(s.phase!=='game'||s.gameOver)errors.push('not-in-game');
+  if(pending(s)||spellChainState(s).length)errors.push('pending-resolution');
+  if(s.turn!==actor)errors.push('not-your-turn');
+  if(self.combatStep==='combat')errors.push('combat-not-finished');
+  if(!num(self.lessonDeckCount))errors.push('empty-lesson-deck');
+  if(num(self.lessonsPlayed)>=2)errors.push('lesson-per-turn-limit');
+  if(num(self.actionsLeft)<1)errors.push('not-enough-actions');
+  if(self.umbridgeDecreePendingV1333)errors.push('umbridge-decree-choice');
+  if(activeCard(enemy,'Finite Incantatem')&&!num(self.hand?.length))errors.push('finite-requires-discard');
+  return {legal:!errors.length,blockers:errors};
+ }
+ function actions(s,db,actor){
+  if(actor!==1&&actor!==2)throw Error('actor must be 1 or 2');
+  if(!s?.players||!db)throw Error('state and card definitions are required');
+  const self=P(s,actor),chain=spellChainState(s),out=[],blocked=[];
+  const append=(action,verdict)=>{
+   if(verdict.legal)out.push({...action,requiredLessons:verdict.requiredLessons??null,actions:verdict.actionCost??0,requiresChoice:!!verdict.requiresChoice});
+   else blocked.push({...action,blockers:verdict.blockers});
+  };
+  const responding=chain.length>0;
+  for(const c of self.hand||[]){
+   const candidates=responding?[true]:[false];
+   for(const response of candidates){
+    if(responding&&!quick(db,c))continue;
+    append({kind:response?'respondQuickSpell':spelling(db,c)?'castSpell':'playCard',cardId:c.id??null,name:c.name,zone:'hand'},inspectCard(s,db,actor,c,'hand',response));
+   }
+  }
+  if(!responding)for(const c of self.discard||[]){
+   if(domain(db,c)!=='Dark Arts'||c.castFromDiscard)continue;
+   append({kind:'castDarkFromDiscard',cardId:c.id??null,name:c.name,zone:'discard'},inspectCard(s,db,actor,c,'discard',false));
+  }
+  if(!responding){
+   append({kind:'playLesson',name:'Play Lesson',zone:'lessonDeck'},inspectLesson(s,actor));
+   const ordinary=!pending(s)&&s.phase==='game'&&s.turn===actor&&self.combatStep==='actions'&&!self.umbridgeDecreePendingV1333;
+   if(ordinary&&num(self.actionsLeft)>=1&&self.basicCastTurnV253!==self.turnSerial){
+    const allies=(self.play||[]).filter(x=>type(db,x)==='Ally'&&!x.frozen).length;
+    const swelling=(self.play||[]).filter(x=>x.name==='Swelling Solution'&&!x.frozen).length;
+    const wolf=(self.play||[]).find(x=>x.name==="Lupin's Werewolf Form");
+    const damage=Math.max(0,wolf?num(wolf.damage):allies+swelling);
+    out.push({kind:'basicCast',name:'Basic Cast',actions:1,damage,requiresChoice:false,targets:allowedAttackTargets(s,db,actor,{name:'Basic Cast'})});
+   }
+   if(ordinary&&num(self.actionsLeft)>=0){
+    for(const card of self.play||[]){
+     if(card.frozen)continue;
+     const name=card.name;
+     const ongoing=ACTIVE_ONGOINGS.has(name);
+     if(!ongoing&&!FIELD_ACTIVATED.has(name))continue;
+     if(name!=='Beater'&&card.abilityUsedTurn===self.turnSerial)continue;
+     if(name==='Beater'&&(!(self.hand||[]).length||!(self.play||[]).some(x=>type(db,x)==='Item'&&domain(db,x)==='Quidditch')))continue;
+     if(name==='Guardian'&&!(self.play||[]).some(x=>type(db,x)==='Item'&&domain(db,x)==='Quidditch'))continue;
+     if(name==='Time Turner'&&(self.hand||[]).length<3)continue;
+     if((name==='Memory Vial'||name==='Portkey')&&!(self.hand||[]).length)continue;
+     if(name==='Memory Vial'&&!num(self.lessonDeckCount))continue;
+     if(name==='Seeker'&&!(self.play||[]).some(x=>x.name==='Golden Snitch')&&!((self.mainCount||0)>0))continue;
+     out.push({kind:'activate',name,cardId:card.id,actions:0,requiresChoice:true});
+    }
+   }
+   if(s.phase==='game'&&s.turn===actor&&self.combatStep==='combat'&&!pending(s)){
+    for(const c of self.play||[]){
+     if(type(db,c)!=='Creature'||c.attackedThisTurn||c.unableToAttack||c.frozen)continue;
+     if(c.name==='Mountain Troll'&&(self.play||[]).some(x=>x.id!==c.id&&type(db,x)==='Creature'))continue;
+     const base=Number(def(db,c).damage??c.damage)||0;
+     if(base<=0)continue;
+     const targets=allowedAttackTargets(s,db,actor,c);
+     for(const target of targets)out.push({kind:'attack',name:c.name,cardId:c.id,actions:0,target,baseDamage:base,damageNeedsEngine:true,requiresChoice:false});
+    }
+    out.push({kind:'finishCombat',name:'Continue to Action Phase',actions:0,requiresChoice:false});
+   }
+   if(s.phase==='game'&&s.turn===actor&&self.combatStep==='actions'&&!pending(s))out.push({kind:'endTurn',name:'End Turn',actions:0,requiresChoice:false});
+  }
+  return {version:VERSION,actor,actions:out,blocked,summary:{legalActions:out.length,blockedCards:blocked.filter(x=>x.zone==='hand').length,handCount:(self.hand||[]).length}};
+ }
+ function copyPublicCard(card,db){return {id:card?.id??null,name:card?.name||'',type:type(db,card),life:card?.life,damage:card?.damage,frozen:!!card?.frozen,block:!!card?.block,attackedThisTurn:!!card?.attackedThisTurn,unableToAttack:!!card?.unableToAttack,abilityUsedTurn:card?.abilityUsedTurn,shield:!!card?.shield,countdownLeft:card?.countdownLeft,isToken:!!card?.isToken,castFromDiscard:!!card?.castFromDiscard,deathEaterDiscountV222:card?.deathEaterDiscountV222,curse:!!card?.curse,shieldValue:card?.shieldValue};}
+ function fromGame(game,db,actor=2){
+  // Opponent's hand and all draw-pile orders are intentionally excluded.
+  // This method cannot grant the planning agent privileged hidden information.
+  const players={};
+  for(const side of [1,2]){
+   const raw=game.P[side]||{},own=side===actor;
+   players[side]={
+    char:raw.char?copyPublicCard(raw.char,db):null,life:raw.life,
+    hand:own?(raw.hand||[]).map(c=>copyPublicCard(c,db)):[],handCount:(raw.hand||[]).length,
+    play:(raw.play||[]).map(c=>copyPublicCard(c,db)),
+    lessons:(raw.lessons||[]).map(c=>copyPublicCard(c,db)),
+    discard:(raw.discard||[]).map(c=>copyPublicCard(c,db)),
+    mainCount:(raw.main||[]).length,lessonDeckCount:(raw.lessonDeck||[]).length,
+    actionsLeft:raw.actionsLeft,combatStep:raw.combatStep,lessonsPlayed:raw.lessonsPlayed,
+    turnSerial:raw.turnSerial,basicCastTurnV253:raw.basicCastTurnV253,
+    langlockThisTurnV246:raw.langlockThisTurnV246,creaturesPlayedTurnV194:raw.creaturesPlayedTurnV194,
+    umbridgeDecreePendingV1333:!!raw.umbridgeDecreePendingV1333
+   };
+  }
+  const chain=game.chain||[];
+  return {version:VERSION,phase:game.phase,turn:game.turn,gameOver:!!game.gameOver,
+   pendingEffect:!!game.pendingEffect,pendingChoice:!!game.pendingChoice,
+   chain:{length:chain.length,topPlayer:chain.length?chain[chain.length-1].player:null,declaring:chain.some(x=>x.declaringV1322),entries:chain.map(x=>({player:x.player,card:copyPublicCard(x.card,db)}))},
+   players};
+ }
+ return Object.freeze({VERSION,fromGame,actions,inspectCard,inspectLesson,resourceCount,requiredLessons,allowedAttackTargets});
+});
+
+</script>
+
+<script id="masterAIFoundationBridgeV1364">
+/* V1.364: debug-only, read-only and privacy-conscious action analysis.
+ * Hard/Easy/Medium and all live game modes keep their previous controllers.
+ * Developer console: PocketMasterV1364.analyze(2)
+ */
+(function(){
+ const core=window.PocketMasterCoreV1364;
+ if(!core)return;
+ function capture(seat=2){
+  return core.fromGame({P,phase,turn,chain:spellChain,
+   gameOver:!!duelTerminalV1363,
+   pendingEffect:!!(autoEngine?.pending||pendingSpellEffect),
+   pendingChoice:!!(P[seat]?.umbridgeDecreePendingV1333||document.getElementById('costDecisionV178')?.classList.contains('open'))
+  },CARD_DB,seat);
+ }
+ const api=Object.freeze({
+  version:core.VERSION,
+  capture,
+  analyze(seat=2){const snapshot=capture(seat);return {snapshot,...core.actions(snapshot,CARD_DB,seat)};},
+  inspectHand(seat=2){const data=this.analyze(seat);return data.actions.filter(a=>a.zone==='hand').concat(data.blocked.filter(a=>a.zone==='hand'));}
+ });
+ Object.defineProperty(window,'PocketMasterV1364',{value:api,writable:false,configurable:false});
 })();
 </script>
 </body></html>
