@@ -31,7 +31,7 @@
     "type": "Ally",
     "domain": "Neutral",
     "cost": 0,
-    "effect": "Once per turn, if you control 6 or more Lessons, you may discard 2 Lessons to create a Thestral Token.",
+    "effect": "Once per turn, if you control 4 or more Lessons, you may create a Luna's Thestral Token. This ability costs 0 Actions.",
     "image": "cards/allies/char_luna.png"
   },
   "Neville Longbottom": {
@@ -416,10 +416,10 @@
     "type": "Creature",
     "domain": "Neutral",
     "cost": 0,
-    "health": 3,
-    "life": 3,
-    "damage": 3,
-    "effect": "Sacrifice this and discard 2 Lessons: Deal 2 damage to a target, plus 1 additional damage for each Spell in your discard pile.",
+    "health": 4,
+    "life": 4,
+    "damage": 1,
+    "effect": "Whenever you play another Creature, you may discard 1 Lesson. If you do, deal 3 damage to a target.",
     "image": "cards/tokens/token_thestrals.png",
     "token": true
   },
@@ -1079,7 +1079,7 @@
     "image": "cards/creatures/creature_puppy.png"
   },
   "Arresto Momentum": {
-    "type": "Spell",
+    "type": "Ongoing Spell",
     "domain": "Neutral",
     "cost": 3,
     "effect": "Countdown 2: Neither player draws during their Draw Step. Events can't be played while this spell is on the board.",
@@ -1096,14 +1096,14 @@
     "type": "Ally",
     "domain": "Neutral",
     "cost": 0,
-    "effect": "Once per turn, when your opponent plays a Spell targeting you or a card you control, you may redirect it to another target you control, even if that target is not normally valid for that Spell. At the beginning of your first turn, play a Moody's Magical Eye.",
+    "effect": "Once per turn, when you play a Neutral Spell, you may deal 2 damage to a target. At the beginning of your first turn, create a Moody's Magical Eye Token.",
     "image": "cards/allies/char_moody.png"
   },
   "Moody's Magical Eye": {
     "type": "Item",
     "domain": "Neutral",
     "cost": 0,
-    "effect": "Your opponent's card effects can't prevent you from targeting their Allies or Creatures. When redirecting a Spell, you may choose any valid target.",
+    "effect": "Your opponent's card effects can't prevent you from targeting their Allies or Creatures. When this Item leaves play, draw 2 cards.",
     "image": "cards/tokens/token_eye.png",
     "token": true
   },
