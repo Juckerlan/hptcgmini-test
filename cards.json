@@ -377,7 +377,7 @@
     "type": "Ally",
     "domain": "Quidditch",
     "cost": "-",
-    "effect": "Once per turn, look at the top 3 cards from your deck, reveal an Item and put it into your hand. If you have Golden Snitch, return an Item from the discard instead.",
+    "effect": "When I enter play choose one: Look at the top 3 cards from your deck. You may reveal an Item among them and put it into your hand. If Golden Snitch is returned from the board to the hand when I am in play, you may return me to your hand.",
     "image": "cards/quidditch/quidd_seeker.png"
   },
   "Guardian": {
@@ -766,7 +766,7 @@
     "type": "Dark Spell",
     "domain": "Dark Arts",
     "cost": 4,
-    "effect": "Countdown 2: Deal 2 damage to a target. Each time this effect resolves, it deals 1 additional damage.",
+    "effect": "Countdown 2: Deal 2 damage to a target. You may sacrifice a card you control. If you do, this spell deals 2 additional damage next turn.",
     "image": "cards/dark/dark_fiend.png"
   },
   "Avada Kedavra": {
