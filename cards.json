@@ -581,8 +581,8 @@
   "Imperio": {
     "type": "Dark Spell",
     "domain": "Dark Arts",
-    "cost": 6,
-    "effect": "Additional Cost: Discard 1 Lesson: Choose a Creature or Ally. You gain control of it for as long as Imperio remains in play.",
+    "cost": 5,
+    "effect": "Choose a Creature or Ally. You gain control of it for as long as Imperio remains in play.",
     "image": "cards/dark/dark_imperio.png"
   },
   "Vanishing Cabinet": {
@@ -1172,5 +1172,42 @@
     "cost": 2,
     "effect": "Remove all status conditions from a target you control.",
     "image": "cards/neutral/neutral_renevate.png"
+  },
+  "Occamy": {
+    "type": "Creature",
+    "domain": "Neutral",
+    "cost": 4,
+    "health": 3,
+    "damage": 1,
+    "effect": "Whenever you discard a Lesson, deal 1 damage to any target.",
+    "image": "cards/creatures/creature_occamy.png"
+  },
+  "Lucius Malfoy": {
+    "type": "Ally",
+    "domain": "Neutral",
+    "cost": 0,
+    "effect": "Once per turn, you may discard a Dark Spell from your hand. If you do, draw 2 cards.",
+    "image": "cards/allies/char_lucius.png"
+  },
+  "The Carrows": {
+    "type": "Ally",
+    "domain": "Neutral",
+    "cost": 0,
+    "effect": "Once per turn, when you play a Dark Spell, you may discard a card from your hand. If you do, your opponent discards a card and gains Curse.",
+    "image": "cards/allies/char_carrows.png"
+  },
+  "Weasley Twins": {
+    "type": "Ally",
+    "domain": "Neutral",
+    "cost": 0,
+    "effect": "Once per turn, when you play an Item, you may return another Item you control to its owner's hand. If you do, draw 1 card.",
+    "image": "cards/allies/char_twins.png"
+  },
+  "Rubeus Hagrid": {
+    "type": "Ally",
+    "domain": "Neutral",
+    "cost": 0,
+    "effect": "Once per turn, the first Creature you play with a printed Cost of 5 or more costs 1 less Lesson and gains Shield 1.",
+    "image": "cards/allies/char_hagrid.png"
   }
 }
