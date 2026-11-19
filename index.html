@@ -2523,7 +2523,7 @@ function starterPreviewV1384(index){
    }
    const meta=document.createElement('div');meta.className='starterModalCardMetaV1384';
    const title=document.createElement('div');title.className='starterModalCardNameV1384';title.textContent=name;
-   const qty=document.createElement('div');qty.className='starterModalCardQtyV1384';qty.textContent=quantity+' copy'+(quantity===1?'':'ies');
+   const qty=document.createElement('div');qty.className='starterModalCardQtyV1384';qty.textContent=quantity+(quantity===1?' copy':' copies');
    meta.append(title,qty);
    article.append(art,meta);grid.appendChild(article);
   });
